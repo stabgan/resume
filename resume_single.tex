@@ -1,0 +1,273 @@
+%-------------------------
+% 3-Page Resume (Kaustabh Ganguly) -- ATS-optimized, research-backed
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage[default]{lato}
+\usepackage{lastpage}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\small Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section format
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+% \pdfgentounicode=1  % Not needed with tectonic/XeTeX
+
+%-------------------------%
+% Commands
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubSubheading}[2]{\item\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}\textit{\small #1} & \textit{\small #2}\end{tabular*}\vspace{-7pt}}
+\newcommand{\resumeProjectHeading}[2]{\item\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}\small #1 & #2 \end{tabular*}\vspace{-7pt}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\definecolor{Black}{RGB}{0,0,0}
+\newcommand{\seticon}[1]{\textcolor{Black}{\csname #1\endcsname}}
+
+\begin{document}
+
+%---------- HEADING ----------
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+  \begin{minipage}[t]{\linewidth}
+    \textbf{\Huge \scshape Kaustabh Ganguly}\\[0.25em]
+    \normalsize \textbf{Senior AI/ML Engineer \,|\, Senior Machine Learning Engineer (Applied ML)}\\[0.35em]
+    \small Bangalore, India \textbar\ IST (UTC{+}5{:}30) \textbar\ +91-8621063804\\
+    \footnotesize \textit{Email: kaustabhganguly@gmail.com \ \ \ \ LinkedIn: linkedin.com/in/stabgan \ \ \ \ GitHub: github.com/stabgan}\\
+    \footnotesize \textit{Portfolio: stabgan.github.io \ \ \ \ HuggingFace: huggingface.co/stabgan \ \ \ \ Scholar: scholar.google.com/citations?user=3AG6T5QAAAAJ}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{2cm}
+  \end{minipage}
+\end{tabularx}
+
+%----------- SUMMARY -----------
+\section{Professional Summary}
+\small
+Hands-on Senior AI/ML Engineer and Applied Researcher with 5+ years of experience specializing in production Large Language Model (LLM) systems, embedding fine-tuning, NLP, search \& ranking, and scalable Machine Learning Operations (MLOps). Currently at Gracenote (Nielsen) architecting multilingual neural translation pipelines with DSPy, fine-tuning bi-encoder models for entity reranking, and building agentic LLM workflows with LangGraph serving millions of records. Proven track record of bridging academic research and enterprise deployment---built production ML decision models (AUROC 0.95) at J\&J MedTech, led LLM migration cutting costs 3x, and designed synthetic data pipelines achieving 100\% human approval. M.Tech from IIT Madras (thesis: clinical ML on MIMIC-IV). Qualified GATE Data Science \& AI and GATE Statistics 2024. Published 5 peer-reviewed papers (45 citations). Active open-source contributor: 8 fine-tuned models and 15 datasets on HuggingFace, 2 published MCP servers on npm.
+
+%----------- CORE COMPETENCIES -----------
+\section{Core Competencies}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+Machine Learning \textbar\ Deep Learning \textbar\ Natural Language Processing (NLP) \textbar\ Large Language Models (LLMs) \textbar\ LLM Evaluation \textbar\ Prompt Optimization \\
+RAG \textbar\ Agentic Workflows \textbar\ Embeddings \& Reranking \textbar\ Entity Resolution \textbar\ Search \& Ranking \textbar\ Survival Analysis \textbar\ Clinical ML \\
+MLOps \textbar\ ETL/ELT \textbar\ Data Architecture \textbar\ A/B Testing \textbar\ Feature Engineering \textbar\ Model Calibration \textbar\ SHAP \textbar\ Fine-Tuning (LoRA/QLoRA)
+}}
+\end{itemize}
+
+%----------- EDUCATION -----------
+\section{Education}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Indian Institute of Technology Madras (IIT Madras)}{2023 -- 2025}
+    {M.Tech, Industrial Artificial Intelligence (GPA: 8.66/10)}{Chennai, IN}
+    \resumeItemListStart
+      \resumeItem{\textbf{Thesis:} Machine Learning for Clinical Decision Support in MIMIC-IV}
+      \resumeItem{\textbf{Key Coursework:} Machine Learning, Deep Learning, Statistical Methods, Time Series Analysis, Optimization, Natural Language Processing, Data Mining, Operations Research}
+      \resumeItem{\textbf{Project 1: Automated ICD Code Prediction for Rare Diseases.} Designed an ontology-based data augmentation pipeline mapping rare diseases from ORDO to SNOMED CT. Fine-tuned small language models (Gemma3, Qwen3) on A100/H100 GPUs using 4-bit QLoRA and Unsloth. Generated realistic discharge summaries via Ollama; tracked metrics with Weights \& Biases.}
+      \resumeItem{\textbf{Project 2: Early Mortality Risk Stratification for SA-AKI.} Deployed an Optuna-tuned LightGBM classifier (AUROC \textbf{0.749}) calibrated via isotonic regression, using SHAP for clinical interpretability. Built time-to-event survival models (CoxPH, custom PyTorch DeepSurv), achieving C-index \textbf{\textasciitilde 0.69} with positive clinical net benefit via Decision Curve Analysis.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Kalyani Government Engineering College (KGEC)}{2016 -- 2020}
+    {B.Tech, Information Technology (CGPA: 8.15/10)}{Kalyani, IN}
+    \resumeItemListStart
+      \resumeItem{5 peer-reviewed papers in IoT and fuzzy systems (Elsevier, IEEE, Springer). Total citations: 45, h-index: 4.}
+      \resumeItem{Swami Vivekananda Merit-cum-Means Scholar (4-year government scholarship).}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%----------- TECHNICAL SKILLS -----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{ML / DL:} PyTorch, TensorFlow, scikit-learn, LightGBM, XGBoost, CatBoost, SHAP, Optuna, calibration, survival analysis, W\&B \\
+\textbf{NLP / LLMs:} DSPy, LangGraph, LangChain, Ollama, HuggingFace Transformers, LoRA/QLoRA, prompt optimization, DeepEval, MCP \\
+\textbf{Embeddings \& Search:} Bi-encoder/cross-encoder fine-tuning, curriculum learning, hard negative mining, reranking, vector similarity \\
+\textbf{GenAI \& Agents:} Agentic workflows, LLM-as-a-Judge evaluation, synthetic data generation, RAG, tool-use orchestration \\
+\textbf{Languages:} Python, SQL, TypeScript, Java, Go, Bash, R \\
+\textbf{Cloud \& Infra:} AWS (S3, EC2, RDS, Lambda, Redshift, SageMaker, Bedrock), Azure (AI-900), GCP, Docker, Kubernetes \\
+\textbf{Data \& MLOps:} Redshift, PostgreSQL, Snowflake, ETL/ELT, Parquet, Airflow, Jenkins, CI/CD, A/B testing, model monitoring
+}}
+\end{itemize}
+
+
+%----------- PROFESSIONAL EXPERIENCE -----------
+\section{Professional Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Gracenote, a Nielsen Company}{2025 -- Present}
+    {Member of Technical Staff II (Senior AI/ML Engineer)}{Bangalore, India}
+    \resumeItemListStart
+      \resumeItem{\textbf{Multilingual Translation Pipeline:} Architected a media description translation system using \textbf{DSPy}. Implemented \textbf{GIST greedy subsampling} (from recent Google research) to select the 300 most diverse examples from a 10,000-sample dataset, reducing prompt optimization costs by \textbf{100x} while preserving translation quality.}
+      \resumeItem{\textbf{Synthetic Data Generation:} Built a local pipeline using \textbf{Ollama} and \textbf{TranslateGemma 4B}. Trained the model with the \textbf{MIPROv2} optimizer on human-written few-shot examples to generate high-quality golden samples at 1 sample/second, achieving a \textbf{100\% pass rate} from human reviewers.}
+      \resumeItem{\textbf{Production LLM Migration:} Led the migration of the inference service from Claude 3.7 Sonnet to \textbf{Claude 4.5 Haiku} following rigorous regression testing via \textbf{DeepEval}. Cut latency by \textbf{50\%} and reduced costs by \textbf{3x} for a system serving \textbf{10,000 daily requests}.}
+      \resumeItem{\textbf{Automated Rule Discovery:} Uncovered undocumented editorial rules by analyzing production data with DSPy and \textbf{InferRules}. Deployed a \textbf{LangGraph} application to apply these rules sequentially, boosting the human ``no-touch'' approval rate from \textbf{30\% to 40\%}.}
+      \resumeItem{\textbf{Large-Scale Entity Resolution:} Overhauled a pipeline mapping \textbf{1.5 million monthly records} from catalogs (Netflix, Amazon) to Gracenote's database. Designed temporal heuristics that automated new metadata creation with \textbf{97\% precision} and reduced false positives by \textbf{40\%}.}
+      \resumeItem{\textbf{Embeddings \& Reranking:} Fine-tuned a \textbf{Gemma 300M bi-encoder} for episode reranking using curriculum learning and hard negative mining. Implemented an automated training loop inspired by Karpathy's auto-research, improving recall@1 from \textbf{85\% to 95\%}.}
+      \resumeItem{Recognized by the \textbf{CTO} for technical contributions and mentored interns on embedding fine-tuning and agentic workflows.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Tata Consultancy Services (Client: Johnson \& Johnson MedTech)}{2023 -- 2025}
+    {Data Architect \& Data Scientist, Contract Commitment Portal (CCP)}{Kolkata, IN / Remote}
+    \resumeItemListStart
+      \resumeItem{Engineered \textbf{analyst decision models} achieving an \textbf{AUROC of 0.95} in production. Provided \textbf{100\% decision coverage}, saving analysts \textbf{4--5 hours per case} and accelerating approvals by \textbf{2x} with zero additional infrastructure costs by reusing AWS EC2, Redshift, and RDS.}
+      \resumeItem{Established robust \textbf{MLOps pipelines} featuring daily email alerts, manual drift checks on Postgres tables, and automated calibration every 2 days. Successfully ran a 2-month A/B pilot with \textbf{zero rollbacks}.}
+      \resumeItem{Architected an \textbf{On Demand Refresh (ODR)} system for one-click ad-hoc ETL, serving 10 analysts across North America and the Philippines. Reduced refresh times from \textbf{3 hours to minutes} and achieved \textbf{zero orchestrator failures} over 8+ months.}
+      \resumeItem{Developed a \textbf{Fail Proof Mechanism (FPM)} converting Excel validation to Parquet with dynamic Redshift DDL, reducing data incidents by \textbf{\textasciitilde 87\%} (from 15+ to \textasciitilde 2/month).}
+      \resumeItem{Built a \textbf{Tableau LangChain Q\&A Bot} proof-of-concept enabling analysts to query dashboards conversationally, demonstrating GenAI-powered analytics in enterprise settings.}
+      \resumeItem{Mentored \textbf{15+ engineers} on ML best practices, system design, and cloud-native architecture patterns.}
+      \resumeItem{Stack: Python, scikit-learn, XGBoost, SHAP, SQL (Redshift/Postgres), Flask, Tableau, LangChain, AWS (S3/EC2/RDS/Redshift), Jenkins, Bitbucket.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Tata Consultancy Services (J\&J COE R\&D)}{2022 -- 2023}
+    {Software Engineer, Data Platform (POCs \& Automation)}{India}
+    \resumeItemListStart
+      \resumeItem{Led R\&D on advanced \textbf{NLP techniques for medical document processing}, collaborating cross-functionally with global engineering teams to evaluate transformer-based approaches for clinical text extraction.}
+      \resumeItem{Created \textbf{Data Sentry}, an automated onboarding/offboarding tool for \textbf{\textasciitilde 500 users} across AWS, Azure, and GCP, reducing cycle times from days to minutes using AWS Lambda and Microsoft Graph OAuth.}
+      \resumeItem{Delivered \textbf{10k+} lines of Redshift SQL in \textasciitilde 3 months with \textbf{zero production defects}, building the data foundation for downstream ML and analytics workloads.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Tata Consultancy Services (J\&J Vision)}{2020 -- 2022}
+    {Software Engineer, Data Platform (Data Engineer to Lead)}{India}
+    \resumeItemListStart
+      \resumeItem{\textbf{Promoted from IC to Lead within 18 months.} Managed production ETL pipelines on AWS orchestrated with Control-M, processing \textbf{\textasciitilde 50 GB/day} across \textbf{40 daily jobs} feeding ML models and analytics for global regions. Optimized Redshift views to run \textbf{\textasciitilde 3x faster}, lowering compute costs.}
+      \resumeItem{Built S3 cross-database transfers and dirty-data filters that eliminated delimiter-related ETL failures, ensuring clean feature data for downstream ML pipelines.}
+      \resumeItem{Served as \textbf{SDET} on 20+ SIT cycles with \textbf{0\% rework}, owned \textbf{100+ production releases}. Led \textbf{10+ engineers} and \textbf{mentored 25+ junior engineers}.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Param.ai}{2018}
+    {Machine Learning Intern}{Hyderabad, IN}
+    \resumeItemListStart
+      \resumeItem{Built resume-to-JD similarity scoring using custom \textbf{word2vec} embeddings with cosine and Jaccard similarity metrics, improving recruiter matching efficiency for the hiring platform.}
+      \resumeItem{Developed a \textbf{visual search} prototype for candidate profile matching. Custom word embeddings prototype was \textbf{adopted by the company} for production use.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%----------- PUBLICATIONS -----------
+\section{Publications}
+\small
+5 peer-reviewed papers \textbar\ 45 citations \textbar\ h-index: 4 \textbar\ Google Scholar: \textit{scholar.google.com/citations?user=3AG6T5QAAAAJ}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{[1]} PS Banerjee, A Karmakar, M Dhara, \textbf{K Ganguly}, S Sarkar. ``Predicting bradycardia and atrial fibrillation using fuzzy logic and IoT sensors.'' \textit{Medicine in Novel Technology and Devices} (Elsevier), 2021. \textbf{22 citations.} \\
+\textbf{[2]} A Karmakar, \textbf{K Ganguly}, P Ghosh, A Mazumder, PS Banerjee, D De. ``FemmeBand: IoT smart security band using EMG sensors.'' \textit{Innovations in Systems and Software Engineering} (Springer), 2024. \textbf{8 citations.} \\
+\textbf{[3]} \textbf{K Ganguly}, A Karmakar, PS Banerjee. ``ValveCare: fuzzy-based heart disease prediction with Arduino IoT.'' \textit{Int'l Conf. on Computational Intelligence} (Springer), 2021. \textbf{7 citations.} \\
+\textbf{[4]} A Karmakar, \textbf{K Ganguly}, PS Banerjee. ``SafeBand: IoT smart security band with instant SOS.'' \textit{Proc. ICACA} (Springer), 2021. \textbf{6 citations.} \\
+\textbf{[5]} A Karmakar, \textbf{K Ganguly}, PS Banerjee. ``HeartHealth: multi-attribute heart monitoring via fuzzy-TOPSIS.'' \textit{IEEE DevIC}, 2021. \textbf{2 citations.}
+}}
+\end{itemize}
+
+%----------- OPEN SOURCE -----------
+\section{Open Source Contributions}
+\small
+200 repositories \textbar\ 43 followers \textbar\ GitHub Developer Program Member \textbar\ Arctic Code Vault Contributor
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{openrouter-mcp-multimodal} (TypeScript, MCP, Docker) -- 19 stars, 12 forks. MCP server for OpenRouter with native vision, image generation, 300+ LLM access, SSRF safeguards. npm: \texttt{@stabgan/openrouter-mcp-multimodal}. \\
+\textbf{steelmind-mcp} (TypeScript, MCP) -- Research-grounded structured thinking + steel-manning verification for AI agents. Backed by 43+ cognitive science papers. 90 tests. npm: \texttt{@stabgan/steelmind-mcp}. \\
+\textbf{awesome-loss-functions} -- Curated collection of \textbf{350+ loss functions} across 25+ AI subdomains with paper links, math, and implementations. \\
+\textbf{HuggingFace} (huggingface.co/stabgan) -- \textbf{8 fine-tuned Gemma-3 1B models} for clinical NLP + \textbf{15 datasets} (PubMed, ICD-10 benchmarks).
+}}
+\end{itemize}
+
+%----------- SELECT PROJECTS -----------
+\section{Select Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{Saaki -- SA-AKI Mortality Prediction} $|$ \emph{Python, CatBoost, XGBoost, LightGBM, MIMIC-IV} $|$ \textbf{6 stars}}{}
+    \resumeItemListStart
+      \resumeItem{Open-source ICU mortality prediction system using 356 clinical features from first 24h of stay. AUROC \textbf{0.80} with CatBoost. Leakage-aware pipeline with stratified evaluation.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{ICD-CM-10 Monographs at Scale} $|$ \emph{Python, Gemini Vertex API, Multithreading, Flask}}{}
+    \resumeItemListStart
+      \resumeItem{Generated detailed disease monographs for \textbf{\textasciitilde 70k} ICD-CM-10 codes in parallel (28 prompts across 14 regions) in Vertex AI. Deployed offline encyclopedia web app used daily by medical coders.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{mcp-icd10} $|$ \emph{Python, MCP} $|$ Offline ICD-10 code lookup}{}
+    \resumeItemListStart
+      \resumeItem{Offline MCP server for ICD-10-CM, ICD-9-CM, ICD-10 WHO code lookup with GEMs crosswalk. \textbf{124K codes, 102K mappings.} Zero API keys, zero network calls.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%----------- CERTIFICATIONS -----------
+\section{Certifications \& Training}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+Statistical Learning with Python (Stanford University, 2025) \textbar\ AWS-ML: Machine Learning Pipeline on AWS (30-hr hands-on workshop, 2024) \\
+PCAP -- Certified Associate in Python Programming (90\%, 2023) \textbar\ Microsoft Certified: Azure AI Fundamentals AI-900 (2021) \\
+6.86x: Machine Learning with Python -- Linear Models to Deep Learning (MIT, 2019)
+}}
+\end{itemize}
+
+%----------- ACHIEVEMENTS -----------
+\section{Achievements \& Honors}
+\begin{itemize}[leftmargin=0.15in]
+  \item \small Swami Vivekananda Merit-cum-Means Scholar (4-year govt. scholarship); WBJEE 2016 rank \#3450 of 100k+; PNTSE Rank 2 Zonal, Rank 46 WB.
+  \item \small GATE Statistics (ST) 2024: \textbf{AIR 410}; GATE Data Science \& AI (DA) 2024: AIR 4,860. TCS CodeVita 2019: \textbf{Rank 585 / 100K+} (top 0.6\%).
+  \item \small Employee of the Month and CTO recognition at Gracenote; mentored 25+ engineers across career.
+  \item \small EF Standard English Test: \textbf{C2 Proficient} (2023). HackerKnight Hackathon: Only team selected to represent KGEC (2018).
+\end{itemize}
+
+%----------- SELECT RECOMMENDATIONS -----------
+\section{Select Recommendations}
+\begin{itemize}[leftmargin=0.15in]
+  \item \small \textit{``Instrumental in designing and architecting the data and ML pipelines. Any team would be lucky to have him.''}
+  \item \small \textit{``Deep technical expertise, especially in Python. He's the kind of engineer you can trust with critical tasks.''}
+\end{itemize}
+
+\end{document}
