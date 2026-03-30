@@ -21,19 +21,13 @@
 \usepackage{wrapfig}
 \usepackage[default]{lato}
 \usepackage{lastpage}
+\usepackage[left=0.4in,right=0.4in,top=0.3in,bottom=0.4in]{geometry}
 
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot[C]{\small Page \thepage\ of \pageref{LastPage}}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
-% Margins
-\addtolength{\oddsidemargin}{-0.6in}
-\addtolength{\evensidemargin}{-0.6in}
-\addtolength{\textwidth}{1.2in}
-\addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.4in}
 
 \urlstyle{same}
 \raggedbottom
@@ -68,23 +62,17 @@
 \begin{document}
 
 %---------- HEADING ----------
-\begin{tabularx}{\textwidth}{@{}X r@{}}
-  \begin{minipage}[t]{\linewidth}
-    \textbf{\Huge \scshape Kaustabh Ganguly}\\[0.25em]
-    \normalsize \textbf{Senior AI/ML Engineer \,|\, Senior Machine Learning Engineer (Applied ML)}\\[0.35em]
-    \small Bangalore, India \textbar\ IST (UTC{+}5{:}30) \textbar\ +91-8621063804\\
-    \footnotesize \textit{Email: kaustabhganguly@gmail.com \ \ \ \ LinkedIn: linkedin.com/in/stabgan \ \ \ \ GitHub: github.com/stabgan}\\
-    \footnotesize \textit{Portfolio: stabgan.github.io \ \ \ \ HuggingFace: huggingface.co/stabgan \ \ \ \ Scholar: scholar.google.com/citations?user=3AG6T5QAAAAJ}
-  \end{minipage}
-  &
-  \begin{minipage}[t]{2cm}
-  \end{minipage}
-\end{tabularx}
+\begin{center}
+  \textbf{\Huge \scshape Kaustabh Ganguly}\\[0.25em]
+  \normalsize \textbf{Senior AI/ML Engineer \,|\, Senior Machine Learning Engineer (Applied ML)}\\[0.3em]
+  \small Bangalore, India \textbar\ IST (UTC{+}5{:}30) \textbar\ +91-8621063804 \textbar\ kaustabhganguly@gmail.com\\[0.15em]
+  \footnotesize linkedin.com/in/stabgan \textbar\ github.com/stabgan \textbar\ huggingface.co/stabgan \textbar\ stabgan.github.io \textbar\ scholar.google.com/citations?user=3AG6T5QAAAAJ
+\end{center}
 
 %----------- SUMMARY -----------
 \section{Professional Summary}
 \small
-Hands-on Senior AI/ML Engineer and Applied Researcher with 5+ years of experience specializing in production Large Language Model (LLM) systems, embedding fine-tuning, NLP, search \& ranking, and scalable Machine Learning Operations (MLOps). Currently at Gracenote (Nielsen) architecting multilingual neural translation pipelines with DSPy, fine-tuning bi-encoder models for entity reranking, and building agentic LLM workflows with LangGraph serving millions of records. Proven track record of bridging academic research and enterprise deployment---built production ML decision models (AUROC 0.95) at J\&J MedTech, led LLM migration cutting costs 3x, and designed synthetic data pipelines achieving 100\% human approval. M.Tech from IIT Madras (thesis: clinical ML on MIMIC-IV). Qualified GATE Data Science \& AI and GATE Statistics 2024. Published 5 peer-reviewed papers (45 citations). Active open-source contributor: 8 fine-tuned models and 15 datasets on HuggingFace, 2 published MCP servers on npm.
+Senior AI/ML Engineer and Applied Researcher with 5+ years of experience in production Large Language Model (LLM) systems, embedding fine-tuning, NLP, search \& ranking, and scalable MLOps. Currently at Gracenote (Nielsen) architecting multilingual neural translation pipelines with DSPy, fine-tuning bi-encoder models for entity reranking, and building agentic LLM workflows with LangGraph serving millions of records. Built production ML decision models (AUROC 0.95) at J\&J MedTech, led LLM migration cutting costs 3x, and designed synthetic data pipelines achieving 100\% human approval. M.Tech from IIT Madras with thesis research in clinical ML on MIMIC-IV. Published 5 peer-reviewed papers (45 citations, h-index 4) across Springer, IEEE, and Elsevier.
 
 %----------- TECHNICAL SKILLS -----------
 \section{Technical Skills}
@@ -153,7 +141,6 @@ Hands-on Senior AI/ML Engineer and Applied Researcher with 5+ years of experienc
       \resumeItem{Developed a \textbf{Fail Proof Mechanism (FPM)} converting Excel validation to Parquet with dynamic Redshift DDL, reducing data incidents by \textbf{\textasciitilde 87\%} (from 15+ to \textasciitilde 2/month).}
       \resumeItem{Built a \textbf{Tableau LangChain Q\&A Bot} proof-of-concept enabling analysts to query dashboards conversationally, demonstrating GenAI-powered analytics in enterprise settings.}
       \resumeItem{Mentored \textbf{15+ engineers} on ML best practices, system design, and cloud-native architecture patterns.}
-      \resumeItem{Stack: Python, scikit-learn, XGBoost, SHAP, SQL (Redshift/Postgres), Flask, Tableau, LangChain, AWS (S3/EC2/RDS/Redshift), Jenkins, Bitbucket.}
     \resumeItemListEnd
 
   \resumeSubheading
@@ -187,7 +174,7 @@ Hands-on Senior AI/ML Engineer and Applied Researcher with 5+ years of experienc
 %----------- PUBLICATIONS -----------
 \section{Publications}
 \small
-5 peer-reviewed papers \textbar\ 45 citations \textbar\ h-index: 4 \textbar\ Google Scholar: \textit{scholar.google.com/citations?user=3AG6T5QAAAAJ}
+5 peer-reviewed papers \textbar\ 45 total citations \textbar\ h-index: 4 \textbar\ \textit{scholar.google.com/citations?user=3AG6T5QAAAAJ}
 \begin{itemize}[leftmargin=0.15in, label={}]
 \small{\item{
 \textbf{[1]} PS Banerjee, A Karmakar, M Dhara, \textbf{K Ganguly}, S Sarkar. ``Predicting bradycardia and atrial fibrillation using fuzzy logic and IoT sensors.'' \textit{Medicine in Novel Technology and Devices} (Elsevier), 2021. \textbf{22 citations.} \\
