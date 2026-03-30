@@ -42,7 +42,7 @@
   \vspace{-2pt}\item
   \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
-    \textit{\small #3} & \textit{\small #4} \\
+    \textit{#3} & \textit{\small #4} \\
   \end{tabular*}\vspace{-5pt}
 }
 \newcommand{\resumeSubSubheading}[2]{\item\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}\textit{\small #1} & \textit{\small #2}\end{tabular*}\vspace{-7pt}}
@@ -88,31 +88,6 @@ Senior AI/ML Engineer and Applied Researcher with 5+ years of experience in prod
 \end{itemize}
 
 
-%----------- EDUCATION -----------
-\section{Education}
-\resumeSubHeadingListStart
-
-  \resumeSubheading
-    {Indian Institute of Technology Madras (IIT Madras)}{2023 -- 2025}
-    {M.Tech, Industrial Artificial Intelligence (GPA: 8.66/10)}{Chennai, IN}
-    \resumeItemListStart
-      \resumeItem{\textbf{Thesis:} Machine Learning for Clinical Decision Support in MIMIC-IV}
-      \resumeItem{\textbf{Key Coursework:} Machine Learning, Deep Learning, Statistical Methods, Time Series Analysis, Optimization, Natural Language Processing, Data Mining, Operations Research}
-      \resumeItem{\textbf{Project 1: Automated ICD Code Prediction for Rare Diseases.} Designed an ontology-based data augmentation pipeline mapping rare diseases from ORDO to SNOMED CT. Fine-tuned small language models (Gemma3, Qwen3) on A100/H100 GPUs using 4-bit QLoRA and Unsloth. Generated realistic discharge summaries via Ollama; tracked metrics with Weights \& Biases.}
-      \resumeItem{\textbf{Project 2: Early Mortality Risk Stratification for SA-AKI.} Deployed an Optuna-tuned LightGBM classifier (AUROC \textbf{0.749}) calibrated via isotonic regression, using SHAP for clinical interpretability. Built time-to-event survival models (CoxPH, custom PyTorch DeepSurv), achieving C-index \textbf{\textasciitilde 0.69} with positive clinical net benefit via Decision Curve Analysis.}
-    \resumeItemListEnd
-
-  \resumeSubheading
-    {Kalyani Government Engineering College (KGEC)}{2016 -- 2020}
-    {B.Tech, Information Technology (CGPA: 8.15/10)}{Kalyani, IN}
-    \resumeItemListStart
-      \resumeItem{5 peer-reviewed papers in IoT and fuzzy systems (Elsevier, IEEE, Springer); see Publications section.}
-      \resumeItem{Swami Vivekananda Merit-cum-Means Scholar (4-year government scholarship).}
-    \resumeItemListEnd
-
-\resumeSubHeadingListEnd
-
-
 %----------- PROFESSIONAL EXPERIENCE -----------
 \section{Professional Experience}
 \resumeSubHeadingListStart
@@ -134,11 +109,11 @@ Senior AI/ML Engineer and Applied Researcher with 5+ years of experience in prod
     {Tata Consultancy Services (Client: Johnson \& Johnson MedTech)}{2023 -- 2025}
     {Data Architect \& Data Scientist, Contract Commitment Portal (CCP)}{Kolkata, IN / Remote}
     \resumeItemListStart
-      \resumeItem{Engineered \textbf{analyst decision models} achieving an \textbf{AUROC of 0.95} in production. Provided \textbf{100\% decision coverage}, saving analysts \textbf{4--5 hours per case} and accelerating approvals by \textbf{2x} with zero additional infrastructure costs by reusing AWS EC2, Redshift, and RDS.}
-      \resumeItem{Established robust \textbf{MLOps pipelines} featuring daily email alerts, manual drift checks on Postgres tables, and automated calibration every 2 days. Successfully ran a 2-month A/B pilot with \textbf{zero rollbacks}.}
-      \resumeItem{Architected an \textbf{On Demand Refresh (ODR)} system for one-click ad-hoc ETL, serving 10 analysts across North America and the Philippines. Reduced refresh times from \textbf{3 hours to minutes} and achieved \textbf{zero orchestrator failures} over 8+ months.}
-      \resumeItem{Developed a \textbf{Fail Proof Mechanism (FPM)} converting Excel validation to Parquet with dynamic Redshift DDL, reducing data incidents by \textbf{\textasciitilde 87\%} (from 15+ to \textasciitilde 2/month).}
-      \resumeItem{Built a \textbf{Tableau LangChain Q\&A Bot} proof-of-concept enabling analysts to query dashboards conversationally, demonstrating GenAI-powered analytics in enterprise settings.}
+      \resumeItem{\textbf{ML Decision Models:} Engineered analyst decision models achieving an \textbf{AUROC of 0.95} in production. Provided \textbf{100\% decision coverage}, saving analysts \textbf{4--5 hours per case} and accelerating approvals by \textbf{2x} with zero additional infrastructure costs by reusing AWS EC2, Redshift, and RDS.}
+      \resumeItem{\textbf{MLOps \& A/B Testing:} Established robust MLOps pipelines featuring daily email alerts, manual drift checks on Postgres tables, and automated calibration every 2 days. Successfully ran a 2-month A/B pilot with \textbf{zero rollbacks}.}
+      \resumeItem{\textbf{On Demand Refresh (ODR):} Architected a one-click ad-hoc ETL system serving 10 analysts across North America and the Philippines. Reduced refresh times from \textbf{3 hours to minutes} and achieved \textbf{zero orchestrator failures} over 8+ months.}
+      \resumeItem{\textbf{Fail Proof Mechanism (FPM):} Developed Excel-to-Parquet validation with dynamic Redshift DDL, reducing data incidents by \textbf{\textasciitilde 87\%} (from 15+ to \textasciitilde 2/month).}
+      \resumeItem{\textbf{GenAI Analytics:} Built a Tableau LangChain Q\&A Bot proof-of-concept enabling analysts to query dashboards conversationally, demonstrating GenAI-powered analytics in enterprise settings.}
       \resumeItem{Mentored \textbf{15+ engineers} on ML best practices, system design, and cloud-native architecture patterns.}
     \resumeItemListEnd
 
@@ -166,6 +141,30 @@ Senior AI/ML Engineer and Applied Researcher with 5+ years of experience in prod
     \resumeItemListStart
       \resumeItem{Built resume-to-JD similarity scoring using custom \textbf{word2vec} embeddings with cosine and Jaccard similarity metrics, improving recruiter matching efficiency for the hiring platform.}
       \resumeItem{Developed a \textbf{visual search} prototype for candidate profile matching. Custom word embeddings prototype was \textbf{adopted by the company} for production use.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%----------- EDUCATION -----------
+\section{Education}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Indian Institute of Technology Madras (IIT Madras)}{2023 -- 2025}
+    {M.Tech, Industrial Artificial Intelligence (GPA: 8.66/10)}{Chennai, IN}
+    \resumeItemListStart
+      \resumeItem{\textbf{Thesis:} Machine Learning for Clinical Decision Support in MIMIC-IV}
+      \resumeItem{\textbf{Key Coursework:} Machine Learning, Deep Learning, Statistical Methods, Time Series Analysis, Optimization, Natural Language Processing, Data Mining, Operations Research}
+      \resumeItem{\textbf{Project 1: Automated ICD Code Prediction for Rare Diseases.} Designed an ontology-based data augmentation pipeline mapping rare diseases from ORDO to SNOMED CT. Fine-tuned small language models (Gemma3, Qwen3) on A100/H100 GPUs using 4-bit QLoRA and Unsloth. Generated realistic discharge summaries via Ollama; tracked metrics with Weights \& Biases.}
+      \resumeItem{\textbf{Project 2: Early Mortality Risk Stratification for SA-AKI.} Deployed an Optuna-tuned LightGBM classifier (AUROC \textbf{0.749}) calibrated via isotonic regression, using SHAP for clinical interpretability. Built time-to-event survival models (CoxPH, custom PyTorch DeepSurv), achieving C-index \textbf{\textasciitilde 0.69} with positive clinical net benefit via Decision Curve Analysis.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Kalyani Government Engineering College (KGEC)}{2016 -- 2020}
+    {B.Tech, Information Technology (CGPA: 8.15/10)}{Kalyani, IN}
+    \resumeItemListStart
+      \resumeItem{5 peer-reviewed papers in IoT and fuzzy systems (Elsevier, IEEE, Springer); see Publications section.}
+      \resumeItem{Swami Vivekananda Merit-cum-Means Scholar (4-year government scholarship).}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
