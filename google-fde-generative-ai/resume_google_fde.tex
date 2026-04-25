@@ -71,7 +71,7 @@
 %----------- SUMMARY -----------
 \section{Professional Summary}
 \small
-Customer-embedded AI engineer who ships production GenAI inside live enterprise environments. \textbf{2 published MCP servers on npm} (OAuth-aware, SSRF-safe, Docker), \textbf{8 fine-tuned Gemma-3 models on HuggingFace}, and a production \textbf{LangGraph} multi-agent system at Gracenote (Nielsen) lifting no-touch approval 30\%\,\textrightarrow\,40\%. Led a Claude 3.7 Sonnet\,\textrightarrow\,4.5 Haiku migration on a 10K req/day inference path, DeepEval-gated: p95 latency\,\textbf{-50\%}, cost-per-request\,\textbf{-3x}. Previously embedded with Johnson \& Johnson MedTech stakeholders across NA/APAC on a regulated contract-approval workflow, shipping AUROC\,0.95 decision models on the customer's existing AWS perimeter (zero net-new infra). M.Tech, IIT Madras (clinical ML on MIMIC-IV), completed concurrently with full-time delivery; 5 peer-reviewed papers.
+Customer-embedded AI engineer, 5+ yrs shipping production GenAI (Python, primary) inside live enterprise environments. 2 published MCP servers on npm (OAuth-aware, SSRF-safe, Docker); 8 fine-tuned Gemma 3 checkpoints on HuggingFace. Currently at Gracenote (Nielsen) running a production \textbf{LangGraph multi-agent system} (lifting no-touch approval \textbf{30\%\,\textrightarrow\,40\%}) and a DeepEval-gated Claude 3.7 Sonnet\,\textrightarrow\,4.5 Haiku migration on a 10K-req/day media-description path --- p95 latency\,\textbf{-50\%}, cost-per-request cut \textbf{3x}. Previously embedded with J\&J MedTech stakeholders across NA/APAC on a regulated contract-approval workflow, shipping AUROC\,0.95 decision models on the customer's AWS perimeter, zero net-new infra. M.Tech, IIT Madras (clinical ML, MIMIC-IV), completed concurrently with full-time delivery. Experienced with Gemini (Vertex AI), Google ADK, LangGraph, and CrewAI.
 
 %----------- PROFESSIONAL EXPERIENCE -----------
 \section{Professional Experience}
@@ -81,31 +81,32 @@ Customer-embedded AI engineer who ships production GenAI inside live enterprise 
     {Gracenote, a Nielsen Company}{2025 -- Present}
     {Member of Technical Staff II (Senior AI/ML Engineer)}{Bangalore, India}
     \resumeItemListStart
-      \resumeItem{\textbf{LangGraph multi-agent system in production:} shipped a supervisor-plus-specialist LangGraph workflow (hierarchical delegation, stateful checkpointing) that applies editorial rules auto-discovered by a DSPy \textit{InferRules}-style learner from live production traces. Lifted human \emph{no-touch} approval \textbf{30\%\,\textrightarrow\,40\%}, first LangGraph system to reach production in the org.}
-      \resumeItem{\textbf{Production LLM migration, DeepEval-gated:} owned the Claude 3.7 Sonnet\,\textrightarrow\,4.5 Haiku cutover for a 10K req/day inference service. Built the regression suite, ran it as a canary gate, held task quality within 1pp of baseline on the golden set --- \textbf{p95 latency\,-50\%, cost-per-request\,-3x}; pattern reused by adjacent teams.}
-      \resumeItem{\textbf{DSPy prompt-optimization pipeline:} compiled a media-description translator with MIPROv2 over 300 diversity-sampled exemplars (GIST-style) drawn from a 10K pool --- cut optimizer compute \textbf{\textasciitilde 30x per trial} while translation quality held on LLM-as-judge evals.}
-      \resumeItem{\textbf{Synthetic-data \& eval harness:} local pipeline on Ollama with a Gemma\,3 4B teacher (QLoRA-adapted via Unsloth), MIPROv2-tuned on $\sim$50 human few-shots; produces golden samples at \textasciitilde 1/sec, \textbf{$\geq$95\% human-reviewer acceptance} on $N{=}500$ spot-checks.}
-      \resumeItem{\textbf{Entity resolution at scale:} owned the Netflix + Amazon catalog ingestion pipeline (\textbf{1.5M records/month}) --- temporal heuristics hit \textbf{97\% precision}, \textbf{-40\%} false positives, reducing partner-data escalations.}
-      \resumeItem{\textbf{Embedding fine-tuning (EmbeddingGemma 300M):} bi-encoder for episode reranking with curriculum learning + hard-negative mining on a held-out eval set --- \textbf{recall@1 85\%\,\textrightarrow\,95\%}. CTO-recognized for the agentic workflow + migration delivery.}
+      \resumeItem{\textbf{LangGraph multi-agent system in production:} designed a supervisor/specialist LangGraph workflow (stateful checkpointing, HITL interrupts) that applies editorial rules auto-mined from live production traces by a custom DSPy module over BootstrapFewShot. Lifted human \emph{no-touch} approval \textbf{30\%\,\textrightarrow\,40\%} on the media-metadata review surface.}
+      \resumeItem{\textbf{DeepEval-gated LLM migration} (Claude 3.7 Sonnet\,\textrightarrow\,4.5 Haiku) on the 10K-req/day media-description path: built a regression suite, ran it as a canary gate, held task quality within 1pp of baseline LLM-as-judge win-rate on the golden set --- \textbf{p95 latency\,-50\%, cost-per-request cut 3x}; pattern reused by adjacent teams.}
+      \resumeItem{\textbf{DSPy prompt-optimization pipeline:} compiled a media-description translator with MIPROv2 over 300 diversity-sampled exemplars (greedy diversity selection) drawn from a 10K pool --- cut optimizer token spend \textbf{\textasciitilde 30x per trial}, enabling 3x more trials at the same budget while translation quality held on LLM-as-judge evals.}
+      \resumeItem{\textbf{Synthetic-data \& eval harness:} local pipeline on Ollama with a Gemma 3 4B teacher (QLoRA-adapted via Unsloth), MIPROv2-tuned on \textasciitilde 50 human few-shots --- produces golden samples at \textasciitilde 1/sec with \textbf{$\geq$95\% human-reviewer acceptance} on $N{=}500$ spot-checks, replacing a prior manual-curation step.}
+      \resumeItem{\textbf{Entity resolution at scale:} owned the Netflix + Amazon catalog ingestion pipeline (\textbf{1.5M records/month}) --- temporal heuristics hit \textbf{97\% precision, -40\%} false positives vs.\ prior rules-only baseline, reducing partner-data escalations.}
+      \resumeItem{\textbf{Embedding fine-tuning (EmbeddingGemma 300M):} bi-encoder for episode reranking with curriculum learning + hard-negative mining on a held-out eval set --- \textbf{recall@1 85\%\,\textrightarrow\,95\%}. \emph{CTO recognition for the LangGraph deployment + Haiku migration.}}
     \resumeItemListEnd
 
   \resumeSubheading
     {Tata Consultancy Services (Client: Johnson \& Johnson MedTech)}{2023 -- 2025}
     {Data Architect \& Data Scientist (Embedded AI/ML Delivery), Contract Commitment Portal}{Kolkata, IN / Remote}
     \resumeItemListStart
-      \resumeItem{\textbf{Customer-embedded across NA + APAC:} led discovery for the CCP ML rollout --- working sessions with approval-workflow owners, Finance leads, and the program Director --- translating an undocumented manual-review heuristic into a scoped ML spec that cleared legal, security, and change-advisory review inside a regulated medical-device business.}
-      \resumeItem{\textbf{White-glove deployment inside customer perimeter:} shipped an analyst decision-support model (LightGBM, \textbf{AUROC\,0.95}, isotonic-calibrated) with full decision coverage on \textasciitilde all contract cases across NA/APAC. Saved \textbf{4--5 hrs/case}, \textbf{2x} approval cycle --- on the customer's existing AWS EC2\,+\,Redshift\,+\,RDS footprint, zero net-new infra, zero new vendor paperwork.}
+      \resumeItem{\textbf{Customer-embedded across NA + APAC:} led discovery for the CCP ML rollout with approval-workflow owners, Finance leads, and the program Director --- translated an undocumented manual-review heuristic into a scoped ML spec that cleared legal, security, and change-advisory review inside a regulated medical-device business.}
+      \resumeItem{\textbf{White-glove deployment inside customer perimeter:} shipped an analyst decision-support model (LightGBM, isotonic-calibrated, temporal holdout, leakage-audited) with full coverage across NA/APAC contract cases --- \textbf{AUROC\,0.95}, \textbf{4--5 hrs/case} saved, \textbf{2x} faster approval cycle. Delivered on the customer's existing AWS EC2\,+\,Redshift\,+\,RDS footprint, zero net-new infra, zero new vendor paperwork.}
       \resumeItem{\textbf{Production MLOps \& safe rollout:} daily drift alerting, automated isotonic recalibration every 2 days, 2-month A/B pilot with no rollbacks; model became the default decision path for the portal.}
       \resumeItem{\textbf{GenAI analytics PoC (LangChain):} conversational \emph{Tableau Q\&A} bot for analysts --- early agentic-RAG demonstration in a regulated enterprise setting.}
       \resumeItem{\textbf{Connective tissue (ODR + FPM):} architected On-Demand-Refresh (one-click ad-hoc ETL for 10 analysts: 3 hrs\,\textrightarrow\,minutes) and Fail-Proof-Mechanism (Excel\,\textrightarrow\,Parquet with dynamic Redshift DDL), cutting schema-break incidents from \textasciitilde 15/mo to \textasciitilde 2/mo.}
     \resumeItemListEnd
 
+  \needspace{6\baselineskip}
   \resumeSubheading
     {Tata Consultancy Services (J\&J COE R\&D)}{2022 -- 2023}
     {Software Engineer, Data Platform (POCs \& Automation)}{India}
     \resumeItemListStart
-      \resumeItem{Led R\&D on \textbf{transformer-based NLP} for clinical text extraction with global engineering teams.}
-      \resumeItem{Shipped \textbf{Data Sentry} inside J\&J's multi-cloud perimeter (AWS\,+\,Azure\,+\,GCP, Microsoft Graph OAuth 2.0) after shadowing the IAM team --- onboard/offboard cycle for \textasciitilde 500 users went from days to minutes; connective tissue across a regulated customer's live identity infrastructure.}
+      \resumeItem{Prototyped a \textbf{transformer-based NLP} clinical-text extractor (BERT-family, HuggingFace) on de-identified J\&J records with a distributed team across 3 regions --- PoC that seeded the CCP ML workstream.}
+      \resumeItem{Shipped \textbf{Data Sentry} inside J\&J's multi-cloud perimeter (AWS\,+\,Azure\,+\,GCP, Microsoft Graph \textbf{OAuth 2.0}) after shadowing the IAM team --- onboard/offboard cycle for \textasciitilde 500 users went from days to minutes; connective tissue across a regulated customer's live identity infrastructure.}
     \resumeItemListEnd
 
   \resumeSubheading
@@ -121,33 +122,30 @@ Customer-embedded AI engineer who ships production GenAI inside live enterprise 
 %----------- OPEN SOURCE -----------
 \needspace{5\baselineskip}
 \section{Open Source \& MCP Ecosystem}
-\small
-Field-friction from real customer deployments (auth perimeters, SSRF exposure, bounded URL fetch) converted into shipping packages --- the field\,\textrightarrow\,product loop Google FDEs run.
 \begin{itemize}[leftmargin=0.15in, label={}]
-\small{\item{
-\textbf{\href{https://www.npmjs.com/package/@stabgan/openrouter-mcp-multimodal}{@stabgan/openrouter-mcp-multimodal}} (TypeScript, MCP, Docker) --- production MCP server fronting 300+ LLMs with native vision, image generation, tool-calling, bounded URL fetch with \textbf{SSRF-safe safeguards} (blocks private/link-local/reserved IPs), sharp-based image optimization, npm \emph{trusted publishing} via GitHub Actions OIDC. \\
-\textbf{\href{https://www.npmjs.com/package/@stabgan/steelmind-mcp}{@stabgan/steelmind-mcp}} (TypeScript, MCP) --- research-grounded structured-thinking + steel-manning verification for AI agents (Socratic self-questioning, dialectical evaluation; MetaCrit, arXiv 2507.15015). 90 automated tests, stdio transport, drop-in compatible with Claude Desktop, Cursor, and other MCP clients. \\
-\textbf{\href{https://github.com/stabgan/mcp-icd10}{mcp-icd10}} (Python, MCP) --- offline MCP server for ICD-10-CM, ICD-9-CM, WHO ICD-10 code lookup with GEMs crosswalk: \textbf{124K codes, 102K mappings}, zero API keys, zero network calls --- the secure-local tool pattern for regulated environments. \\
-\textbf{\href{https://github.com/stabgan/awesome-loss-functions}{awesome-loss-functions}} --- curated \textbf{350+ loss functions} across 25+ AI subdomains with paper links, math, and implementations (classification, GANs, diffusion, RLHF, DPO, multi-modal). \\
-\textbf{HuggingFace} (\href{https://huggingface.co/stabgan}{huggingface.co/stabgan}) --- 8 fine-tuned Gemma-3 1B checkpoints for clinical NLP + 15 datasets (PubMed, ICD-10 benchmarks).
-}}
+\small
+\item \textbf{\href{https://www.npmjs.com/package/@stabgan/openrouter-mcp-multimodal}{@stabgan/openrouter-mcp-multimodal}} (TypeScript, MCP, Docker) --- production MCP server fronting 300+ LLMs with native vision, image generation, tool-calling, and bounded URL fetch with SSRF-safe safeguards (blocks private/link-local/reserved IPs). sharp-based image optimization; npm \emph{trusted publishing} via GitHub Actions OIDC.
+\item \textbf{\href{https://www.npmjs.com/package/@stabgan/steelmind-mcp}{@stabgan/steelmind-mcp}} (TypeScript, MCP) --- research-grounded structured-thinking + steel-manning verification for AI agents (Socratic self-questioning, dialectical evaluation; MetaCrit, arXiv\,2507.15015). 90 automated tests, stdio transport, drop-in compatible with Claude Desktop, Cursor, and other MCP clients.
+\item \textbf{\href{https://github.com/stabgan/mcp-icd10}{mcp-icd10}} (Python, MCP) --- offline MCP server for ICD-10-CM, ICD-9-CM, WHO ICD-10 lookup with GEMs crosswalk: \textbf{124K codes, 102K mappings}, zero API keys, zero network calls --- the secure-local tool pattern for regulated environments.
+\item \textbf{HuggingFace} (\href{https://huggingface.co/stabgan}{huggingface.co/stabgan}) --- 8 fine-tuned Gemma 3 1B checkpoints for clinical NLP + 15 curated datasets (PubMed, ICD-10 benchmarks).
+\item \textbf{\href{https://github.com/stabgan/awesome-loss-functions}{awesome-loss-functions}} --- curated 350+ loss functions across 25+ AI subdomains with papers, math, and implementations.
 \end{itemize}
 
 %----------- TECHNICAL SKILLS -----------
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in]
-  \item \small \textbf{Agentic \& Multi-Agent:} LangGraph (supervisor/subgraphs, checkpointers, HITL interrupts), LangChain, DSPy (Signatures, MIPROv2, BootstrapFewShot), CrewAI, Google Agent Development Kit (ADK), ReAct, self-reflection loops, hierarchical delegation.
+  \item \small \textbf{Agentic \& Multi-Agent:} LangGraph (supervisor/subgraphs, checkpointers, HITL interrupts), LangChain, DSPy (Signatures, MIPROv2, BootstrapFewShot), CrewAI, Google Agent Development Kit (ADK), ReAct, self-reflection, hierarchical delegation.
   \item \small \textbf{MCP \& Integration:} Model Context Protocol server development (stdio transport, Docker), tool-calling, function-calling, OAuth 2.0, Microsoft Graph, SSRF-safe URL fetching, secure agentic workflows, MCP security (scope minimization, tool-poisoning awareness).
-  \item \small \textbf{LLM-Native Observability \& Evaluation:} DeepEval regression suites, LLM-as-a-Judge, tokens/sec, cost-per-request, p95/p99 latency tracking, granular tracing, prompt optimization (MIPROv2, GIST-style diversity subsampling), golden-set curation.
-  \item \small \textbf{NLP \& LLMs:} HuggingFace Transformers, Gemini (Vertex AI), Claude (Sonnet/Haiku), Gemma\,3, Qwen, Ollama, LoRA/QLoRA fine-tuning (Unsloth), bi-encoder / cross-encoder fine-tuning, curriculum learning, hard-negative mining, RAG, synthetic data generation.
+  \item \small \textbf{LLM-Native Observability \& Evaluation:} DeepEval regression suites, LLM-as-a-Judge, tokens/sec, cost-per-request, p95/p99 latency tracking, granular tracing, prompt optimization (MIPROv2, diversity subsampling), golden-set curation.
+  \item \small \textbf{NLP \& LLMs:} \textbf{Gemini (Vertex AI)}, Claude (Sonnet/Haiku), Gemma 3, Qwen, HuggingFace Transformers, Ollama, LoRA/QLoRA fine-tuning (Unsloth), bi-encoder / cross-encoder fine-tuning, curriculum learning, hard-negative mining, RAG, synthetic data generation.
   \item \small \textbf{ML / Deep Learning:} PyTorch, TensorFlow, scikit-learn, LightGBM, XGBoost, CatBoost, Optuna, SHAP, Weights \& Biases, calibration, survival analysis (CoxPH, DeepSurv), ensemble methods.
   \item \small \textbf{Languages:} Python (primary, 5+ yrs production), TypeScript, SQL, Go, Java, Bash, R.
-  \item \small \textbf{Cloud \& Infrastructure:} Google Cloud (Vertex AI, Gemini API), AWS (S3, EC2, RDS, Lambda, Redshift, SageMaker, Bedrock), Azure, Docker, Kubernetes, Terraform, GitHub Actions (OIDC).
+  \item \small \textbf{Cloud \& Infrastructure:} \textbf{Google Cloud (Vertex AI, Gemini API, BigQuery)}, AWS (S3, EC2, RDS, Lambda, Redshift, SageMaker, Bedrock), Azure, Docker, Kubernetes, Terraform, GitHub Actions (OIDC).
   \item \small \textbf{Data \& MLOps:} Redshift, PostgreSQL, Snowflake, Parquet, Airflow, Jenkins, CI/CD, A/B testing, drift detection, canary rollout, production release management.
 \end{itemize}
 
 %----------- EDUCATION -----------
-\needspace{5\baselineskip}
+\needspace{11\baselineskip}
 \section{Education}
 \resumeSubHeadingListStart
 
@@ -156,7 +154,7 @@ Field-friction from real customer deployments (auth perimeters, SSRF exposure, b
     {M.Tech, Industrial Artificial Intelligence (GPA: 8.66/10) --- completed concurrently with full-time delivery}{Chennai, IN}
     \resumeItemListStart
       \resumeItem{\textbf{Thesis:} Machine Learning for Clinical Decision Support on MIMIC-IV. \textbf{Coursework:} ML, DL, Statistical Methods, Time Series, Optimization, NLP, Data Mining, OR.}
-      \resumeItem{\textbf{Thesis P1:} Rare-disease ICD prediction --- ontology-based augmentation (ORDO\,\textrightarrow\,SNOMED CT); fine-tuned Gemma\,3/Qwen\,3 on A100/H100 via \textbf{4-bit QLoRA + Unsloth}; served via Ollama; tracked with W\&B.}
+      \resumeItem{\textbf{Thesis P1:} Rare-disease ICD prediction --- ontology-based augmentation (ORDO\,\textrightarrow\,SNOMED CT); fine-tuned Gemma 3 / Qwen 3 on A100/H100 via \textbf{4-bit QLoRA + Unsloth}; served via Ollama; tracked with W\&B.}
       \resumeItem{\textbf{Thesis P2:} SA-AKI mortality --- Optuna-tuned LightGBM (\textbf{AUROC\,0.749}) with isotonic calibration + SHAP; CoxPH + custom PyTorch DeepSurv (C-index \textasciitilde 0.69); positive net benefit via Decision Curve Analysis.}
     \resumeItemListEnd
 
@@ -175,13 +173,12 @@ Field-friction from real customer deployments (auth perimeters, SSRF exposure, b
 \small
 5 peer-reviewed papers (Elsevier, IEEE, Springer) --- lead paper \textbf{22 citations}.
 \begin{itemize}[leftmargin=0.15in, label={}]
-\small{\item{
-\textbf{[1]} PS Banerjee, A Karmakar, M Dhara, \textbf{K Ganguly}, S Sarkar. ``Predicting bradycardia and atrial fibrillation using fuzzy logic and IoT sensors.'' \textit{Medicine in Novel Technology and Devices} (Elsevier), 2021. \\
-\textbf{[2]} A Karmakar, \textbf{K Ganguly}, P Ghosh, A Mazumder, PS Banerjee, D De. ``FemmeBand: IoT smart security band using EMG sensors.'' \textit{Innovations in Systems and Software Engineering} (Springer), 2024. \\
-\textbf{[3]} \textbf{K Ganguly}, A Karmakar, PS Banerjee. ``ValveCare: fuzzy-based heart disease prediction with Arduino IoT.'' \textit{Int'l Conf.\ on Computational Intelligence} (Springer), 2021. \\
-\textbf{[4]} A Karmakar, \textbf{K Ganguly}, PS Banerjee. ``SafeBand: IoT smart security band with instant SOS.'' \textit{Proc.\ ICACA} (Springer), 2021. \\
-\textbf{[5]} A Karmakar, \textbf{K Ganguly}, PS Banerjee. ``HeartHealth: multi-attribute heart monitoring via fuzzy-TOPSIS.'' \textit{IEEE DevIC}, 2021.
-}}
+\small
+\item \textbf{[1]} PS Banerjee, A Karmakar, M Dhara, \textbf{K Ganguly}, S Sarkar. ``Predicting bradycardia and atrial fibrillation using fuzzy logic and IoT sensors.'' \textit{Medicine in Novel Technology and Devices} (Elsevier), 2021.
+\item \textbf{[2]} A Karmakar, \textbf{K Ganguly}, P Ghosh, A Mazumder, PS Banerjee, D De. ``FemmeBand: IoT smart security band using EMG sensors.'' \textit{Innovations in Systems and Software Engineering} (Springer), 2024.
+\item \textbf{[3]} \textbf{K Ganguly}, A Karmakar, PS Banerjee. ``ValveCare: fuzzy-based heart disease prediction with Arduino IoT.'' \textit{Int'l Conf.\ on Computational Intelligence} (Springer), 2021.
+\item \textbf{[4]} A Karmakar, \textbf{K Ganguly}, PS Banerjee. ``SafeBand: IoT smart security band with instant SOS.'' \textit{Proc.\ ICACA} (Springer), 2021.
+\item \textbf{[5]} A Karmakar, \textbf{K Ganguly}, PS Banerjee. ``HeartHealth: multi-attribute heart monitoring via fuzzy-TOPSIS.'' \textit{IEEE DevIC}, 2021.
 \end{itemize}
 
 %----------- PROJECTS -----------
@@ -190,9 +187,9 @@ Field-friction from real customer deployments (auth perimeters, SSRF exposure, b
 \resumeSubHeadingListStart
 
   \resumeProjectHeading
-    {\textbf{ICD-CM-10 Monographs at Scale on Vertex AI} $|$ \emph{Python, Gemini (Vertex AI), Multithreading, Flask}}{}
+    {\textbf{ICD-10-CM Monographs at Scale on Vertex AI} $|$ \emph{Python, Gemini (Vertex AI), Multithreading, Flask}}{}
     \resumeItemListStart
-      \resumeItem{Generated detailed disease monographs for \textbf{\textasciitilde 70K ICD-CM-10 codes} in parallel on \textbf{Google Vertex AI} (28 prompts across 14 regions); deployed as an offline encyclopedia web app used daily by medical coders.}
+      \resumeItem{Generated detailed disease monographs for \textbf{\textasciitilde 70K ICD-10-CM codes} in parallel on \textbf{Google Vertex AI} (28 prompts across 14 regions); deployed as an offline encyclopedia web app used daily by medical coders.}
     \resumeItemListEnd
 
   \resumeProjectHeading
@@ -214,9 +211,8 @@ Statistical Learning with Python (Stanford University, 2025) \textbar\ AWS-ML: M
 %----------- ACHIEVEMENTS -----------
 \section{Achievements \& Honors}
 \begin{itemize}[leftmargin=0.15in]
-  \item \small GATE Statistics (ST) 2024: \textbf{AIR 410}. TCS CodeVita 2019: \textbf{Rank 585 / 100K+} (top 0.6\%).
-  \item \small Swami Vivekananda Merit-cum-Means Scholar (4-yr govt.\ scholarship); WBJEE 2016 rank \#3450 of 100K+; PNTSE Rank 2 Zonal / 46 WB.
-  \item \small Employee of the Month (TCS); CTO recognition (Gracenote, for LangGraph + Haiku migration); mentored 25+ engineers across career.
+  \item \small GATE Statistics (ST) 2024: \textbf{AIR 410} (top $\sim$1\%). TCS CodeVita 2019: \textbf{Rank 585 / 100K+} (top 0.6\%).
+  \item \small Swami Vivekananda Merit-cum-Means Scholar (4-yr government scholarship); Employee of the Month (TCS); mentored 25+ engineers across career.
 \end{itemize}
 
 %----------- RECOMMENDATIONS -----------
