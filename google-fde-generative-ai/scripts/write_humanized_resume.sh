@@ -1,3 +1,11 @@
+#!/usr/bin/env bash
+# Writes the humanized (v4) resume over the existing tex file, compiles, checks page count.
+# Run from repo root.
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+
+cat > resume_google_fde.tex <<'TEX_EOF'
 %-------------------------
 % Google FDE GenAI resume (Kaustabh Ganguly) -- ATS-optimized, research-backed
 % v4: humanized pass -- de-templated prose, variable rhythm, fewer em-dashes,
@@ -222,3 +230,12 @@ Statistical Learning with Python (Stanford University, 2025) \textbar\ AWS-ML: M
 \end{itemize}
 
 \end{document}
+TEX_EOF
+
+# Compile
+tectonic resume_google_fde.tex 2>&1 | tail -5
+
+# Verify page count
+echo ""
+echo "=== PAGE COUNT ==="
+mdls -name kMDItemNumberOfPages resume_google_fde.pdf
