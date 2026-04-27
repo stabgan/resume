@@ -1,67 +1,68 @@
-# Google FDE Interview Prep
+# Interview Prep — Google FDE GenAI
 
-Research-backed prep artifacts for the **Google Forward Deployed Engineer, Generative AI, Google Cloud** role (Bengaluru / Mumbai / Gurugram).
+A 2-week, day-by-day plan for the Google Forward Deployed Engineer, Generative AI, Google Cloud interview loop.
 
-Built from mining 10 live Google FDE postings across India, US, UK, Singapore, Japan, DACH, Telecom, GenMedia, Applied AI, and Staff variants — synthesized into a canonical JD, then calibrated the curriculum against it.
+## Start here (in order)
 
-## Files
+1. **Tonight** — read [`CHEATSHEET_recruiter_call.md`](./CHEATSHEET_recruiter_call.md). Nothing else.
+2. **After the recruiter call converts** — read [`CANONICAL_JD.md`](./CANONICAL_JD.md) once.
+3. **From Day 2** — work [`CURRICULUM.md`](./CURRICULUM.md) day by day.
 
-| File | When to read |
-|---|---|
-| [`CHEATSHEET_recruiter_call.md`](./CHEATSHEET_recruiter_call.md) | Tonight, before tomorrow's 9:30 IST call |
-| [`CANONICAL_JD.md`](./CANONICAL_JD.md) | Once, now — the single source of truth for what Google is hiring for |
-| [`CURRICULUM.md`](./CURRICULUM.md) | After the recruiter screen, once the hiring-manager round is scheduled |
-| [`RESEARCH_SOURCES.md`](./RESEARCH_SOURCES.md) | Reference index — all sources cited in the other docs |
+Every day the curriculum will point you into the right deep-dive doc.
 
-## Start-here workflow
+## The 5 documents you'll actually use
 
-1. **Tonight:** Read `CHEATSHEET_recruiter_call.md`. Nothing else.
-2. **After the recruiter call converts:** Read `CANONICAL_JD.md` end-to-end. It's the contract.
-3. **Once the loop is scheduled:** Follow `CURRICULUM.md`. Use the 3-week or 6-week track based on how fast the loop lands.
+| When | File | What |
+|---|---|---|
+| **Tomorrow morning** | [`CHEATSHEET_recruiter_call.md`](./CHEATSHEET_recruiter_call.md) | 60-sec intro, comp script, 3 questions |
+| **Every day, 14 days** | [`CURRICULUM.md`](./CURRICULUM.md) | Day-by-day 2-week plan |
+| **Each morning** | [`DSA_RECOVERY.md`](./DSA_RECOVERY.md) | 30-problem pattern-first drill |
+| **As needed** | [`CODING_ROUND_PROTOCOL.md`](./CODING_ROUND_PROTOCOL.md) | Google-Doc protocol + debug-codebase playbook |
+| **Each night** | [`STAR_STORIES.md`](./STAR_STORIES.md) | 10 stories with full scripts |
 
-## The loop (from Indian candidate accounts + JD synthesis)
+Reference only (read once, don't re-read):
+- [`CANONICAL_JD.md`](./CANONICAL_JD.md) — the synthesized JD from 10 live postings
+- [`RESEARCH_SOURCES.md`](./RESEARCH_SOURCES.md) — all cited sources
+- [`CURRICULUM_6WEEK_archive.md`](./CURRICULUM_6WEEK_archive.md) — previous longer plan, archived
 
-1. Recruiter screen (tomorrow)
-2. Round 1 — AI/ML deep dive (45–60 min)
-3. Round 2 — DSA on Google Doc, no IDE (45 min)
-4. Round 3 — Customer scenario + Googleyness (45 min)
-5. *Sometimes, at senior levels:* Round 4 — System design on GCP (45 min)
+## The premise this prep is built on
 
-Total process: 4–6 weeks from recruiter screen to decision.
+1. **2 weeks** from Day 2 to Day 15.
+2. **DSA is rusty** — you haven't practiced LeetCode in a long time.
+3. **You use AI agents for coding daily** — this is a superpower for the behavioral rounds and a gap for the solo-coding round. The plan handles both.
+4. **Customer-scenario + Googleyness is 30% of the evaluation weight** — more than coding. Most AI/ML candidates over-prep technical and under-prep this.
 
-## The 6 capabilities Google grades against (from canonical JD)
+## What 2 weeks will produce
 
-| # | Capability | Your current evidence | Gap |
-|---|---|---|---|
-| 1 | Production agentic systems on Google Cloud (ADK + Agent Engine + A2A) | LangGraph, 2 MCP servers | **ADK hands-on** |
-| 2 | Messy customer infrastructure (OAuth 2.0, VPC-SC, legacy APIs, data silos) | J&J MS Graph OAuth 2.0 | **GCP perimeter fluency** |
-| 3 | Eval + observability with LLM-native metrics | DeepEval, Haiku migration | OTel GenAI conventions |
-| 4 | Discovery → spec → ship with C-suite | J&J CCP NA/APAC | STAR stories prep |
-| 5 | Python under interview pressure | 5+ yrs prod | **DSA on Google Doc** |
-| 6 | Field insights → product requests | Karpathy AutoResearch + kiro-cli + Firecrawl + steelmind MCPs | Frame it as such |
+- Fluency with the Google Cloud agent stack (ADK, Agent Engine, A2A, Gemini tiers)
+- 30 DSA problems solved on a plain Google Doc, by pattern
+- 1 public open-source project Google reviewers will see
+- 10 STAR stories rehearsed to 90-second scripts
+- A comp-negotiation script
+- 2–3 mock interviews to defuse the nerves
 
-## Evaluation weights (Sundeep Teki; 10-JD mining reconfirms)
+## The 6 capabilities Google grades FDEs on (from `CANONICAL_JD.md`)
+
+Each day of the curriculum maps back to one of these:
+
+| # | Capability | Your current evidence |
+|---|---|---|
+| 1 | Production agentic systems on Google Cloud (ADK + Agent Engine + A2A) | LangGraph production, 2 MCP servers on npm |
+| 2 | Navigate messy customer infrastructure (OAuth, VPC, legacy APIs) | J&J MS Graph OAuth; Data Sentry across AWS+Azure+GCP |
+| 3 | Eval + observability with LLM-native metrics | DeepEval + Haiku migration + AutoResearch |
+| 4 | Discovery → spec → ship with C-suite stakeholders | J&J CCP, NA+APAC, legal+security+CAB review |
+| 5 | Write Python under interview pressure (Google Doc, no IDE) | **Gap — this is what `DSA_RECOVERY.md` rebuilds** |
+| 6 | Field insights → product feature requests | Karpathy AutoResearch extension, kiro-cli + Firecrawl + steelmind MCPs |
+
+## Evaluation weight (Sundeep Teki)
 
 - Customer Obsession: **30%**
 - Technical Versatility: **25%**
 - Communication: **25%**
 - Autonomy / Judgment: **20%**
 
-Technical depth < half of the evaluation. Most senior AI/ML candidates over-index on technical and under-prepare customer-scenario + communication.
+If you have to compromise, compromise on technical depth, not on the other three.
 
-## The 3-week crash-plan (if the loop lands fast)
+## If the loop lands in 1 week instead of 2
 
-1. Week 1: ADK + Agent Engine. Ship `adk-langgraph-bridge`.
-2. Week 2: DSA — 30 problems on blank Google Docs.
-3. Week 3: 10 STAR stories + 3 mocks.
-
-Everything else is nice-to-have.
-
-## Open-source projects (highest-ROI signal)
-
-| Project | Priority | Effort |
-|---|---|---|
-| `adk-langgraph-bridge` | P0 | 8–12 hrs |
-| `fde-reference-architecture` | P0 | 6–8 hrs |
-| `gepa-cookbook` | P1 | 10–15 hrs |
-| `vertex-agent-eval` | P1 (optional) | 15–20 hrs |
+See the "1 week" section at the bottom of [`CURRICULUM.md`](./CURRICULUM.md). Short answer: do Days 1, 3, 5, 9, 10, 13, 14 of the 2-week plan.
