@@ -106,10 +106,20 @@ That sentence is literally one of the 4 JD responsibilities. Don't skip it.
 
 ### Questions you should ask at the end (pick 1)
 
+**Pick based on who's interviewing you:**
+
+For an **RRK / generalist FDE interviewer:**
 - *"For this FDE team, what are the most common blockers between prototype and production?"*
-- *"How much of the role is embedded customer delivery vs. building reusable assets for the broader Google Cloud field?"*
 - *"How does the FDE team feed product gaps back into ADK, Agent Engine, or the broader Vertex AI roadmap?"*
-- *"What does success look like for the first six months?"*
+
+For a **coding / craft interviewer:**
+- *"What does day-to-day coding look like on an FDE engagement, more building, more reviewing, more prototyping in customer environments?"*
+- *"What language and tooling do FDEs typically standardize on, and where do customer environments force deviation?"*
+
+For a **hiring manager / bar raiser:**
+- *"What does success look like for this role in the first 6 months, and 12 months?"*
+- *"How much of the role is embedded customer delivery vs. building reusable assets for the broader Google Cloud field?"*
+- *"What's the team's biggest open problem right now that you'd hope a new hire accelerates?"*
 
 **Don't ask:**
 - Comp (save for the recruiter).
@@ -209,7 +219,69 @@ Only if there's time. Pick 1:
 
 ---
 
-## Post-interview — within 2 hours
+## Recovery scripts for bad moments (memorize these)
+
+Under pressure, your default is silence or apology. Both lose the round. These 7 scripts give you words for the moments you're most likely to hit.
+
+### 1. Interviewer says "that's wrong" or "that won't work"
+
+Do NOT argue or concede immediately. Pause, say:
+
+> You're probably right. Let me make sure I'm solving the same problem you are. Can you tell me which part you see breaking, so I can fix it rather than guess?
+
+Then listen. Nine times in ten, it's a misread, not a mistake. You get to clarify, not defend.
+
+### 2. You realize mid-answer you gave a wrong number or bad claim
+
+Don't let it slide. Stop, say:
+
+> Let me correct myself on that. I said X; the actual number is Y. I conflated it with Z for a second.
+
+Calibration signal: a candidate who catches their own error is more trusted than one who silently hopes it passed.
+
+### 3. You can't remember the right GCP product name
+
+Never guess. Say:
+
+> I know the product for this exists on Vertex; I'm blanking on the exact name. The capability I'd reach for is <describe the pattern, e.g., managed vector retrieval with private endpoints>. I can confirm the product name in 30 seconds if you give me a moment.
+
+If they help you with the name, thank them and move on. If they don't, keep describing the capability.
+
+### 4. Interviewer cuts you off mid-answer
+
+Don't try to finish your original thought. Say:
+
+> Sure, let me take your question directly.
+
+Then answer what they asked. If the cut-off point matters, bring it back later with *"Coming back to your earlier question, the piece I didn't get to is..."*
+
+### 5. You accidentally overclaim and want to walk it back
+
+The moment you catch it, correct. Say:
+
+> Actually let me be more precise there. I haven't shipped production CrewAI; I've read the framework and built a prototype. What I have shipped is LangGraph multi-agent in production at Gracenote.
+
+Correcting yourself reads as senior. Letting it stand and hoping reads as junior.
+
+### 6. Interviewer asks something you genuinely don't know
+
+Never say "I'm not sure" or "I don't know, sorry." Say:
+
+> I haven't shipped with that exact product. The pattern I'd map it to is <describe shape>. I'd validate the specifics with docs or a specialist before committing to a design.
+
+This converts a knowledge gap into a process answer. Both are valuable, but the process answer is senior.
+
+### 7. You freeze completely
+
+Name it calmly. Say:
+
+> Let me pause for 15 seconds and restart my thinking on this.
+
+Then breathe. Restate the problem back to the interviewer. 99% of freezes are a side effect of trying to hold too much in your head; restating resets the working memory.
+
+**Rule for all 7:** never apologize. Never say "sorry." Never say "I'm rusty." Never say "this is hard." These are the verbal tells of a candidate who's already lost confidence in themselves — interviewers mirror your confidence back to you.
+
+
 
 ### Send the thank-you email
 
@@ -308,6 +380,46 @@ Two 60-min technical rounds on the same day is the equivalent of a 3-hour exam w
 - "Round 1 happened, whatever it was. Round 2 is a fresh round."
 - "I'm tired. That's expected. I'll compensate by slowing down and narrating more."
 - "The code doesn't need to be fast. It needs to be correct and clear."
+
+---
+
+## Self-eval rubric for mock recordings (May 9 and May 11)
+
+Record every mock. Rewatch the same day, not 24 hours later (memory fades). Use this 10-item rubric. Score each 0-2 (0 = didn't do, 1 = partial, 2 = clean). Target score for May 13 readiness: 16/20.
+
+### RRK mock rubric (10 items, 20 points)
+
+1. **Clarification first.** Did I ask 4+ questions before proposing architecture? (0 = jumped straight to design; 1 = asked 1-3; 2 = asked 4+)
+2. **Restatement.** Did I play back the problem in one paragraph before architecting? (0 = no; 1 = partial; 2 = clean one-paragraph restatement)
+3. **Narration density.** One sentence every 8-15 sec of thinking. (0 = long silent stretches; 1 = mixed; 2 = continuous audible thinking)
+4. **Tradeoff surfaced.** Did I say "tradeoff" or equivalent at least 2x? (0 = none; 1 = one; 2 = two or more)
+5. **Evidence tied.** Did I cite at least 2 of my own stories (Gracenote/J&J/EmbeddingGemma/Data Sentry/MCP) as pattern references? (0 = none; 1 = one; 2 = two+)
+6. **GCP vocabulary.** Did I name 3-5 GCP products naturally in context? (0 = zero or name-dropped; 1 = forced; 2 = natural 3+)
+7. **Security mentioned.** Did I touch OAuth/VPC-SC/IAP/CMEK/ACL at least once? (0 = no; 1 = one; 2 = two+)
+8. **Eval mentioned.** Did I describe a specific eval layer (golden set/regression/LLM-as-judge/online metric)? (0 = no; 1 = generic mention; 2 = specific eval layer)
+9. **Rollout/rollback discussed.** Did I describe pilot → canary → full with a pre-decided rollback criterion? (0 = no; 1 = generic; 2 = specific with numbers)
+10. **FDE close.** Did I end with (a) reusable asset and (b) product feedback to Google? (0 = neither; 1 = one; 2 = both)
+
+### Coding mock rubric (10 items, 20 points)
+
+1. **Clarification.** Asked 4-5 questions before coding? (0/1/2)
+2. **Approach stated.** Compared 2 approaches aloud with complexity? (0/1/2)
+3. **Invariant stated.** Said the invariant aloud before coding? (0/1/2)
+4. **Narration density.** Spoke every line as I typed it? (0/1/2)
+5. **Variable names.** Used `left/right/nums/graph`, not `l/r/a/g`? (0 = single letters; 1 = mixed; 2 = clean)
+6. **Dry-run.** Walked through 2 test cases including one edge? (0/1/2)
+7. **Complexity.** Stated time and space clearly after coding? (0/1/2)
+8. **Production discussion.** Named 3+ production concerns at the end? (0/1/2)
+9. **No apologies.** Never said "sorry", "I'm rusty", or "this is hard"? (0 = apologized once; 1 = caught and corrected; 2 = never)
+10. **Time discipline.** Finished working code by the 30-min mark of a 40-min round? (0 = no code by 30; 1 = partial; 2 = working code by 30)
+
+### What to DO with the score
+
+- **16-20:** You're ready. Rehearse the weakest 2 items and rest.
+- **12-15:** Targeted repair on 0-1 items, not a full redo.
+- **Under 12:** Don't re-mock the same day. Take a day off from speaking, re-read the master guides, then try again.
+
+Do NOT watch the full recording. Watch only the 10-minute stretch where you felt weakest + the close. That's where the lessons live.
 
 ---
 

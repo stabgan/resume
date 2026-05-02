@@ -284,6 +284,58 @@ If they share a band: *"That works. Happy to discuss specifics as we go."* Move 
 
 > It is — and that's exactly why this conversation is useful. My current pay reflects Gracenote's fixed structure, not the market for the work I'm actually doing. Google's pay bands for this role reflect the market. I'd rather be honest about current than inflate — I trust the process to land on a fair number.
 
+## Other comp questions you should be ready for
+
+### "Are you in other processes?"
+
+If yes, be honest without naming:
+
+> I'm in late stages with one other process. I'm not rushing it, and my timeline with Google is whatever Google's timeline is. I mention it because it's factually true, not as a lever.
+
+If no:
+
+> I'm not. Google is the process I'm actively pursuing because the role fits what I want next.
+
+### "What's your notice period?"
+
+Straight facts:
+
+> Two months at Gracenote. Standard Indian tech notice. I can negotiate a shorter exit if the offer timing requires it, but two months is the default.
+
+### "Relocation?"
+
+If remote/Hyderabad role:
+
+> I'm in Hyderabad currently. No relocation needed unless the role requires Bangalore or Gurgaon on-site, in which case I'd want to understand the housing and relocation support.
+
+If Bangalore/Gurgaon required:
+
+> Open to relocating. I'd want to understand the package covers the move, temporary housing for 30-60 days, and any school/spouse considerations if applicable.
+
+### "What about signing bonus and RSU refreshers?"
+
+Don't ask for specific numbers in the first call. Say:
+
+> I'd want to look at the total offer including signing, stock vest schedule, and refreshers once we're at that stage. For Indian L4/L5 at Google, I know the ranges are public on Levels and similar platforms; I'll be reasonable and I'd expect the same from Google.
+
+### "Can you join in 30 days?"
+
+Don't commit on a call. Say:
+
+> My notice is 2 months, so realistically 45-60 days. If Google needs someone faster, I can ask Gracenote for an early release, but I'd rather not burn that bridge unless the offer is strong and final.
+
+### "Would you take a lateral offer (no level bump)?"
+
+Direct answer:
+
+> It depends on total comp and scope. If the FDE role gives me the surface area I'm looking for — customer embedding, production agentic work, product feedback loop — and the comp matches L5 market for my experience, level title matters less. If the role is scoped below FDE IC, we'd need to talk more.
+
+### "Are you a flight risk? You've moved every 2-3 years."
+
+Own the pattern:
+
+> I move when the work I want to do is no longer available where I am. At TCS→Gracenote the jump was from services to product GenAI. The FDE role at Google is a permanent step up in surface area and platform scope; I wouldn't move out of it for a lateral. I'm looking for a 4+ year home.
+
 ## Don't say
 
 - *"Whatever Google pays is fine."* Kills your negotiating position.

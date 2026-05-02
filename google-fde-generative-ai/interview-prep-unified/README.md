@@ -18,11 +18,15 @@ This folder is the single source of truth for your prep. It replaces both earlie
 | 3 | [`cases/`](./cases/) | Ten fully worked customer cases (2000-3000 words each). Start with [`cases/README.md`](./cases/README.md) |
 | 4 | [`04_CODING_PROTOCOL.md`](./04_CODING_PROTOCOL.md) | Google-Doc whiteboard mechanics + 40-min protocol |
 | 5 | [`05_CODING_PROBLEM_SET.md`](./05_CODING_PROBLEM_SET.md) | 22 problems (must-do) + 18 stretch + OOP set |
+| 5a | [`05a_CODING_SOLUTIONS.md`](./05a_CODING_SOLUTIONS.md) | **Reference Python solutions** for all 25 problems. Use to check your own work after drilling on a blank Doc. |
 | 6 | [`06_PYTHON_AND_OOP.md`](./06_PYTHON_AND_OOP.md) | Python fluency + OOP class-design templates |
 | 7 | [`07_SYSTEM_DESIGN.md`](./07_SYSTEM_DESIGN.md) | Classic + ML + GenAI system design skeletons |
 | 8 | [`08_GCP_AND_FDE_VOCABULARY.md`](./08_GCP_AND_FDE_VOCABULARY.md) | Google Cloud product map, decision trees, JD-language phrases |
-| 9 | [`09_STORIES_AND_COMP.md`](./09_STORIES_AND_COMP.md) | 8 STAR stories + compensation script |
-| 10 | [`10_INTERVIEW_DAY.md`](./10_INTERVIEW_DAY.md) | Day-of checklist, taper, energy management for back-to-back rounds |
+| 9 | [`09_STORIES_AND_COMP.md`](./09_STORIES_AND_COMP.md) | 8 STAR stories + compensation script (including signing/relocation/multi-offer extensions) |
+| 10 | [`10_INTERVIEW_DAY.md`](./10_INTERVIEW_DAY.md) | Day-of checklist, taper, back-to-back energy, **recovery scripts**, **self-eval rubric** for mock recordings |
+| 11 | [`12_RAPID_FIRE_QA.md`](./12_RAPID_FIRE_QA.md) | **70 one-line Q&A probes** (RAG, agents, evals, cost, security, GCP, personal). Drill between main topics. |
+| 12 | [`13_BEHAVIORAL_INDEX.md`](./13_BEHAVIORAL_INDEX.md) | **30 Google behavioral prompts** mapped to 13 stories (8 existing + 5 new career-arc stories) |
+| 13 | [`14_NARRATED_WALKTHROUGHS.md`](./14_NARRATED_WALKTHROUGHS.md) | **Two full spoken transcripts**: Rate Limiter coding round (40 min) + Enterprise RAG RRK round (60 min) |
 
 > **Note:** `03_RRK_CASEBOOK.md` is now the [`cases/`](./cases/) folder. The old single-file skeleton is archived at `../interview-prep/_archive/03_RRK_CASEBOOK_v1_skeleton.md`.
 
