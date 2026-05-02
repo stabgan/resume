@@ -43,9 +43,9 @@ Recovery: "No. I've shipped production RAG on LangGraph with custom retrieval at
 
 Recovery: "Honest answer, this happens. My fallback: run the agent on a Cloud Run container inside their existing cloud via Workload Identity Federation, keep the model call on Vertex but route through their network, and deploy the eval harness on whatever orchestration they already use. The customer doesn't have to leave their cloud; we meet them at the network boundary. The tradeoff is we lose some Agent Engine governance features, but we can layer them manually."
 
-**Prompt A7.** *"Why Gemini 2.5 Flash? Gemini 2.5 Pro is stronger."*
+**Prompt A7.** *"Why Gemini 3 Flash instead of Gemini 3.1 Pro? The Pro model is stronger."*
 
-Recovery: "Correct, and I'd use Pro for the hardest 10-15% of queries via a classifier gate. For most traffic, Flash is fast enough to hit the latency SLA, and quality matches Pro within 2 points on a typical customer golden set. The cost difference at 100K queries per day is the difference between shipping the pilot and having the CFO veto it."
+Recovery: "Correct, and I'd use 3.1 Pro for the hardest 10-15% of queries via a classifier gate. For most traffic, Gemini 3 Flash is fast enough to hit the latency SLA — it's now the default in the Gemini app for a reason — and quality matches Pro within 2 points on a typical customer golden set. The cost difference at 100K queries per day is the difference between shipping the pilot and having the CFO veto it."
 
 **Prompt A8.** *"You mentioned OAuth. Walk me through the flow in 45 seconds."*
 

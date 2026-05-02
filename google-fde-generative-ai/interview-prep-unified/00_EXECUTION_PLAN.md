@@ -76,7 +76,7 @@ Goal: orient to the plan; set up the practice environment.
 - [ ] **Video:** [A2A full course](https://learn.deeplearning.ai/courses/a2a-the-agent2agent-protocol) (~67 min). Skip Microsoft/BeeAI/Agent Stack lessons. See `15_VIDEO_STUDY_PLAN.md` for lesson order.
 - [ ] **Video:** [3Blue1Brown Attention](https://www.youtube.com/watch?v=eMlx5fFNoYc) (26 min, breakfast).
 - [ ] Recall: STAR 5 (AutoResearch + MCP).
-- [ ] Say aloud: "MCP connects agents to tools and data. A2A connects agents to other agents. ADK builds the agent. Agent Engine runs it in production." × 5.
+- [ ] Say aloud: "MCP connects agents to tools and data. A2A connects agents to other agents. ADK builds the agent. Agent Runtime runs it in production." × 5.
 
 ### May 6 (Wed) — Security and customer perimeter
 

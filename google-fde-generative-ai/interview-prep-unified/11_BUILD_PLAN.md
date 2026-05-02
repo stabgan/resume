@@ -2,7 +2,7 @@
 
 ## Why This Exists
 
-The JD lists a specific stack: CrewAI, Google ADK, Vertex AI Agent Builder, Agent Engine, Vector Search, RAG Engine, deep OAuth 2.0 flows, MCP secure tool-calling. I have shipped with some of these (LangGraph, MCP servers, Microsoft Graph OAuth at J&J) and read docs on others (ADK, CrewAI, Vertex AI RAG Engine, A2A). The previous curriculum told me to avoid claiming CrewAI, ADK, Vertex AI products, or deep OAuth because I had not shipped with them. That framing was wrong. I have 11 days. I am a fast builder. I use AI agents daily. I can turn each gap into a small, real, public GitHub project in one day. Each repo becomes concrete evidence I can link from LinkedIn and reference in the interview.
+The JD lists a specific stack: CrewAI, Google ADK, Agent Designer (formerly Agent Builder), Agent Runtime, Vector Search, RAG Engine, deep OAuth 2.0 flows, MCP secure tool-calling. I have shipped with some of these (LangGraph, MCP servers, Microsoft Graph OAuth at J&J) and read docs on others (ADK, CrewAI, Vertex AI RAG Engine, A2A). The previous curriculum told me to avoid claiming CrewAI, ADK, Vertex AI products, or deep OAuth because I had not shipped with them. That framing was wrong. I have 11 days. I am a fast builder. I use AI agents daily. I can turn each gap into a small, real, public GitHub project in one day. Each repo becomes concrete evidence I can link from LinkedIn and reference in the interview.
 
 Strategy: four to six small projects. Each one takes two to five hours end to end. Each one gets pushed to github.com/stabgan, linked from the resume, and becomes a talking point. The goal is not production polish. The goal is to move from "I know what it is" to "I shipped with it last week and here is the repo."
 
@@ -88,6 +88,8 @@ adk eval samples_for_testing/hello_world hello_world_eval_set_001.evalset.json  
 Deploy to Agent Engine in `deploy.py`:
 
 ```python
+# Note: The SDK still uses `agent_engines` but the product is now called
+# "Agent Runtime" in the console and docs (Cloud Next 2026 rebrand).
 import vertexai
 from vertexai import agent_engines
 from agent import root_agent
@@ -134,7 +136,7 @@ One-paragraph pitch. Three-line comparison of ADK versus LangChain versus CrewAI
 
 ### Interview talking point
 
-"I built a working ADK agent and deployed it to Vertex AI Agent Engine last week. The repo shows the minimum viable pattern, agent definition, tool registration, the deploy call, and teardown. Here is the link. Happy to walk through the deploy flow or show the engine in the console."
+"I built a working ADK agent and deployed it to Agent Runtime (formerly Agent Engine) last week. The repo shows the minimum viable pattern, agent definition, tool registration, the deploy call, and teardown. Here is the link. Happy to walk through the deploy flow or show the engine in the console."
 
 ## Project 2: crewai-vs-langgraph-comparison
 

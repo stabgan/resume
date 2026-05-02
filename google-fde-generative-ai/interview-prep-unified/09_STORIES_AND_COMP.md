@@ -36,7 +36,7 @@ Never say "we" when you mean "I". Interviewers count the "we"s.
 
 > The FDE role is the clearest label for the work I already gravitate toward. At J&J MedTech I was embedded with business, legal, security, and engineering teams, turning an undocumented approval workflow into a production ML decision-support system inside their existing AWS footprint. At Gracenote I'm doing the same pattern for production GenAI: LangGraph workflows, eval gates, cost optimization, and tools that come from field friction.
 >
-> Google is interesting because the agentic stack is being defined there — Gemini, Vertex AI, ADK, Agent Engine, enterprise connectors, observability, governance. I don't want to just build demos around frontier models. I want to make them work in messy enterprise environments, learn from the blockers, and feed those patterns back into reusable products.
+> Google is interesting because the agentic stack is being defined there — the Gemini Enterprise Agent Platform, ADK, Agent Runtime, Agent Gateway, managed MCP servers, enterprise connectors, observability, governance. I don't want to just build demos around frontier models. I want to make them work in messy enterprise environments, learn from the blockers, and feed those patterns back into reusable products.
 
 ### Follow-up
 *"Why not stay where you are?"*

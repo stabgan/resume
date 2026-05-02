@@ -744,6 +744,35 @@ Voice. Every answer is first person, present tense, confident but calibrated. No
 
 ---
 
+## Bucket 8 — Cloud Next 2026 (drill May 10-11)
+
+### Q8.1 — What is Agent Gateway? 🟡
+
+**15-second answer:**
+> Agent Gateway is the centralized security enforcement point for all agent-to-agent and agent-to-tool communications. It integrates with Agent Identity for mTLS and DPoP, Agent Registry for approved tools and MCP servers, and Model Armor for prompt injection protection. Think of it as the air-traffic controller for your agent fleet.
+
+### Q8.2 — What is Agent Identity? 🟡
+
+**15-second answer:**
+> Agent Identity gives every agent a SPIFFE-based cryptographic identity. The agent can authenticate to MCP servers, cloud resources, and other agents using its own credential, acting on its own behalf or on behalf of an end user via delegated OAuth. It's secured by default with mTLS and DPoP through Context-Aware Access.
+
+### Q8.3 — What changed with MCP at Cloud Next 2026? 🟡
+
+**15-second answer:**
+> Every Google Cloud service is now MCP-enabled by default. There's also a Workspace MCP Server in public preview that exposes Drive, Gmail, and Calendar as MCP tools. Agent Gateway secures all MCP communications, and Agent Registry catalogs approved MCP servers. For an FDE, this means I can connect a customer's agent to any Google service through a standard protocol without custom integration code.
+
+### Q8.4 — Agent Runtime vs Agent Engine — what's the difference? 🟡
+
+**15-second answer:**
+> Agent Engine is the SDK-level concept — sessions, memory, eval. Agent Runtime is the managed container runtime for deploying agents in production. The SDK still uses `agent_engines` in code, but the product surface in the console and docs is now called Agent Runtime. When I say "deploy to Agent Runtime," I mean the managed, scalable, governed container that inherits identity, tracing, and security automatically.
+
+### Q8.5 — What is Model Armor? 🟡
+
+**15-second answer:**
+> Model Armor is Google's runtime protection layer against prompt injection and sensitive data leakage. It integrates directly with Agent Gateway so every agent-to-tool and agent-to-agent communication is inspected. For a regulated customer, I'd enable Model Armor at the gateway level so the security team gets visibility without the agent developer needing to write custom guardrails.
+
+---
+
 ## Speed drill routine (May 11 and May 12)
 
 Twenty minutes, daily, out loud, timed. Voice recorder on.

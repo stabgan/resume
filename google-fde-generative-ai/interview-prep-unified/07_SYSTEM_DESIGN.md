@@ -302,6 +302,9 @@ Cover in this order:
 - Validate tool arguments before execution.
 - Idempotency keys for writes.
 - Prompt-injection defense: treat retrieved content as untrusted; documents cannot grant permissions.
+- **Agent Gateway** as the centralized policy enforcement point for all agent-to-tool and agent-to-agent communications.
+- **Model Armor** integrated with Agent Gateway for prompt injection and data leakage protection.
+- **Agent Identity** for cryptographic agent authentication (SPIFFE-based, mTLS + DPoP).
 
 ## Eval + observability archetype
 

@@ -360,7 +360,7 @@ Short. Warm. Concrete. Don't reopen technical debates.
 > I haven't shipped with that specific product, but I understand the pattern. I'd map it to integration, identity, observability, eval, and rollback requirements, and validate the product mechanics with docs or a specialist.
 
 ### MCP / A2A / ADK / Agent Engine one-liner
-> MCP connects agents to tools and data. A2A connects agents to other agents. ADK builds the agent. Agent Engine runs it in production.
+> MCP connects agents to tools and data. A2A connects agents to other agents. ADK builds the agent. Agent Runtime runs it in production.
 
 ### RAG vs. fine-tune
 > I'd start with RAG and evals if the problem is knowledge access. I'd fine-tune only if the failure is behavior, format, or domain representation after retrieval is solid.

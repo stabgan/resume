@@ -153,7 +153,7 @@ Ground rule: after you push the repo, you get to say "I built X" in the intervie
   - What I'll build: `adk-research-assistant`. A single-agent ADK app with 2 tools (web search + a structured summarizer), deployed locally, with a README section on how it would deploy to Agent Engine and what the Agent Engine runtime buys you (managed sessions, tracing, scaling).
   - What to say after building: "I built a small ADK agent end to end this week. I haven't put one on Agent Engine in prod, but I understand the deploy story and the runtime surface, so I can map a customer's agent onto it on day one."
 
-- **Vertex AI Agent Builder**
+- **Agent Designer** (formerly Agent Builder)
   - Gap: the low-code / managed side of Google's agent stack. Different audience than ADK.
   - What I'll build: `vertex-agent-builder-demo`. A Data Store agent + a tool-using agent in Agent Builder, wired to a small corpus and one external API. README covers when Agent Builder beats hand-rolling in ADK (time-to-value for non-engineering buyers, managed grounding).
   - What to say after building: "I stood up an Agent Builder demo so I could speak to the managed path, not just the code-first path. For an FDE conversation that matters because some customers want the console, not a codebase."

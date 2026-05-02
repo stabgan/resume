@@ -92,8 +92,8 @@ This is literally the 4th responsibility in the JD. Say it naturally.
 
 ### Model selection — tiered answer
 
-- **Gemini 3 Pro / Gemini 2.5 Pro class:** hard reasoning, complex multimodal, high-value low-volume. Gemini 3 is the current headline; 2.5 family is still widely in production.
-- **Gemini Flash class:** fast, general-purpose, default for production assistants where latency/cost matter.
+- **Gemini 3.1 Pro / Gemini 2.5 Pro class:** hard reasoning, complex multimodal, high-value low-volume. Gemini 3.1 Pro is the current frontier; Gemini 3 Pro Preview is shut down; 2.5 Pro is still stable and widely in production.
+- **Gemini 3 Flash / Gemini 2.5 Flash class:** fast, general-purpose, default for production assistants where latency/cost matter. Gemini 3 Flash is the new default in the Gemini app.
 - **Gemini Flash-Lite or smaller:** extraction, classification, routing, high-volume cheap tasks.
 - **Open/fine-tuned model:** when data control, cost, latency, or domain specificity matters (Gemma, Llama via Model Garden; your fine-tuned EmbeddingGemma for retrieval).
 
@@ -157,7 +157,7 @@ Senior phrase:
 
 ### ADK, Agent Engine, MCP, A2A — the one-liner you must memorize
 
-> MCP connects agents to tools and data. A2A connects agents to other agents. ADK builds the agent. Agent Engine runs it in production.
+> MCP connects agents to tools and data. A2A connects agents to other agents. ADK builds the agent. Agent Runtime runs it in production.
 
 Definitions:
 

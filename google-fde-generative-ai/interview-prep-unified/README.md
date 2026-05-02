@@ -36,12 +36,10 @@ This folder is the single source of truth for your prep. It replaces both earlie
 | 17 | [`18_ADVERSARIAL_MOCK_SCRIPT.md`](./18_ADVERSARIAL_MOCK_SCRIPT.md) | **30 RRK interruption prompts + 15 coding gotchas** organized by answer stage. Script these into May 9 and May 11 mocks so solo rehearsal has hostile-interviewer pressure. |
 | 18 | [`19_DSA_FROM_ZERO.md`](./19_DSA_FROM_ZERO.md) | **DSA primer from zero for 10-day runway**: 8 core patterns (hash map, sliding window, two pointers, binary search, BFS, DFS/backtracking, heap, stack) + light DP, each with template, canonical problems, bugs, and narration script. Pair with NeetCode Pro videos. |
 | 19 | [`20_OOP_DESIGN_PATTERNS.md`](./20_OOP_DESIGN_PATTERNS.md) | **OOP and design-pattern companion for Round 2**: 4 OOP pillars, composition-over-inheritance instinct, 6 patterns that actually come up at Google (Strategy, Factory, Singleton, Observer, Decorator, Iterator), and 7 scripted follow-up answers (thread safety, distributed, TTL, scale to 10M). |
-| 18 | [`19_DSA_FROM_ZERO.md`](./19_DSA_FROM_ZERO.md) | **DSA primer from scratch**, organized by the 8 patterns that cover 90% of Google coding problems. Each pattern has: recognition cue, template code, canonical drill problems, common bugs, complexity. Pair with NeetCode videos. |
-| 19 | [`20_OOP_DESIGN_PATTERNS.md`](./20_OOP_DESIGN_PATTERNS.md) | **OOP + classic design patterns** for Round 2 follow-ups. Composition over inheritance, the 6 patterns Google actually asks (Strategy, Factory, Singleton, Observer, Decorator, Iterator), and scripted answers for "thread-safe this" / "distributed this" / "scale this" follow-ups. |
 
 > **Note:** `03_RRK_CASEBOOK.md` is now the [`cases/`](./cases/) folder. The old single-file skeleton is archived at `../interview-prep/_archive/03_RRK_CASEBOOK_v1_skeleton.md`.
 
-## Non-Negotiables (14 days)
+## Non-Negotiables (11 days)
 
 1. **Sleep 7 hours minimum.** Recall collapses without it. Cramming on 5 hours loses you the round.
 2. **Every coding problem practiced on a plain Google Doc.** No VS Code, no Cursor, no Copilot. Whether Google uses a plain Doc or a syntax-highlighted platform, practicing on the harder surface pays off both ways.

@@ -42,7 +42,7 @@ Every case ties back to at least one of the evidence pillars in `01_SOURCE_OF_TR
 | May 10 (Sat) | Weak spot from mock | Repair |
 | May 11 (Sun, Mock Day 2) | Case 6 + Case 7 | Full RRK simulation |
 | May 12 (Mon, taper) | Skim all 10, no new reading | Sleep |
-| May 13 (Tue, interview) | None, calm retrieval only | — |
+| May 13 (Wed, interview) | None, calm retrieval only | — |
 
 Cases 9 and 10 are covered during the May 9 and May 11 mocks by random selection.
 

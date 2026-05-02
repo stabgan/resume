@@ -12,7 +12,7 @@ As of Google Cloud Next 2026 (April), **Vertex AI is officially rebranded as "Ge
 
 The companion product **Gemini Enterprise** is a separate surface for registering, managing, and governing custom-built agents across the org.
 
-**Current model generation:** Gemini 3 is the headline family (Gemini 3 Pro, Gemini 3 Pro Image / "Nano Banana Pro"). Gemini 2.5 Pro / Flash / Flash-Lite are still supported and widely deployed; both generations are valid to reference.
+**Current model generation:** Gemini 3 is the headline family. Gemini 3 Flash is the new default in the Gemini app. Gemini 3.1 Pro is the latest frontier reasoning model (Gemini 3 Pro Preview has been shut down). Gemini 3 Pro Image / "Nano Banana Pro" is the image generation model. Gemini 2.5 Pro / Flash are still stable and widely deployed in production; all generations are valid to reference.
 
 ## The four one-liners you MUST memorize
 
@@ -20,12 +20,12 @@ Say these aloud 5× per day for 3 days. They become automatic.
 
 1. **MCP** (Model Context Protocol) — connects agents to tools and data.
 2. **A2A** (Agent-to-Agent) — connects agents to other agents.
-3. **ADK** (Agent Development Kit) — Python, code-first framework for building agents.
-4. **Agent Engine** — managed runtime on Google Cloud for deploying, scaling, observing, and governing agents.
+3. **ADK** (Agent Development Kit) — code-first framework for building agents (Python, TypeScript, Go, Java).
+4. **Agent Runtime** (formerly Agent Engine) — managed runtime on Google Cloud for deploying, scaling, observing, and governing agents.
 
 Combined:
 
-> MCP connects agents to tools and data. A2A connects agents to other agents. ADK builds the agent. Agent Engine runs it in production.
+> MCP connects agents to tools and data. A2A connects agents to other agents. ADK builds the agent. Agent Runtime runs it in production.
 
 ## Agent / GenAI products
 
@@ -34,15 +34,23 @@ Combined:
 | **Gemini Enterprise Agent Platform** (formerly Vertex AI) | Umbrella managed ML/GenAI platform | First time you mention Google Cloud for ML |
 | **Gemini Enterprise** | Enterprise-wide app to register, manage, and govern custom agents at org scale | Large customer with multiple agent teams |
 | **Gemini** | Google's foundation model family | Model selection |
-| **Gemini 3 Pro** | Current-gen high-reasoning multimodal. "Nano Banana Pro" = Gemini 3 Pro Image | Complex tasks, high-value, frontier reasoning |
+| **Gemini 3.1 Pro** | Current frontier reasoning model (replaces Gemini 3 Pro Preview, which is shut down) | Complex tasks, high-value, frontier reasoning |
+| **Gemini 3 Flash** | New default model in Gemini app; PhD-level reasoning at Flash speed | Default for most production workloads |
 | **Gemini 2.5 Pro** | Prior-gen high-reasoning, still supported and widely in production | Customers on existing Vertex stack |
 | **Gemini 2.5 Flash** | Fast, general-purpose, cheaper | Default for production assistants |
 | **Gemini 2.5 Flash-Lite** | Cheapest, highest throughput, up to ~1M token context | Batch extraction, classification, routing |
-| **Vertex AI Agent Builder** | Low-code agent UI + infrastructure | When the customer wants non-engineer self-serve |
-| **ADK** (Agent Development Kit) | Code-first Python SDK for agents (`pip install google-adk`) | When the team is shipping production code |
-| **Agent Engine** | Managed runtime — deploy, scale, memory, telemetry | For ADK-based agents going to prod |
-| **Agent Studio** | Low-code visual builder for Gemini prompts, agent design | Prototyping by non-engineers; same surface where Nano Banana Pro is tested |
+| **Gemini 3 Pro Image** | "Nano Banana Pro" — studio-quality image generation + editing, 2K/4K, grounded via Google Search | Image generation, product mockups, technical diagrams |
+| **Agent Designer** (formerly Agent Builder) | No-code visual builder for agent workflows; schedule- or trigger-based | When the customer wants non-engineer self-serve |
+| **ADK** (Agent Development Kit) | Code-first SDK for agents — Python (`pip install google-adk`), TypeScript, Go, Java | When the team is shipping production code |
+| **Agent Runtime** (formerly Agent Engine) | Managed container runtime — deploy, scale, memory, telemetry, governance | For ADK-based agents going to prod |
+| **Agent Studio** | Prompt-testing and agent-design surface in the console | Prototyping; same surface where Nano Banana Pro is tested |
 | **Agent Garden** | Samples and reusable patterns | Starter kit |
+| **Agent Gateway** | Centralized security policy enforcement for all agent-to-agent and agent-to-tool comms; integrates Model Armor | Regulated customers, MCP security, least-privilege |
+| **Agent Identity** | SPIFFE-based cryptographic identity per agent; mTLS + DPoP; IAM integration | Agent-level auth, delegated user access to MCP servers |
+| **Agent Registry** | Central library of approved agents, tools, and third-party MCP servers | Enterprise governance, agent fleet management |
+| **Agent Marketplace** | Third-party agents from Atlassian, Box, ServiceNow, Workday, Oracle, etc. | Rapid deployment of pre-built agent solutions |
+| **Model Armor** | Runtime protection against prompt injection and data leakage; integrates with Agent Gateway | Security guardrails for production agents |
+| **Managed MCP Servers** | Every Google Cloud service now exposed as MCP; Workspace MCP Server for Drive/Gmail/Calendar | Connect agents to any Google service via standard MCP |
 | **Agent Search** | Managed discovery / retrieval surface for agents | When the customer needs enterprise search built in |
 | **Memory Bank** | Long-term agent memory (per-session, persistent) | Multi-turn conversations, user profiles |
 | **Agentspace** | Enterprise agent discovery + governance + identity layer (folded into Gemini Enterprise) | Large enterprise with multiple agent teams |
@@ -52,6 +60,37 @@ Combined:
 | **Gemini Code Assist** | AI coding assistant for IDEs and CLIs | Developer productivity conversations |
 | **Agentic SOC** | Security-ops agents for threat detection and response | Security-team customer conversations |
 
+## Cloud Next 2026 — What Changed (April 22-24)
+
+The biggest shift: Google is treating agents as **managed enterprise workloads** with identity, policy enforcement, observability, evaluation, and runtime controls — not one-off AI applications.
+
+**Key renames:**
+- Vertex AI → **Gemini Enterprise Agent Platform**
+- Agent Builder → **Agent Designer**
+- Agent Engine → **Agent Runtime** (the SDK concept of sessions/memory is still called Agent Engine in code; the managed deployment surface is Agent Runtime)
+- Agentspace → folded into **Gemini Enterprise**
+
+**New governance stack (memorize this):**
+- **Agent Identity** — every agent gets a SPIFFE-based cryptographic identity
+- **Agent Gateway** — air-traffic controller enforcing security policies across all agent comms
+- **Model Armor** — prompt injection + data leakage protection, integrated with Agent Gateway
+- **Agent Registry** — central library of approved agents and MCP servers
+
+**New builder surfaces:**
+- **Agent Designer** — no-code visual workflow builder (schedule/trigger-based)
+- **Agent Marketplace** — third-party agents (Atlassian, ServiceNow, Workday, etc.)
+- **Inbox in Gemini Enterprise** — monitor long-running agent workflows
+
+**Infrastructure:**
+- **Managed MCP Servers** — every Google Cloud service is now MCP-enabled by default
+- **Workspace MCP Server** — Drive, Gmail, Calendar as MCP tools (public preview)
+- **8th-gen TPUs** — dual-chip, powering the AI Hypercomputer
+- **Virgo Network** — megascale data center fabric
+
+**Senior phrase for the interview:**
+
+> "At Cloud Next last month, Google shipped Agent Gateway and Agent Identity — that's the missing governance layer. Now an FDE can deploy an agent with cryptographic identity, least-privilege tool access via Agent Registry, and Model Armor protecting against prompt injection at the gateway level. That's the production story that was missing six months ago."
+
 ## Compute products (know the decision tree)
 
 | Product | Pick when |
@@ -60,11 +99,11 @@ Combined:
 | **GKE** | Kubernetes. Pick when the customer has K8s already, or you need fine control (custom schedulers, stateful workloads). |
 | **App Engine** | Managed app platform. Less likely for custom agent infra — consider only when customer is already on it. |
 | **Compute Engine** | VM-level control. Pick only when Cloud Run / GKE don't fit. |
-| **Agent Engine** | Opinionated managed runtime for ADK agents. Pick when you want Google-managed sessions, memory, eval, governance. |
+| **Agent Runtime** (formerly Agent Engine) | Opinionated managed runtime for ADK agents. Pick when you want Google-managed sessions, memory, eval, governance. |
 
 ### Decision tree you can say aloud
 
-> For an agent, I'd default to Agent Engine if the customer is ADK-native and wants managed telemetry + governance. Cloud Run is the right escape hatch when they want custom sidecars, their own network controls, or scale-to-zero. GKE is for when the customer is already invested in Kubernetes.
+> For an agent, I'd default to Agent Runtime if the customer is ADK-native and wants managed telemetry + governance. Cloud Run is the right escape hatch when they want custom sidecars, their own network controls, or scale-to-zero. GKE is for when the customer is already invested in Kubernetes.
 
 ## Data products
 
@@ -204,6 +243,6 @@ You get full credit for the cloud knowledge and you don't lose points for not ha
 
 ## 5-second answer skeleton for "How would you build X on GCP?"
 
-> For X on Google Cloud, I'd put the agent on [Agent Engine / Cloud Run] depending on how much custom infra the customer needs. Model is [Gemini Flash / Pro tier] depending on task complexity. Data layer is [BigQuery for structured / Vector Search for embeddings / Cloud Storage for docs]. Security: IAM for internal, OAuth for customer users, VPC-SC / PSC if they're in a regulated perimeter. Observability: OpenTelemetry + Cloud Trace. Rollout: pilot → shadow → canary.
+> For X on Google Cloud, I'd put the agent on [Agent Runtime / Cloud Run] depending on how much custom infra the customer needs. Agent Gateway handles security policy enforcement. Model is [Gemini Flash / Pro tier] depending on task complexity. Data layer is [BigQuery for structured / Vector Search for embeddings / Cloud Storage for docs]. Security: IAM for internal, OAuth for customer users, VPC-SC / PSC if they're in a regulated perimeter. Observability: OpenTelemetry + Cloud Trace. Rollout: pilot → shadow → canary.
 
 Practice saying that sentence 3 times. It's the default shape.
