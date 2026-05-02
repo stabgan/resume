@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Kiro IDE local state
+.kiro/
+
+# Playwright MCP browser cache (research artifacts only)
+.playwright-mcp/
+
+# Local-only working files with credentials / scratch
+cert page scrap.txt
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+.venv/
+env/
