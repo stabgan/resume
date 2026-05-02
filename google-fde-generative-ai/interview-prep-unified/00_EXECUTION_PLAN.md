@@ -46,6 +46,7 @@ Goal: orient to the plan; set up the practice environment.
 - [ ] Create a Google Doc titled `dsa-practice-may2026`. This is where you'll code for 11 days.
 - [ ] Coding: **Two Sum** (LC 1). Think aloud, explain before typing.
 - [ ] RRK: read `02_RRK_MASTER_GUIDE.md` once.
+- [ ] **Video (on walk / cooking):** [Karpathy "Intro to LLMs"](https://www.youtube.com/watch?v=zjkBMFhNj_g) (1h). Not dedicated desk time. See `15_VIDEO_STUDY_PLAN.md`.
 - [ ] Recall: rehearse the 60-second opener 3×.
 - [ ] Logistics: confirm with Priyanka that May 13 works. Ask about interview platform (Meet + CoderPad or Meet + plain Doc).
 
@@ -62,6 +63,8 @@ Goal: orient to the plan; set up the practice environment.
 - [ ] Coding: **Group Anagrams** (LC 49).
 - [ ] RRK: RAG section of `02_RRK_MASTER_GUIDE.md`. Memorize the RAG-done-properly checklist.
 - [ ] Case: **Enterprise RAG Assistant** (`cases/02_enterprise_rag_bank.md`).
+- [ ] **Video:** [CrewAI course](https://learn.deeplearning.ai/courses/multi-ai-agent-systems-with-crewai) — cherry-pick 57 min (see `15_VIDEO_STUDY_PLAN.md`).
+- [ ] **Video:** [Vertex embeddings](https://learn.deeplearning.ai/courses/google-cloud-vertex-ai) — first 3 lessons (~45 min, you already started this).
 - [ ] Recall: STAR 2 (J&J ambiguity).
 
 ### May 5 (Tue) — Agents, MCP, A2A
@@ -69,6 +72,8 @@ Goal: orient to the plan; set up the practice environment.
 - [ ] Coding: **Search in Rotated Sorted Array** (LC 33).
 - [ ] RRK: agent section + GCP vocabulary from `08_GCP_AND_FDE_VOCABULARY.md`.
 - [ ] Case: **Multi-Agent Claims Workflow** (`cases/03_multi_agent_claims.md`).
+- [ ] **Video:** [A2A full course](https://learn.deeplearning.ai/courses/a2a-the-agent2agent-protocol) (~67 min). Skip Microsoft/BeeAI/Agent Stack lessons. See `15_VIDEO_STUDY_PLAN.md` for lesson order.
+- [ ] **Video:** [3Blue1Brown Attention](https://www.youtube.com/watch?v=eMlx5fFNoYc) (26 min, breakfast).
 - [ ] Recall: STAR 5 (AutoResearch + MCP).
 - [ ] Say aloud: "MCP connects agents to tools and data. A2A connects agents to other agents. ADK builds the agent. Agent Engine runs it in production." × 5.
 
@@ -77,6 +82,7 @@ Goal: orient to the plan; set up the practice environment.
 - [ ] Coding: **Valid Parentheses** (LC 20). Plus one OOP class skeleton from `06_PYTHON_AND_OOP.md`.
 - [ ] RRK: security section of `02_RRK_MASTER_GUIDE.md`. Memorize OAuth/OIDC, IAP, VPC-SC, PSC, Apigee one-liners.
 - [ ] Case: **MCP/OAuth Tool Integration** (`cases/04_mcp_oauth_tool_integration.md`).
+- [ ] **Video:** [MCP with Anthropic](https://learn.deeplearning.ai/courses/mcp-build-rich-context-ai-apps-with-anthropic) (~80 min). Watch fully, it's your signature area. See `15_VIDEO_STUDY_PLAN.md`.
 - [ ] Recall: STAR 4 (hard-gate disagreement).
 
 ### May 7 (Thu) — Eval and observability (your differentiator)
@@ -84,6 +90,7 @@ Goal: orient to the plan; set up the practice environment.
 - [ ] Coding: **Kth Largest Element** (LC 215).
 - [ ] RRK: eval section. Read `07_SYSTEM_DESIGN.md` ML section.
 - [ ] Case: **Eval Pipeline For Agentic Support** (`cases/05_eval_pipeline_agentic_support.md`).
+- [ ] **Video:** [Evaluating AI Agents (Arize)](https://learn.deeplearning.ai/courses/evaluating-ai-agents) — first 60 min. Stop before Arize-tool walkthroughs. See `15_VIDEO_STUDY_PLAN.md`.
 - [ ] Recall: STAR 6 (Sonnet → Haiku migration). Practice the 60-second GEPA explanation.
 
 ### May 8 (Fri) — Scale and reliability

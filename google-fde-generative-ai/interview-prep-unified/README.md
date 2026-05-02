@@ -27,6 +27,7 @@ This folder is the single source of truth for your prep. It replaces both earlie
 | 11 | [`12_RAPID_FIRE_QA.md`](./12_RAPID_FIRE_QA.md) | **70 one-line Q&A probes** (RAG, agents, evals, cost, security, GCP, personal). Drill between main topics. |
 | 12 | [`13_BEHAVIORAL_INDEX.md`](./13_BEHAVIORAL_INDEX.md) | **30 Google behavioral prompts** mapped to 13 stories (8 existing + 5 new career-arc stories) |
 | 13 | [`14_NARRATED_WALKTHROUGHS.md`](./14_NARRATED_WALKTHROUGHS.md) | **Two full spoken transcripts**: Rate Limiter coding round (40 min) + Enterprise RAG RRK round (60 min) |
+| 14 | [`15_VIDEO_STUDY_PLAN.md`](./15_VIDEO_STUDY_PLAN.md) | **DeepLearning.AI Pro + YouTube** plan. 8 JD-aligned DLAI courses (A2A, CrewAI, MCP, Evaluating AI Agents, ADK voice, DSPy, Vertex embeddings, Agent memory) + 3 YouTube picks (Karpathy LLMs, 3B1B attention, Stanford CS25). ~10.5h across 11 days. |
 
 > **Note:** `03_RRK_CASEBOOK.md` is now the [`cases/`](./cases/) folder. The old single-file skeleton is archived at `../interview-prep/_archive/03_RRK_CASEBOOK_v1_skeleton.md`.
 
