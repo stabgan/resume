@@ -177,15 +177,14 @@ Re-solving is where retention happens. Spaced repetition beats volume.
 
 ## Common Google-asked problems NOT on the core 22
 
-If you've finished the core and the stretch and still want more, these are frequent at Google specifically:
+If you've finished the core and the stretch and still want more, these are frequent at Google specifically. Note: **Design In-Memory File System and Logger Rate Limiter now have full solutions in `05a_CODING_SOLUTIONS.md`** (problems 26 and 27), so they're pre-drilled.
 
 - Meeting Rooms II (253) — interval + heap
 - Word Break (139) — DP
-- Design In-Memory File System (588) — OOP, trie
+- Design In-Memory File System (588) — pre-solved in `05a`
+- Logger Rate Limiter (359) — pre-solved in `05a`
 - Alien Dictionary (269) — topological sort from constraints
 - Longest Palindromic Substring (5) — expand around center
-
-Do not touch these until Days 9–11, if at all. The core 22 is the bar.
 
 ## The one habit that wins the coding round
 

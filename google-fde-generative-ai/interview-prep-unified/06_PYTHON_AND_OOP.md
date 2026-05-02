@@ -115,13 +115,15 @@ Invariant: per key, only timestamps within the active window are stored.
 from collections import defaultdict, deque
 
 class RateLimiter:
-    def __init__(self, limit: int, window_seconds: int):
+    def __init__(self, limit: int, window_seconds: int) -> None:
+        if limit <= 0 or window_seconds <= 0:
+            raise ValueError("limit and window_seconds must be positive")
         self.limit = limit
         self.window = window_seconds
-        self.events = defaultdict(deque)
+        self._events: dict[str, deque[int]] = defaultdict(deque)
 
     def allow(self, user_id: str, timestamp: int) -> bool:
-        q = self.events[user_id]
+        q = self._events[user_id]
         cutoff = timestamp - self.window
 
         while q and q[0] <= cutoff:
@@ -134,9 +136,11 @@ class RateLimiter:
         return True
 ```
 
+Same signature as `04_CODING_PROTOCOL.md`, `05a_CODING_SOLUTIONS.md` problem 07, and `14_NARRATED_WALKTHROUGHS.md` walkthrough 1. Drill one spelling.
+
 Production discussion:
 - Memory: evict inactive users via TTL or LRU.
-- Distributed: Redis or sharded counters.
+- Distributed: Redis ZSET with a Lua script for atomicity; avoids the cross-replica race.
 - Token bucket for smoother traffic.
 - Clock skew between distributed nodes.
 
@@ -218,19 +222,20 @@ class TimeMap:
         return entries[idx - 1][1]
 ```
 
-## Other useful class patterns (know they exist)
+## Other useful class patterns (all fully solved in `05a_CODING_SOLUTIONS.md`)
 
-| Class | Key data structure |
-|---|---|
-| `MinStack` | Two stacks (values + running mins) |
-| `Trie` (prefix tree) | Nested dict `{char: {...}}` |
-| `UnionFind` | Parent array with path compression |
-| `RandomizedSet` | List + map (for O(1) random removal) |
-| `HitCounter` | Circular array or deque |
-| `FileSystem` | Trie + values at nodes |
-| `TwitterFeed` | Heap of recent posts per user-graph |
+| Class | Key data structure | Solution location |
+|---|---|---|
+| `MinStack` | Two stacks (values + running mins) | `05a` problem 23 |
+| `TimeMap` | Per-key sorted list + `bisect` | `05a` problem 24 |
+| `HitCounter` | Deque of hit timestamps, sliding 300s window | `05a` problem 25 |
+| `Logger` (LC #359) | Map of message to next-allowed timestamp | `05a` problem 26 |
+| `FileSystem` (LC #588) | Trie of `_Node` with `__slots__`, `_walk` helper | `05a` problem 27 |
+| `Trie` (prefix tree) | Nested dict `{char: {...}}` | Not pre-solved; pattern in `04_CODING_PROTOCOL.md` |
+| `UnionFind` | Parent array with path compression | Not pre-solved |
+| `RandomizedSet` | List + map (for O(1) random removal) | Not pre-solved |
 
-Don't try to memorize all of these. Just know the shape so you can recognize when the interviewer is leading you there.
+When an interviewer leads you toward one of the first five, the solution is pre-drilled; just say the invariant aloud, then reproduce from memory.
 
 ## Idiom reference
 

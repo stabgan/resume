@@ -21,6 +21,35 @@ Most of it is gold you already paid for. This file picks the 8 highest-leverage 
 
 ---
 
+## Priority tier 0: watch these FIRST (the 3 videos the recruiter PDF explicitly links)
+
+These are not optional. The recruiter PDF has exactly 3 embedded YouTube links on pages 3-4; these are the canonical framework Google Careers trains interviewers against. Transcripts already extracted to `_transcripts/` for offline reading.
+
+### 0.1 Prepare for Your Google Interview: Systems Design (~5 minutes)
+
+**URL:** `https://youtu.be/Gg318hR5JY0`
+**Transcript:** `_transcripts/systems_design.txt`
+
+Short, extremely dense. The single-most-important sentence: *"20 minutes for requirements + initial solution."* You'll find this quote plus 6 more direct quotes already pulled into `07_SYSTEM_DESIGN.md`. Watch once, then re-read the transcript on May 12 night.
+
+### 0.2 How to: Work at Google — Example Coding/Engineering Interview (~25 minutes)
+
+**URL:** `https://www.youtube.com/watch?v=XKu_SEDAykw`
+**Transcript:** `_transcripts/coding_interview.txt`
+
+The canonical Google Careers coding-interview demo. Two Sum variant: the candidate walks from brute-force O(n²) → binary search O(n log n) → two-pointer O(n) (sorted) → hash map O(n) (unsorted), then the interviewer throws the scale distractor "what if 10 million integers?". The closing 3 minutes (Becky's recap) lists the exact signals Google interviewers are grading you on. Watch once at 1.5x. Relevant quotes are pulled into `04_CODING_PROTOCOL.md`.
+
+### 0.3 Google I/O 2011: Life in App Engine Production (~1 hour)
+
+**URL:** `https://www.youtube.com/watch?v=rgQm1KEIIuc`
+**Transcript:** `_transcripts/life_in_appengine_production.txt`
+
+The PDF cites this as "a troubleshooting example" right after the slow-website sample prompt. Deep dive on how Google diagnoses distributed systems in production. **Do not watch end to end.** Skim the transcript for the troubleshooting framework; use the case `cases/01_slow_website.md` as the primary artifact. The value of this video is showing you what "senior Google troubleshooting vocabulary" actually sounds like.
+
+**Slot into:** May 2 (tonight) evening or weekend morning, 30 minutes max for all three. These are foundation, not deep study.
+
+---
+
 ## Priority tier 1: MUST watch (5.5 hours total, spread May 3-9)
 
 These 4 courses are non-negotiable. Every one of them directly closes a JD gap or sharpens an evidence-backed claim.

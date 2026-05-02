@@ -1,26 +1,32 @@
-# Coding Protocol — Google Doc, No IDE
+# Coding Protocol — Virtual Interview Platform, No Execution
 
 ## The exact environment you'll face
 
-You confirmed this directly with the recruiter:
+There's a conflict between two sources on the coding environment. Believe neither exclusively; prep for both.
 
-- **Plain Google Doc**, whiteboard-style.
-- **No IDE. No syntax highlighting. No autocomplete. No linting. No execution.**
-- 60 minutes.
-- ~30–50 lines of Python.
-- Object-oriented programming is explicitly in scope.
+**Recruiter's PDF (official):**
+- "Virtual Interview Platform that provides formatting/syntax highlighting."
+- "You will not be running / deploying the code."
+- 30–50 lines of Python.
+- Object-oriented programming is in scope.
 
-This is a harder environment than most candidates expect. The good news: once your muscle memory is tuned to it, it's just a constraint — not a blocker. The practice is what matters; you have 11 days.
+**Priyanka (your recruiter, by email):**
+- Plain Google Doc, whiteboard-style.
+- No IDE features.
+
+**Action:** send Priyanka a confirmation email before May 13 with this exact line: *"Quick confirmation on the coding environment — will it be a plain Google Doc or a virtual coding platform with syntax highlighting? The PDF mentions one, you mentioned the other, so I want to match my warmup exactly."*
+
+**Until you hear back, practice on a plain Google Doc.** If the real environment has syntax highlighting, that's a bonus, not a blocker. If it's plain Doc, you're already calibrated.
 
 ## Why this environment is hard (and what to train against)
 
 | Challenge | Counter-practice |
 |---|---|
-| No autocomplete — you must remember exact imports | Memorize the 6 Python imports you need (below) |
-| No indentation helper — easy to misalign nested blocks | Practice typing `for/while/if` with consistent 4-space indent on a Doc |
-| No run — can't see output | Dry-run mentally, track variables on-screen |
-| No find/replace on your code — renaming variables mid-flow is painful | Pick names carefully before typing; don't improvise |
-| No syntax check — a typo ships silently | Slow down. Speak each line as you type it. |
+| May be no autocomplete — remember exact imports | Memorize the 6 Python imports below |
+| May be no indentation helper — easy to misalign nested blocks | Type `for/while/if` with 4-space indent on a Doc until it's automatic |
+| No run — can't see output | Dry-run mentally; track variable state as text on the Doc |
+| Limited find/replace | Pick variable names carefully before typing; don't improvise |
+| No syntax check — typo ships silently | Slow down. Speak each line as you type it. |
 
 ## The 6 imports you must memorize
 
@@ -141,13 +147,15 @@ Invariant: **for each key, only timestamps within the active window are stored.*
 from collections import defaultdict, deque
 
 class RateLimiter:
-    def __init__(self, limit: int, window_seconds: int):
+    def __init__(self, limit: int, window_seconds: int) -> None:
+        if limit <= 0 or window_seconds <= 0:
+            raise ValueError("limit and window_seconds must be positive")
         self.limit = limit
         self.window = window_seconds
-        self.events = defaultdict(deque)
+        self._events: dict[str, deque[int]] = defaultdict(deque)
 
     def allow(self, user_id: str, timestamp: int) -> bool:
-        q = self.events[user_id]
+        q = self._events[user_id]
         cutoff = timestamp - self.window
 
         while q and q[0] <= cutoff:
@@ -160,9 +168,11 @@ class RateLimiter:
         return True
 ```
 
+This signature is identical to the one in `05a_CODING_SOLUTIONS.md` and the walkthrough in `14_NARRATED_WALKTHROUGHS.md`. Drill one spelling.
+
 Production discussion points:
 - Memory cleanup for inactive users (evict via TTL or LRU).
-- Distributed rate limiting needs Redis or sharded counters.
+- Distributed rate limiting needs Redis or sharded counters (Redis ZSET + Lua script for atomicity is the canonical Google-answer pattern).
 - Token bucket for smoother traffic profile.
 - Clock skew between distributed nodes.
 
@@ -389,6 +399,18 @@ For every problem, name these tests (say them aloud even if you don't type them)
 > The tradeoff here is O(n) memory for O(n) time; if memory were tight I'd pivot to the two-pass version.
 
 These phrases matter more than solving one extra problem. **Practice them out loud.**
+
+## What Google's own interviewers look for (from the PDF-linked coding demo video)
+
+The recruiter PDF links to the official Google Careers video "How to: Work at Google — Example Coding/Engineering Interview." Full transcript in `_transcripts/coding_interview.txt`. The canonical good signals the Google interviewer (Becky) calls out at the end, in order:
+
+1. **Clarification before coding.** "Could they be negative? Floating point? Repeating elements?" Your clarification block already models this.
+2. **Think out loud constantly.** "Thinking out loud is probably the best thing you can do... it lets the interviewee see your thought process and course-correct or ask follow-ups that help you demonstrate knowledge further."
+3. **Talk before you write.** The example candidate went through two iterations (brute force → binary search → two-pointer → hash map) purely verbally before typing anything. Don't type the first version that comes to mind.
+4. **Test in real time.** "If your interviewer doesn't give you an example, make one up. Test your solution. Think about edge cases (empty input, etc.) and bring them up."
+5. **Handle the distractor.** The interviewer ends with "now assume the input is not sorted" — this is the standard Google move. Have a pivot ready.
+
+Your `40-minute protocol` above maps 1:1 onto this. The only addition worth making on May 12 night: watch the 25-minute video once at 1.5x to hear the cadence, not to memorize the answer.
 
 ## Emergency rescue moves if you're lost
 

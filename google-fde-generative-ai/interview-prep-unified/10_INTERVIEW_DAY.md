@@ -30,7 +30,7 @@ Do NOT re-read cases, RRK guide, system design, GCP vocabulary, or coding soluti
 ## The schedule
 
 - **Round 1 — RRK:** 60 minutes
-- **Round 2 — Coding:** 60 minutes, plain Google Doc, no IDE, no execution
+- **Round 2 — Coding:** 60 minutes. PDF says "virtual platform with formatting/syntax highlighting, no execution." Recruiter said plain Google Doc. Conflict. Practice assumes plain Doc; verify with Priyanka in the pre-interview email.
 
 Same-day format means:
 - You will be tired by Round 2.
@@ -191,14 +191,15 @@ Same greeting warmth as Round 1. New interviewer (probably). Don't assume they r
 
 - They'll likely ask for a brief intro. Use a 30-second version of the opener (not the full 60).
 - They'll describe the problem. **Listen fully before starting.**
+- **If the coding surface is different from what you practiced** (e.g., CoderPad with syntax highlighting instead of plain Doc, or vice versa), do not comment. Adapt silently. The environment does not change the protocol.
 
 ### The 40-minute protocol (from `04_CODING_PROTOCOL.md`)
 
 ```
  0:00 – 0:03   CLARIFY        Restate. Ask input size, edge cases, output.
  0:03 – 0:08   APPROACH       State brute force + optimized + complexity.
- 0:08 – 0:28   CODE           Plain Google Doc. Say each line aloud.
- 0:28 – 0:35   DRY-RUN        2 test cases by hand, on the Doc.
+ 0:08 – 0:28   CODE           Google Doc or virtual platform. Say each line aloud.
+ 0:28 – 0:35   DRY-RUN        2 test cases by hand, on the Doc / platform.
  0:35 – 0:40   DISCUSS        Trade-offs, bigger N, tests in production.
 ```
 

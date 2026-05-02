@@ -51,41 +51,46 @@ Python ADK agent. One tool, get_weather, that calls OpenWeatherMap free tier or 
 Install the ADK and authenticate:
 
 ```bash
-pip install google-cloud-aiplatform[adk,agent-engines]
+pip install google-adk
 gcloud auth application-default login
 gcloud config set project YOUR_PROJECT_ID
 ```
 
-Create the agent in agent.py:
+Create the agent in `agent.py` using the real 2026 ADK API (verified against github.com/google/adk-python):
 
 ```python
-from vertexai.preview.reasoning_engines import AdkApp
 from google.adk.agents import Agent
 
 def get_weather(city: str) -> str:
     """Return current weather for a city. Demo uses a stub."""
     return f"Weather in {city}: 22C, partly cloudy, light wind."
 
-weather_agent = Agent(
+root_agent = Agent(
     name="weather_agent",
-    model="gemini-2.5-flash",
+    model="gemini-2.5-flash",  # or "gemini-3-pro" if available on your project
     instruction=(
         "You are a weather assistant. "
         "Always use the get_weather tool when asked about weather. "
         "Do not invent values."
     ),
+    description="An assistant that answers weather questions via the get_weather tool.",
     tools=[get_weather],
 )
-
-app = AdkApp(agent=weather_agent)
 ```
 
-Deploy to Agent Engine in deploy.py:
+Test locally with the ADK dev UI:
+
+```bash
+adk web   # launches the local development UI; chat with the agent at localhost
+adk eval samples_for_testing/hello_world hello_world_eval_set_001.evalset.json  # optional eval CLI
+```
+
+Deploy to Agent Engine in `deploy.py`:
 
 ```python
 import vertexai
-from vertexai.preview import reasoning_engines
-from agent import app
+from vertexai import agent_engines
+from agent import root_agent
 
 vertexai.init(
     project="YOUR_PROJECT_ID",
@@ -93,9 +98,9 @@ vertexai.init(
     staging_bucket="gs://YOUR_STAGING_BUCKET",
 )
 
-remote_app = reasoning_engines.ReasoningEngine.create(
-    app,
-    requirements=["google-cloud-aiplatform[adk,agent-engines]"],
+remote_app = agent_engines.create(
+    agent_engine=root_agent,
+    requirements=["google-adk", "google-cloud-aiplatform[agent-engines]"],
     display_name="Weather Agent Demo",
 )
 
@@ -104,6 +109,24 @@ print("Deployed:", remote_app.resource_name)
 resp = remote_app.query(input="What is the weather in Tokyo?")
 print(resp)
 ```
+
+Multi-agent pattern (say this aloud if the interviewer asks to extend):
+
+```python
+from google.adk.agents import LlmAgent
+
+greeter = LlmAgent(name="greeter", model="gemini-2.5-flash", instruction="Greet the user warmly.")
+weatherbot = LlmAgent(name="weatherbot", model="gemini-2.5-flash", instruction="Answer weather questions.", tools=[get_weather])
+
+coordinator = LlmAgent(
+    name="coordinator",
+    model="gemini-2.5-flash",
+    description="Route greetings to greeter, weather questions to weatherbot.",
+    sub_agents=[greeter, weatherbot],
+)
+```
+
+Tool Confirmation (HITL built into ADK) is the line to drop if asked about safety: "ADK ships a tool confirmation flow that can guard any tool execution with explicit user confirmation before the call fires — that's the built-in HITL surface for agent writes."
 
 ### README structure
 

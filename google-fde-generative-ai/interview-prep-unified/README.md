@@ -1,7 +1,7 @@
 # Google FDE GenAI — Interview Prep (Unified)
 
 **Interview:** RRK (60 min) + Coding (60 min), **same day**.
-**Format:** Virtual. Coding is in a **plain Google Doc**, whiteboard-style. **No IDE, no execution.**
+**Format:** Virtual. **Coding environment is ambiguous:** the official PDF says "virtual interview platform with formatting/syntax highlighting, no execution"; recruiter said plain Google Doc. Verify with Priyanka in the pre-interview email. Prep for the harder case (plain Doc) either way.
 **Target date:** May 13 (Wednesday). Recruiter cadence is Wed/Thu.
 **Contact:** Priyanka Biswas (bipriyanka@google.com).
 
@@ -27,7 +27,8 @@ This folder is the single source of truth for your prep. It replaces both earlie
 | 11 | [`12_RAPID_FIRE_QA.md`](./12_RAPID_FIRE_QA.md) | **70 one-line Q&A probes** (RAG, agents, evals, cost, security, GCP, personal). Drill between main topics. |
 | 12 | [`13_BEHAVIORAL_INDEX.md`](./13_BEHAVIORAL_INDEX.md) | **30 Google behavioral prompts** mapped to 13 stories (8 existing + 5 new career-arc stories) |
 | 13 | [`14_NARRATED_WALKTHROUGHS.md`](./14_NARRATED_WALKTHROUGHS.md) | **Two full spoken transcripts**: Rate Limiter coding round (40 min) + Enterprise RAG RRK round (60 min) |
-| 14 | [`15_VIDEO_STUDY_PLAN.md`](./15_VIDEO_STUDY_PLAN.md) | **DeepLearning.AI Pro + YouTube** plan. 8 JD-aligned DLAI courses (A2A, CrewAI, MCP, Evaluating AI Agents, ADK voice, DSPy, Vertex embeddings, Agent memory) + 3 YouTube picks (Karpathy LLMs, 3B1B attention, Stanford CS25). ~10.5h across 11 days. |
+| 14 | [`15_VIDEO_STUDY_PLAN.md`](./15_VIDEO_STUDY_PLAN.md) | **DeepLearning.AI Pro + YouTube** plan. 3 official Google-Careers videos linked in the recruiter PDF (transcripts in `_transcripts/`) + 8 JD-aligned DLAI courses + Karpathy/3B1B/Stanford CS25. ~11h across 11 days. |
+| — | [`_transcripts/`](./_transcripts/) | Extracted transcripts of the 3 official Google interview-prep YouTube videos linked in the recruiter PDF: systems design, coding demo, and "Life in App Engine Production" (the PDF's troubleshooting reference). Read once, cite in mocks. |
 | 15 | [`16_BLIND_INTEL.md`](./16_BLIND_INTEL.md) | **Harvested Blind intel** on Google FDE India comp (₹1.0-1.3 Cr L5 target), interview shape, culture signals, and updated comp negotiation script. |
 | 16 | [`17_METRIC_DEFENSE.md`](./17_METRIC_DEFENSE.md) | **Hostile-interviewer drill**: every resume number (AUROC 0.95, 3x cost, 50% p95, 12M rows/$460, +12pts, 58% FP drop, Data Sentry) defended with denominator, baseline, eval design, leakage check, rollback criteria, failure cases. |
 | 17 | [`18_ADVERSARIAL_MOCK_SCRIPT.md`](./18_ADVERSARIAL_MOCK_SCRIPT.md) | **30 RRK interruption prompts + 15 coding gotchas** organized by answer stage. Script these into May 9 and May 11 mocks so solo rehearsal has hostile-interviewer pressure. |
@@ -37,7 +38,7 @@ This folder is the single source of truth for your prep. It replaces both earlie
 ## Non-Negotiables (14 days)
 
 1. **Sleep 7 hours minimum.** Recall collapses without it. Cramming on 5 hours loses you the round.
-2. **Every coding problem practiced on a plain Google Doc.** No VS Code, no Cursor, no Copilot. Exactly the interview environment.
+2. **Every coding problem practiced on a plain Google Doc.** No VS Code, no Cursor, no Copilot. Whether Google uses a plain Doc or a syntax-highlighted platform, practicing on the harder surface pays off both ways.
 3. **Every RRK answer starts with clarification.** Never jump to architecture.
 4. **One STAR story rehearsed aloud per night, standing, no notes.**
 5. **No new material after May 11.** Taper into recall, not new inputs.

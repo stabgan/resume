@@ -2,6 +2,18 @@
 
 Speak these names correctly, sparingly, and with context. Never string together a list of GCP products without explaining what each does and why you'd pick it.
 
+## 2026 rename to know cold
+
+As of Google Cloud Next 2026 (April), **Vertex AI is officially rebranded as "Gemini Enterprise Agent Platform"**. The Vertex AI name still appears everywhere in docs, code samples, and SDK imports, so you should be fluent in both:
+
+- **Old name (still valid):** Vertex AI, Vertex AI Agent Engine, Vertex AI RAG Engine, Vertex AI Vector Search.
+- **New name:** Gemini Enterprise Agent Platform, and the same component names under it.
+- **Safe phrasing in the interview:** *"Vertex AI, which Google has been renaming to Gemini Enterprise Agent Platform"* — shows you track releases without over-correcting an interviewer who says "Vertex AI."
+
+The companion product **Gemini Enterprise** is a separate surface for registering, managing, and governing custom-built agents across the org.
+
+**Current model generation:** Gemini 3 is the headline family (Gemini 3 Pro, Gemini 3 Pro Image / "Nano Banana Pro"). Gemini 2.5 Pro / Flash / Flash-Lite are still supported and widely deployed; both generations are valid to reference.
+
 ## The four one-liners you MUST memorize
 
 Say these aloud 5× per day for 3 days. They become automatic.
@@ -19,21 +31,26 @@ Combined:
 
 | Product | What it does | When you'd mention it |
 |---|---|---|
-| **Vertex AI** | Umbrella managed ML/GenAI platform | First time you mention Google Cloud for ML |
-| **Gemini** | Google's foundation model family (Pro, Flash, Flash-Lite, Ultra) | Model selection |
-| **Gemini 2.5 Pro** | High-reasoning, multimodal, higher cost | Complex tasks, high-value |
+| **Gemini Enterprise Agent Platform** (formerly Vertex AI) | Umbrella managed ML/GenAI platform | First time you mention Google Cloud for ML |
+| **Gemini Enterprise** | Enterprise-wide app to register, manage, and govern custom agents at org scale | Large customer with multiple agent teams |
+| **Gemini** | Google's foundation model family | Model selection |
+| **Gemini 3 Pro** | Current-gen high-reasoning multimodal. "Nano Banana Pro" = Gemini 3 Pro Image | Complex tasks, high-value, frontier reasoning |
+| **Gemini 2.5 Pro** | Prior-gen high-reasoning, still supported and widely in production | Customers on existing Vertex stack |
 | **Gemini 2.5 Flash** | Fast, general-purpose, cheaper | Default for production assistants |
 | **Gemini 2.5 Flash-Lite** | Cheapest, highest throughput, up to ~1M token context | Batch extraction, classification, routing |
 | **Vertex AI Agent Builder** | Low-code agent UI + infrastructure | When the customer wants non-engineer self-serve |
-| **ADK** | Code-first Python SDK for agents | When the team is shipping production code |
+| **ADK** (Agent Development Kit) | Code-first Python SDK for agents (`pip install google-adk`) | When the team is shipping production code |
 | **Agent Engine** | Managed runtime — deploy, scale, memory, telemetry | For ADK-based agents going to prod |
-| **Agent Studio** | Low-code visual builder | Prototyping by non-engineers |
+| **Agent Studio** | Low-code visual builder for Gemini prompts, agent design | Prototyping by non-engineers; same surface where Nano Banana Pro is tested |
 | **Agent Garden** | Samples and reusable patterns | Starter kit |
+| **Agent Search** | Managed discovery / retrieval surface for agents | When the customer needs enterprise search built in |
 | **Memory Bank** | Long-term agent memory (per-session, persistent) | Multi-turn conversations, user profiles |
-| **Agentspace** | Enterprise agent discovery + governance + identity layer (now part of Gemini Enterprise) | Large enterprise with multiple agent teams |
+| **Agentspace** | Enterprise agent discovery + governance + identity layer (folded into Gemini Enterprise) | Large enterprise with multiple agent teams |
 | **RAG Engine** | Managed RAG workflow + connectors | "I need RAG without building ingest pipes" |
 | **Vector Search** | Scalable vector retrieval | Large-scale embedding retrieval with private endpoints |
-| **Model Garden** | 200+ models (Gemini, Anthropic, Meta, Mistral, etc.) | When you need a non-Google model on Vertex |
+| **Model Garden** | 200+ models. First-party: Gemini, Imagen, Lyria, Chirp, Veo. Third-party: Anthropic Claude family. Open: Gemma, Llama | When you need a non-Google or non-LLM model on the platform |
+| **Gemini Code Assist** | AI coding assistant for IDEs and CLIs | Developer productivity conversations |
+| **Agentic SOC** | Security-ops agents for threat detection and response | Security-team customer conversations |
 
 ## Compute products (know the decision tree)
 
@@ -146,27 +163,44 @@ This reads better than faking expertise. Calibration earns trust.
 
 ## A cleaner mental map of GCP
 
-Think of GCP for an FDE in 4 layers:
+Think of GCP for an FDE in 4 layers. Layer names reflect the 2026 rename.
 
 ```
-┌─────────────────────────────────────────────────────┐
-│  AGENT LAYER:  ADK → Agent Engine / Cloud Run /GKE │
-├─────────────────────────────────────────────────────┤
-│  GenAI LAYER:  Vertex AI → Gemini + RAG Engine +   │
-│                Vector Search + Model Garden        │
-├─────────────────────────────────────────────────────┤
-│  DATA LAYER:   BigQuery + Cloud SQL + Firestore +  │
-│                Cloud Storage                        │
-├─────────────────────────────────────────────────────┤
-│  SECURITY:     IAM + IAP + VPC-SC + PSC + Apigee + │
-│                Workload Identity Federation         │
-└─────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────┐
+│  AGENT LAYER:  ADK → Agent Engine / Cloud Run / GKE     │
+│                Agent Builder / Agent Studio (low-code)   │
+├──────────────────────────────────────────────────────────┤
+│  GenAI LAYER:  Gemini Enterprise Agent Platform          │
+│                (formerly Vertex AI) →                    │
+│                Gemini 3 / 2.5 + RAG Engine +             │
+│                Vector Search + Model Garden              │
+├──────────────────────────────────────────────────────────┤
+│  DATA LAYER:   BigQuery + Cloud SQL + Firestore +        │
+│                Cloud Storage + AlloyDB + Spanner         │
+├──────────────────────────────────────────────────────────┤
+│  SECURITY:     IAM + IAP + VPC-SC + PSC + Apigee +       │
+│                Workload Identity Federation + CMEK       │
+└──────────────────────────────────────────────────────────┘
 
 Cross-cutting:  Cloud Logging + Monitoring + Trace +
                 OpenTelemetry (observability everywhere)
 ```
 
 If you remember this stack top-to-bottom, you can answer almost any GCP architecture question by walking down the layers and mentioning which product fits each concern.
+
+## "Interviews are not GCP specific" — the PDF's explicit cloud clause
+
+From the recruiter PDF, verbatim:
+
+> "Our interviews are not GCP specific, although it is recommended you familiarize yourself with the names of relevant GCP Cloud products. Questions will evaluate your general cloud knowledge, therefore answer these questions in the cloud platform you are most familiar with."
+
+Translation: **you can frame answers in AWS when that's natural**, as long as you show awareness of Google's equivalents. Your J&J work was AWS-native; Data Sentry touched AWS + Azure + GCP. Use AWS framing when it anchors your real experience and follow with the Google equivalent:
+
+- *"On J&J we used AWS KMS with CMEK-style customer-managed keys; the Google equivalent is Cloud KMS with the same CMEK model."*
+- *"That project lived behind an AWS ALB with Cognito; on Google I'd put IAP in front of Cloud Run."*
+- *"The data residency story on AWS was VPC endpoints plus resource policies; on GCP the same shape is VPC Service Controls plus Private Service Connect."*
+
+You get full credit for the cloud knowledge and you don't lose points for not having shipped the exact Google product.
 
 ## 5-second answer skeleton for "How would you build X on GCP?"
 

@@ -20,6 +20,20 @@ Opening line:
 
 > I'll start by clarifying functional requirements, non-functional requirements, and scale, then propose a simple design and harden the bottlenecks.
 
+## What the official Google Systems Design video actually says
+
+The recruiter PDF links to the Google Careers video *"Prepare for Your Google Interview: Systems Design"* (transcript in `_transcripts/systems_design.txt`). The video is short (~5 min) but it is the exact framework interviewers are trained against. Memorize these quotes.
+
+- **"You will not be coding in this interview."** Systems design is verbal + diagram only, not implementation.
+- **"20 minutes for requirements and an initial solution."** The first third of the interview is discovery, not architecture. If you're naming products at minute 5, you're going too fast.
+- **"The problem you will solve will be deliberately underspecified... you will need to ask clarifying questions."** Interviewers grade ambiguity navigation first, technical depth second.
+- **"We are not looking for one specific answer."** Multiple valid solutions exist. State your assumptions and pick one.
+- **"We deal with planet-scale data and compute systems every day."** Expect every question to end with a scale follow-up. Be ready for "now imagine 100x the load."
+- **"Trade-offs and compromises... lay them out and explain your reasoning."** The word "tradeoff" or "compromise" should appear at least twice in your answer.
+- **"Practice on paper or a whiteboard."** Same advice as the coding round. You won't have your usual tools.
+
+Your default answer shape in `02_RRK_MASTER_GUIDE.md` already matches this framework. The main cadence lesson: budget roughly 20 minutes for clarification + initial architecture, 20 minutes for scaling and failure modes, 15 minutes for tradeoffs + rollout + FDE close.
+
 ## Requirements checklist
 
 **Functional:**

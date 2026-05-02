@@ -87,22 +87,28 @@ The recruiter invite PDF lists **3 years** as the minimum qualification. Adjacen
 
 ## Compensation Benchmarks
 
-For the India market (Google SWE bands via levels.fyi, mid-2025):
+For the India market, cross-referenced between **levels.fyi** and the **Blind harvest in `16_BLIND_INTEL.md`** (May 2026):
 
-| Level | Total Comp Range | Base | Stock | Bonus |
+| Level | Total Comp Range (Blind-verified) | Base | Stock (4yr, front-loaded 38% Y1) | Bonus target |
 |---|---|---|---|---|
-| L4 | ₹65–85L | ~₹42–52L | ~₹15–25L/yr | ~₹5–8L |
-| L5 | ₹95L–₹1.3Cr | ~₹55–70L | ~₹30–50L/yr | ~₹8–12L |
-| L6 | ₹1.3Cr–₹1.8Cr+ | ~₹70–85L | ~₹50–80L/yr | ~₹12–18L |
+| L4 | ₹65–85L | ~₹42–52L | ~$100K total | ~15% |
+| L5 SWE | ₹88L–₹1.34Cr, recruiter cap currently ~₹1.1Cr | **~₹60.5L (fixed, little negotiation)** | $100–250K total (variance is here) | 15% |
+| L5 FDE / CE | ~20% above SWE. Floor ₹1.0Cr, realistic ₹1.2–1.3Cr, reach ₹1.4Cr | ~₹55–65L | $120–200K total | 15–42% (customer-facing premium) |
+| L6 | ₹1.3Cr–₹1.8Cr+ | ~₹70–85L | $200K+ total | 15% |
 
-FDE typically pays at or slightly above SWE bands because it's customer-facing.
+Key intel from Blind:
+- **L5 base is essentially fixed at ₹60.5L** for SWE-coded reqs. All variance is in the stock grant.
+- **Google Cloud CE L5** (closest existing analog to FDE) runs **base ₹55–56L with a 42.86% bonus target** and **Y1 TC ~₹1.2 Cr**. FDE should anchor similarly.
+- **Recruiter-stated ceiling (recent):** "TC won't cross ₹1.1 Cr for L5 SWE right now." FDE gets a markup on top.
+- **L5 → L6 promotion timeline:** 2–3 years minimum per current Googlers.
 
 **Your current comp:** ₹33L fixed only, no stock. Any Google offer is a 2–4× jump. **Your anchor should be market for the level**, not current comp.
 
-Negotiation stance (from `09_STORIES_AND_COMP.md`):
+Negotiation stance (full script in `09_STORIES_AND_COMP.md` + Blind-backed script in `16_BLIND_INTEL.md` Part D):
 - First response: *"I'd want to understand the level this role is being scoped at before putting a number on it."*
-- If pushed: Give a range tied to L4/L5 market data.
-- If forced to one number: ~₹1Cr total.
+- If pushed: give L5 range ₹1.1–1.4 Cr (FDE markup on SWE band).
+- If forced to one number: ~₹1.2 Cr total.
+- Walk-away floor: ₹1.0 Cr for L5; ₹70L for L4.
 - Never: apologize for current ₹33L.
 
 ## Your Evidence (anchor these in every answer)
@@ -178,4 +184,4 @@ Calibration point: honesty still earns trust. The difference is what you're bein
 ## Key uncertainty
 
 - Whether the two rounds are strictly **same-day back-to-back** or **split with a break** — you have confirmed same day. Ask Priyanka directly whether there's a 15+ min break between them. If yes, plan for a breath-reset; if no, plan for no downtime.
-- Whether Round 2 coding is in a **plain Google Doc** (most likely, per your confirmation) or **CoderPad in a locked-down mode**. Prepare for the Doc. If it turns out to be CoderPad, that's easier, not harder.
+- **Coding platform conflict (must resolve).** Recruiter PDF says *"virtual interview platform that provides formatting/syntax highlighting"*; Priyanka said verbally *"plain Google Doc."* These are different environments. Send a confirmation email before May 13. Your prep assumes the harder case (plain Doc) either way, so it's win-win; you just want the warmup to match reality.

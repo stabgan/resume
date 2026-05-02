@@ -558,13 +558,13 @@ Voice. Every answer is first person, present tense, confident but calibrated. No
 
 **Evidence tie:** General knowledge, Vertex integration.
 
-### Q6.3 — How do you pick between Gemini Pro, Flash, and Flash-Lite? 🟢
+### Q6.3 — How do you pick between Gemini 3 Pro, Gemini 2.5 Flash, and Flash-Lite? 🟢
 
 **15-second answer:**
-> Start with Flash for general generation; drop to Flash-Lite for classification, routing, and short extraction; escalate to Pro only for long context or hard reasoning. I drive the split from the golden set, not from vibes. The cost delta is big enough that routing matters.
+> Gemini 3 Pro or 2.5 Pro for hard reasoning and long context; 2.5 Flash for general generation where latency and cost matter; 2.5 Flash-Lite for classification, extraction, and routing at high throughput. I route by query class through a thin classifier and log the tier with every trace so I can audit cost by segment. 3 Pro is the current headline; most production still runs on 2.5 because it's battle-tested.
 
 **If they push:**
-> That tiering is the same pattern I used on Gracenote, and it is the fastest cost lever on most customer systems.
+> That tiering is the same pattern I used on Gracenote for the Haiku migration, and it is the fastest cost lever on most customer systems.
 
 **Evidence tie:** Gracenote Haiku migration tiering.
 

@@ -92,10 +92,10 @@ This is literally the 4th responsibility in the JD. Say it naturally.
 
 ### Model selection — tiered answer
 
-- **Gemini Pro class:** hard reasoning, complex multimodal, high-value low-volume.
-- **Gemini Flash class:** default for production assistants where latency/cost matter.
+- **Gemini 3 Pro / Gemini 2.5 Pro class:** hard reasoning, complex multimodal, high-value low-volume. Gemini 3 is the current headline; 2.5 family is still widely in production.
+- **Gemini Flash class:** fast, general-purpose, default for production assistants where latency/cost matter.
 - **Gemini Flash-Lite or smaller:** extraction, classification, routing, high-volume cheap tasks.
-- **Open/fine-tuned model:** when data control, cost, latency, or domain specificity matters.
+- **Open/fine-tuned model:** when data control, cost, latency, or domain specificity matters (Gemma, Llama via Model Garden; your fine-tuned EmbeddingGemma for retrieval).
 
 Senior phrase:
 
@@ -115,11 +115,12 @@ Cover in this order:
 - **Access control:** document-level permissions at retrieval time.
 - **Operations:** index freshness, drift, broken connectors, latency, cost.
 
-Google vocabulary to sprinkle in:
-- Vertex AI RAG Engine (managed workflow + connectors)
+Google vocabulary to sprinkle in (2026 names in `08_GCP_AND_FDE_VOCABULARY.md`):
+- Vertex AI RAG Engine, now under the Gemini Enterprise Agent Platform umbrella
 - Vertex AI Vector Search (scalable vector retrieval, private endpoint pattern)
 - BigQuery (structured grounding)
 - Cloud Storage (document staging + batch ingestion)
+- Document AI (layout-aware PDF parsing, especially for tables and forms)
 
 ### RAG vs. Fine-tuning decision
 
@@ -371,6 +372,12 @@ Senior phrase:
 ## Consulting and Customer Communication
 
 The interviewer is listening for whether you can operate with customers, not just code.
+
+### The PDF's cloud-technology clause (memorize this posture)
+
+The recruiter PDF says verbatim: *"Our interviews are not GCP specific, although it is recommended you familiarize yourself with the names of relevant GCP Cloud products. Questions will evaluate your general cloud knowledge, therefore answer these questions in the cloud platform you are most familiar with."*
+
+Translation: you can frame answers in AWS when it's natural (your J&J work was AWS; Data Sentry touched AWS + Azure + GCP), then name the Google equivalent. This is senior behavior, not a cop-out. See `08_GCP_AND_FDE_VOCABULARY.md` section "Interviews are not GCP specific" for concrete bridge phrases.
 
 ### Senior-sounding discovery questions
 - "What would make this pilot a business success in 30 days?"
