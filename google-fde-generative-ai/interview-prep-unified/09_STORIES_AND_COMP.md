@@ -258,31 +258,51 @@ Count filler words — "um", "like", "you know", "basically". These double under
 
 Use this when Priyanka (or any interviewer) raises compensation.
 
+## Anchor you already have (from HR call)
+
+HR told you: **base capped around ₹40L, stocks "similar added" on top, level determined by interview performance.** Decoded, this maps to Y1 total around ₹85-90L, which reads closer to L4 than to standard L5 India bands.
+
+Don't treat the HR anchor as the final number. The compensation committee sets the final offer after the loop based on your actual level signal. Your job at any comp conversation now is to leave room for L5 upside without fighting the base.
+
 ## Current comp
 
 > My current fixed is ₹33L. No variable or stock — Gracenote is a fixed-pay structure.
 
 Say it calmly. Don't apologize. Don't explain.
 
-## Expected comp — first response (try to redirect)
+## Expected comp — first response (redirect to interview performance)
 
-> I'd want to understand the level this role is being scoped at before putting a number on it. Could you share the band Google is working with for this requisition?
+> I'd rather focus on nailing the interviews and let the level set the comp. My read of the market based on public data is that L4 in this function lands around ₹75-85 lakh total, and L5 at ₹1.0-1.2 crore total, with FDE typically running slightly above SWE because of the customer-facing element. I'm comfortable working within whichever level the interview process calibrates to, as long as the offer reflects that level.
 
-If they share a band: *"That works. Happy to discuss specifics as we go."* Move on.
+This acknowledges the HR anchor without accepting it as a cap. Plants the L5 ceiling without demanding it.
 
-## If they deflect and push back ("what are you looking for?")
+## If she asks you to commit to one number
 
-> I'm anchoring on market rather than my current. For an L5 IC role at Google India, I'm looking at total comp in the ₹95L to ₹1.2Cr range. If the role is scoped as L4, I'd expect ₹65–80L total. I'm flexible on the split between base, stock, and bonus.
-
-## If forced to one number
-
-> If I had to pick one, total comp around ₹1 crore is where I'd aim, with the specific level determining how that breaks out.
+> If I have to pick a single number for planning, I'd say ₹1.0 crore total for L5, around ₹80 lakh for L4. I'm flexible on the split between base, stock, and bonus.
 
 **Then stop talking.** Silence is your friend. Don't walk the number back.
 
+## If she says "base is capped at ₹40L, we don't move there"
+
+Don't fight base. Fight stock and bonus.
+
+> That's fair on base. Where I'd want to focus in the offer discussion is stock and bonus. For the level I end up at, I'd want the stock grant and bonus target to reflect the customer-facing nature of the role and market data for that level. Coming from a fixed-only pay structure, stock is where the total-comp story gets built for me.
+
+## If the offer comes in at ₹85-90L for L5 (underbanded)
+
+Don't accept verbally on the call. Say:
+
+> I appreciate the offer. Can I take 48 hours to review the full breakdown? I want to make sure I understand the full vesting schedule and benefits before committing.
+
+Then counter once with a single, specific ask:
+
+> I've reviewed the package. Based on market data for L5 customer-facing engineering at Google India, I was expecting total comp closer to ₹1.0 crore. Is there room to move on the stock grant? I understand the base is fixed at ₹40L, so I'm focused on stock and bonus.
+
+Accept whatever comes back. The base ₹40L is likely firm. The stock has some flexibility.
+
 ## If they say "that's a big jump from ₹33L"
 
-> It is — and that's exactly why this conversation is useful. My current pay reflects Gracenote's fixed structure, not the market for the work I'm actually doing. Google's pay bands for this role reflect the market. I'd rather be honest about current than inflate — I trust the process to land on a fair number.
+> It is, and that's exactly why this conversation is useful. My current pay reflects Gracenote's fixed structure, not the market for the work I'm actually doing. Google's pay bands for this role reflect the market. I'd rather be honest about current than inflate — I trust the process to land on a fair number.
 
 ## Other comp questions you should be ready for
 

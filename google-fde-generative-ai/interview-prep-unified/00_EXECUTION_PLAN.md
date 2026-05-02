@@ -4,7 +4,7 @@
 
 - **Target:** May 13 (Wednesday). Two interviews, back-to-back, same day.
 - **Interview 1:** RRK, 60 min.
-- **Interview 2:** Coding, 60 min. PDF says "virtual interview platform, formatting/syntax highlighting, no execution"; recruiter said plain Google Doc. Ambiguous. Practice on a plain Doc.
+- **Interview 2:** Coding, 60 min. Plain **Google Doc**, confirmed by HR. No IDE, no execution.
 - **You have 11 days.** You also have a full-time Gracenote job.
 - **You use AI agents for daily coding.** That's an asset for RRK and a gap for coding. This plan closes the gap.
 
@@ -48,7 +48,7 @@ Goal: orient to the plan; set up the practice environment.
 - [ ] RRK: read `02_RRK_MASTER_GUIDE.md` once.
 - [ ] **Video (on walk / cooking):** [Karpathy "Intro to LLMs"](https://www.youtube.com/watch?v=zjkBMFhNj_g) (1h). Not dedicated desk time. See `15_VIDEO_STUDY_PLAN.md`.
 - [ ] Recall: rehearse the 60-second opener 3×.
-- [ ] Logistics: confirm with Priyanka that May 13 works. Ask directly: "Is the coding round in a plain Google Doc or a virtual interview platform with syntax highlighting?" The PDF and the recruiter have said different things; confirm so morning-of practice matches reality.
+- [ ] Logistics: confirm with Priyanka that May 13 works. (Coding environment already confirmed: plain Google Doc, no execution.)
 - [ ] **Watch official prep videos (PDF-linked):** [Prepare for Your Google Interview: Systems Design](https://youtu.be/Gg318hR5JY0) (5 min) and [How to: Work at Google — Example Coding/Engineering Interview](https://www.youtube.com/watch?v=XKu_SEDAykw) (25 min). Both are the canonical Google Careers framework. Transcripts already in `_transcripts/`.
 
 ### May 3 (Sun) — RRK spine + Python fluency

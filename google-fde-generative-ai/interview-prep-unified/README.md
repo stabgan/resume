@@ -1,9 +1,10 @@
 # Google FDE GenAI — Interview Prep (Unified)
 
 **Interview:** RRK (60 min) + Coding (60 min), **same day**.
-**Format:** Virtual. **Coding environment is ambiguous:** the official PDF says "virtual interview platform with formatting/syntax highlighting, no execution"; recruiter said plain Google Doc. Verify with Priyanka in the pre-interview email. Prep for the harder case (plain Doc) either way.
+**Format:** Virtual. Coding is in a **plain Google Doc** (confirmed by HR). No IDE, no execution.
 **Target date:** May 13 (Wednesday). Recruiter cadence is Wed/Thu.
 **Contact:** Priyanka Biswas (bipriyanka@google.com).
+**Level:** Open between **L4 and L5**, decided by your interview performance. You are interviewing for a level, not just for a role.
 
 This folder is the single source of truth for your prep. It replaces both earlier drafts (`may13-intensive-prep/` and `may13-rapid-prep/`), which are archived for reference. Best parts of both are merged here.
 

@@ -11,7 +11,7 @@ From the recruiter's official prep PDF and the April 30 shortlisting email:
   - **RRK** (Role-Related Knowledge): **60 minutes.**
   - **Coding:** **60 minutes.**
 - **Same day** (confirmed by candidate).
-- **Coding environment:** virtual platform with formatting/syntax highlighting, but **no code execution**. Treat as a whiteboard-style **Google Doc**. You will not run the code.
+- **Coding environment:** plain Google Doc, whiteboard-style (confirmed by HR on the recruiter call). No code execution. No syntax highlighting promised. Treat it exactly as a blank Doc.
 - **Coding scope:** LeetCode/HackerRank-style + object-oriented programming. Expect ~30–50 lines of Python.
 - **Cadence:** Interviews happen Wed/Thu from May 6 onward.
 - **Recruiter contact:** Priyanka Biswas (bipriyanka@google.com). Harish introduced the handoff on April 30.
@@ -87,29 +87,40 @@ The recruiter invite PDF lists **3 years** as the minimum qualification. Adjacen
 
 ## Compensation Benchmarks
 
-For the India market, cross-referenced between **levels.fyi** and the **Blind harvest in `16_BLIND_INTEL.md`** (May 2026):
+**Anchor from your recruiter call (Priyanka / HR):** base capped around ₹40L, stocks "similar added" on top. Level is decided by interview performance.
 
-| Level | Total Comp Range (Blind-verified) | Base | Stock (4yr, front-loaded 38% Y1) | Bonus target |
-|---|---|---|---|---|
-| L4 | ₹65–85L | ~₹42–52L | ~$100K total | ~15% |
-| L5 SWE | ₹88L–₹1.34Cr, recruiter cap currently ~₹1.1Cr | **~₹60.5L (fixed, little negotiation)** | $100–250K total (variance is here) | 15% |
-| L5 FDE / CE | ~20% above SWE. Floor ₹1.0Cr, realistic ₹1.2–1.3Cr, reach ₹1.4Cr | ~₹55–65L | $120–200K total | 15–42% (customer-facing premium) |
-| L6 | ₹1.3Cr–₹1.8Cr+ | ~₹70–85L | $200K+ total | 15% |
+Decoded: base ₹40L + stock ~₹40L/yr equivalent over 4 yr (roughly $150-190K total) + 15% bonus ≈ Y1 total **₹85-90L**. This anchor reads closer to L4 than to standard L5 market data; the real L5 offer could be higher than what HR quoted if the committee reads strong L5 signal from your interview.
 
-Key intel from Blind:
-- **L5 base is essentially fixed at ₹60.5L** for SWE-coded reqs. All variance is in the stock grant.
-- **Google Cloud CE L5** (closest existing analog to FDE) runs **base ₹55–56L with a 42.86% bonus target** and **Y1 TC ~₹1.2 Cr**. FDE should anchor similarly.
-- **Recruiter-stated ceiling (recent):** "TC won't cross ₹1.1 Cr for L5 SWE right now." FDE gets a markup on top.
-- **L5 → L6 promotion timeline:** 2–3 years minimum per current Googlers.
+### How this compares to Blind / levels.fyi market data
 
-**Your current comp:** ₹33L fixed only, no stock. Any Google offer is a 2–4× jump. **Your anchor should be market for the level**, not current comp.
+| Level | Blind-verified 2026 India band | HR-quoted anchor |
+|---|---|---|
+| L4 | Y1 ₹65-85L total (base ₹42-52L, stock $100K/4yr, 15% bonus) | **Matches the HR anchor** |
+| L5 SWE | Y1 ₹88-134L total (base fixed ~₹60.5L, stock $100-250K/4yr, 15% bonus). Recruiter ceiling currently ~₹1.1 Cr. | **HR anchor is 15-30% below this** |
+| L5 FDE / CE | +20% above SWE per current Googlers (customer-facing premium). Y1 ₹1.0-1.3 Cr target. | **HR anchor is meaningfully below this band** |
 
-Negotiation stance (full script in `09_STORIES_AND_COMP.md` + Blind-backed script in `16_BLIND_INTEL.md` Part D):
-- First response: *"I'd want to understand the level this role is being scoped at before putting a number on it."*
-- If pushed: give L5 range ₹1.1–1.4 Cr (FDE markup on SWE band).
-- If forced to one number: ~₹1.2 Cr total.
-- Walk-away floor: ₹1.0 Cr for L5; ₹70L for L4.
-- Never: apologize for current ₹33L.
+### Your target numbers by interview outcome
+
+**If interview signal is L4:**
+- Fair Y1 target: ₹80-90L (matches HR anchor, don't push hard)
+- Walk-away floor: ₹70L
+- Base ₹40L acceptable; push slightly on stock
+
+**If interview signal is L5:**
+- Fair Y1 target: ₹1.0-1.3 Cr (per Blind, regardless of HR's earlier anchor)
+- Walk-away floor: ₹95L
+- Base: push for ₹50-60L; accept ₹45L floor
+- Stock: $150-200K over 4 yr, front-loaded
+- Counter once on stock if the first offer comes in at ₹85-90L for L5. Don't walk.
+
+**Critical:** the HR anchor of ₹40L base "max" is real and probably firm for L4. For L5, push back respectfully. If they deliver an L5 offer with ₹40L base and still only ₹85L Y1, that is underbanded for the customer-facing FDE premium and worth a single counter.
+
+**Your current comp:** ₹33L fixed only. HR anchor of ₹85-90L is still a 2.5-2.7x jump — life-changing. Accept if L4. Counter once then accept if L5 underbanded. Walk only if you have a competing offer.
+
+Negotiation stance (full script in `09_STORIES_AND_COMP.md`, Blind-backed in `16_BLIND_INTEL.md` Part D):
+- HR already gave you the anchor. Don't name a number first; instead say *"I'd rather nail the interviews and let the level set the comp. My market read is L4 around ₹75-85L and L5 at ₹1.0-1.2 Cr; I'm comfortable within that."*
+- If forced to one number: ₹1.0 Cr for L5, ₹80L for L4.
+- Never: apologize for ₹33L current comp.
 
 ## Your Evidence (anchor these in every answer)
 
@@ -184,4 +195,4 @@ Calibration point: honesty still earns trust. The difference is what you're bein
 ## Key uncertainty
 
 - Whether the two rounds are strictly **same-day back-to-back** or **split with a break** — you have confirmed same day. Ask Priyanka directly whether there's a 15+ min break between them. If yes, plan for a breath-reset; if no, plan for no downtime.
-- **Coding platform conflict (must resolve).** Recruiter PDF says *"virtual interview platform that provides formatting/syntax highlighting"*; Priyanka said verbally *"plain Google Doc."* These are different environments. Send a confirmation email before May 13. Your prep assumes the harder case (plain Doc) either way, so it's win-win; you just want the warmup to match reality.
+- **Level: L4 or L5 is decided by interview performance.** Priyanka confirmed this explicitly. You are interviewing for the level, not just for the role. Perform at staff-adjacent signal to land L5. Perform mid to land L4. Below mid = no offer.
