@@ -116,7 +116,10 @@ No new material. Fix what surfaced on May 9.
 ### May 11 (Mon) — Mock day 2 + compression
 
 - [ ] Coding: pick `Coin Change` (LC 322) or `Subsets` (LC 78). Google Doc, no-run.
+- [ ] Check your work against `05a_CODING_SOLUTIONS.md`.
 - [ ] RRK mock: `Customer Data Readiness` (`cases/06_customer_data_readiness.md`) + `Cost Reduction` (`cases/07_cost_reduction.md`).
+- [ ] Drill 10 random probes from `12_RAPID_FIRE_QA.md` (HIGH LIKELIHOOD set), timed, recorded.
+- [ ] Score both mocks against the rubric in `10_INTERVIEW_DAY.md` (target 16/20 each).
 - [ ] Recall: full opener + "why Google/why FDE" + 1 hot story.
 - [ ] **Switch to `10_INTERVIEW_DAY.md` as your primary reference.** Stop reading deep docs.
 
@@ -125,7 +128,9 @@ No new material. Fix what surfaced on May 9.
 This is the most important day of prep. Less is more.
 
 - [ ] Morning: one easy coding warmup (`Valid Parentheses` or `Binary Search`) on a Google Doc. 20 min.
-- [ ] Read `10_INTERVIEW_DAY.md`.
+- [ ] Read `10_INTERVIEW_DAY.md` front to back (includes the night-before/morning-of block at the top).
+- [ ] Read `14_NARRATED_WALKTHROUGHS.md` aloud, both transcripts, at interview pace. 30 min.
+- [ ] Eyeball `13_BEHAVIORAL_INDEX.md` Section A (30-prompt → story map). 5 min.
 - [ ] Rehearse 3 hot stories (J&J, Haiku, AutoResearch/MCP). 30 min.
 - [ ] Logistics check: camera, mic, lighting, internet, backup hotspot, interview links, water, notebook, charger.
 - [ ] **By 21:00: everything off. Sleep by 22:30.**

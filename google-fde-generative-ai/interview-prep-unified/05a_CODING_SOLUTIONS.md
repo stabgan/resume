@@ -2,7 +2,9 @@
 
 ## How to use this file
 
-This is the answer key for the 25 problems in `05_CODING_PROBLEM_SET.md`. The workflow is the same every day. Open a blank Google Doc, read only the problem name and signature from the problem set, then solve the problem cold on the Doc using the protocol in `04_CODING_PROTOCOL.md`. Talk through the invariant, dry-run one example by hand, then write the code. Only after you are done do you open this file and diff your work against the reference.
+This file holds reference Python solutions for the full coding-round target set: the 22 core problems from `05_CODING_PROBLEM_SET.md`, renumbered 01 through 22 here, plus three additional OOP class-design problems (23 `MinStack`, 24 `TimeMap`, 25 `HitCounter`) that cover the class patterns most likely to show up in Round 2. The three OOP problems are extensions; the 22 core are the must-solve set. "25" throughout this file means `22 core + 3 OOP extensions`.
+
+The workflow is the same every day. Open a blank Google Doc, read only the problem name and signature from the problem set, then solve the problem cold on the Doc using the protocol in `04_CODING_PROTOCOL.md`. Talk through the invariant, dry-run one example by hand, then write the code. Only after you are done do you open this file and diff your work against the reference.
 
 Mark each problem green, yellow, or red. Green means you solved it clean in under 15 minutes with a correct dry-run on the first try. Yellow means you got there but you hit a bug, or you needed a nudge on the data structure. Red means you did not converge. Red problems get redone 48 hours later. Yellow problems get redone once more the same week. Green problems get one refresh pass in the last 48 hours before the interview.
 
@@ -217,19 +219,21 @@ class Codec:
 from collections import defaultdict, deque
 
 class RateLimiter:
-    def __init__(self, max_requests: int, window_seconds: float) -> None:
-        self.max_requests = max_requests
+    def __init__(self, limit: int, window_seconds: int) -> None:
+        if limit <= 0 or window_seconds <= 0:
+            raise ValueError("limit and window_seconds must be positive")
+        self.limit = limit
         self.window = window_seconds
-        self.log: dict[str, deque[float]] = defaultdict(deque)
+        self._events: dict[str, deque[int]] = defaultdict(deque)
 
-    def allow(self, user_id: str, now: float) -> bool:
-        q = self.log[user_id]
-        cutoff = now - self.window
+    def allow(self, user_id: str, timestamp: int) -> bool:
+        q = self._events[user_id]
+        cutoff = timestamp - self.window
         while q and q[0] <= cutoff:
             q.popleft()
-        if len(q) >= self.max_requests:
+        if len(q) >= self.limit:
             return False
-        q.append(now)
+        q.append(timestamp)
         return True
 ```
 
@@ -237,7 +241,9 @@ class RateLimiter:
 
 **Common bug:** Using `list.pop(0)` instead of `deque.popleft`, which is O(n). Also using `<` instead of `<=` on the cutoff and keeping one stale timestamp on the boundary.
 
-**What to say during the round:** "Per-user deque of timestamps, sliding window. On every call I evict anything older than `now - window`, then compare length to the limit. Amortized O(1) per call. In production I would shard by user and back it with Redis ZSET if I needed cross-instance consistency."
+**What to say during the round:** "Per-user deque of timestamps, sliding window. On every call I evict anything older than `timestamp - window`, then compare length to the limit. Amortized O(1) per call. In production I would shard by user and back it with Redis ZSET plus a Lua script for atomicity if I needed cross-instance consistency."
+
+**Note:** The narrated walkthrough in `14_NARRATED_WALKTHROUGHS.md` uses the same signature (`limit`, `window_seconds: int`, `timestamp: int`). Drill one spelling.
 
 ---
 

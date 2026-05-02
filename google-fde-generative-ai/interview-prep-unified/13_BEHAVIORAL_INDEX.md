@@ -40,9 +40,9 @@ Story numbers: 1 Data Sentry, 2 J&J approval heuristics, 3 Gracenote ingestion, 
 | # | Prompt | Primary | Secondary | Angle |
 |---|---|---|---|---|
 | 10 | Tell me about disagreeing with a senior stakeholder. | 4 Hard-gate | 13 Customer said no | Program Director wanted a hard gate. I wrote a 1-page memo with a 4-mode decision matrix. The memo changed the decision without a confrontation. |
-| 11 | A time you had to tell a customer their plan was wrong. | 13 Customer said no | 4 Hard-gate | Partner team wanted to automate before evals existed. I pushed back in writing, proposed a phased rollout, held my position, and kept the relationship. |
-| 12 | Most difficult teammate you had to work with. | 12 DSPy adoption | 4 Hard-gate | One team I tried to teach the eval-first pattern to kept pushing to skip eval setup. I held the line, but I also respected their final "not right for us" and didn't escalate. |
-| 13 | A disagreement you lost, and what you learned. | 10 Strongest critic | 4 Hard-gate | Early at J&J, I lost an argument because I jumped to architecture before discovery. The feedback changed how I run engagements. |
+| 11 | A time you had to tell a customer their plan was wrong. | 4 Hard-gate | 13 Customer said no | Program Director at J&J wanted a hard gate on a regulated workflow. I wrote a 1-page memo with a 4-mode decision matrix. Phased rollout won. Story 13 is a secondary because it was an internal partner, not a full external customer; lean on Story 4 first. |
+| 12 | Most difficult teammate you had to work with. | 4 Hard-gate (stakeholder) | 12 DSPy adoption | Honest framing: I do not have a pure peer-level interpersonal friction story of the textbook kind. Closest is the J&J Program Director, who was a difficult stakeholder with different risk appetite; I acknowledge the mismatch with "teammate" and offer the stakeholder version. If they push for a peer, I name it as a real gap in my recent experience and say what I would have done. |
+| 13 | A disagreement you lost, and what you learned. | 8 Overclean metric | 10 Strongest critic | I argued the 100% pass rate was real; the evidence said otherwise at N=500. I walked back the number publicly. Story 10 is secondary because it is feedback received, not a live disagreement. |
 
 ## Failure (3)
 
@@ -73,7 +73,7 @@ Story numbers: 1 Data Sentry, 2 J&J approval heuristics, 3 Gracenote ingestion, 
 | # | Prompt | Primary | Secondary | Angle |
 |---|---|---|---|---|
 | 23 | A time you convinced someone without authority over them. | 4 Hard-gate | 12 DSPy adoption | Memo, decision matrix, dollar cost of each mode. Give the other person a public path to change their mind. |
-| 24 | How you mentor junior engineers. | 12 DSPy adoption | 7 J&J ML explanation | Teach the playbook, pair on first eval run, then step back. Respect "no" when a team decides the pattern isn't right for them. |
+| 24 | How you mentor junior engineers. | 12 DSPy adoption (team level) | 7 J&J ML explanation | Honest framing: my mentoring has been more horizontal (adjacent teams adopting a pattern) than vertical (pairing with a junior). If the interviewer pushes for a specific junior engineer story, I name it as a gap in my most recent 18 months and describe how I would structure 1:1 mentoring: pair on first eval run, step back on the second, critique via PR not in meetings. |
 | 25 | When you had to drive adoption of something. | 12 DSPy adoption | 1 Data Sentry | Rolled out DSPy + DeepEval eval-first pattern across adjacent Gracenote teams after Haiku worked. 2 of 3 adopted. |
 
 ## Career arc / self-reflection (3)
@@ -177,7 +177,7 @@ Frontier awareness. Applied learning. Evaluation rigor. Honest scoping of techni
 >
 > I wrote a short internal doc, about two pages, with the playbook: build the golden set first, wire DeepEval as a regression gate, compile prompts with MIPROv2 on the cheaper model, run a canary, gate full traffic on regression thresholds. Then I offered 90-minute pairing sessions with each team's lead to set up the first eval run. That was the key move. The doc alone would not have landed.
 >
-> Two teams adopted it within a month. The content-tagging team cut their cost 2.2x with no quality regression. The media-summarization team found a subtle prompt dependency the eval surfaced, and they caught it before production. The third team pushed back. Their argument was that their workload was small enough that eval setup would cost more than the savings. I disagreed internally but they were right about their specific constraints. I didn't escalate. I marked it down, moved on, and they came back six months later when their volume grew.
+> Two teams adopted it within a month and saw meaningful cost cuts on their own workloads; one of them used the eval to catch a regression before ship. I cannot quote their exact numbers, those were their metrics not mine. The third team pushed back. Their argument was that their workload was small enough that eval setup would cost more than the savings. I disagreed internally but they were right about their specific constraints. I didn't escalate. I marked it down, moved on, and they came back six months later when their volume grew.
 >
 > The lesson was about calibration, not persuasion. When you are driving adoption, the teams that say no for good reasons are a signal, not a failure. Respect the no. It protects the pattern's credibility.
 
@@ -199,7 +199,7 @@ Influence at scale. Written playbooks. Respect for other teams' judgment. Adopti
 
 > At Gracenote, one of our internal partner teams, the one that owns a downstream content-quality surface, asked us to fully automate a classification decision point that our pipeline was feeding them. Their pitch was reasonable on the surface: our ingestion classifier was hitting 97 percent precision, so why was a human still approving the top-tier partners? They wanted to cut their reviewer queue by 70 percent.
 >
-> I said no, and I said it in writing. My memo had three parts. First, the 97 percent number was aggregated across all partners, but the tail distribution mattered: new partners and rare-language catalogs were closer to 91 percent, and those were the cases the human reviewers were catching. Second, we had no regression eval that would catch a drift from 97 to 93 before it showed up in customer complaints. Third, I proposed a staged plan: add a partner-tier confidence gate, build a DeepEval regression suite on the tail distribution, run a 60-day shadow mode, and only then revisit the automation ask.
+> I said no, and I said it in writing. My memo had three parts. First, the 97 percent number was aggregated across all partners, but the tail distribution mattered: the human reviewers were catching cases in the tail on new partners and rare-language catalogs that the aggregate hid. Second, we had no regression eval that would catch a precision drift before it showed up in customer complaints. Third, I proposed a staged plan: add a partner-tier confidence gate, build a DeepEval regression suite on the tail distribution, run a 60-day shadow mode, and only then revisit the automation ask.
 >
 > They pushed back in the meeting. They had a reviewer-cost target they were trying to hit. I held the position, but I acknowledged their constraint and offered to co-own the shadow-mode metrics so they could see the cost trajectory in real time. That unlocked it. We ran the 60-day shadow, found two drift events we'd have missed without it, and automated only the confidence-gated tier.
 >

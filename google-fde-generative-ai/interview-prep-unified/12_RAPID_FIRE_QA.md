@@ -54,9 +54,9 @@ Voice. Every answer is first person, present tense, confident but calibrated. No
 > ACLs ride on the chunk as metadata at ingest, and I filter the vector query by the caller's group membership before scoring, not after. Post-filtering is the classic leak. For Google Workspace sources I would hydrate ACLs through Drive APIs at index time and refresh on a schedule, with OAuth 2.0 delegation so the query runs as the user.
 
 **If they push:**
-> Data Sentry did exactly this against Microsoft Graph with OAuth and per-user scopes; the Google equivalent is Workspace APIs plus IAP for the front door.
+> I built the OAuth-against-Microsoft-Graph half in Data Sentry for IAM onboarding, so enterprise identity propagation is familiar; the ACL-filter-at-retrieve half is the pattern I would bring, with the Google equivalent being Workspace APIs plus IAP at the edge.
 
-**Evidence tie:** Data Sentry OAuth on Microsoft Graph.
+**Evidence tie:** Data Sentry OAuth on Microsoft Graph (identity side only).
 
 ### Q1.5 — Do I really need a reranker? 🟢
 
@@ -104,7 +104,7 @@ Voice. Every answer is first person, present tense, confident but calibrated. No
 > I extract text, tables, and image regions separately; text and table rows get embedded with a text model, images with a vision embedding, and each chunk carries a type tag. At query time I retrieve across both spaces and let a Gemini Flash model compose the final answer from mixed evidence.
 
 **If they push:**
-> My @stabgan/openrouter-mcp-multimodal MCP server already routes multimodal inputs with SSRF-safe URL handling, so the ingestion path is familiar.
+> The ingestion piece here is table-aware parsing plus joint text-image embeddings, which I would build on Document AI plus Vertex multimodal embeddings. My @stabgan/openrouter-mcp-multimodal MCP server handles the tool-side SSRF-safe routing of multimodal inputs at inference, not the ingestion pipeline.
 
 **Evidence tie:** @stabgan/openrouter-mcp-multimodal MCP server.
 
@@ -158,9 +158,9 @@ Voice. Every answer is first person, present tense, confident but calibrated. No
 > Supervisor plus specialists is my default: one planner agent decomposes, specialists own domains, the supervisor aggregates. I keep shared state explicit, not implicit, and I use A2A or a bus so specialists do not call each other directly unless the graph says they can.
 
 **If they push:**
-> On the J&J MedTech CCP work the orchestration was simpler, but the same supervisor pattern kept the audit trail clean for CAB review.
+> I have not shipped a pure multi-agent supervisor in production; on Gracenote the LangGraph migration is the closest, with a bounded agent node inside a deterministic graph. J&J MedTech CCP was classical ML, so I draw the governance lessons from there and the orchestration lessons from Gracenote.
 
-**Evidence tie:** J&J MedTech CCP clearance.
+**Evidence tie:** Gracenote LangGraph migration; J&J governance experience.
 
 ### Q2.5 — An upstream tool returns garbage. What happens? 🟢
 
@@ -645,7 +645,7 @@ Voice. Every answer is first person, present tense, confident but calibrated. No
 ### Q7.1 — Why Google, why FDE? 🟢
 
 **15-second answer:**
-> FDE is the only role I have seen that pairs deep ML engineering with real customer pressure. I have been the engineer the customer calls at 2am on Gracenote and J&J; I want to do that with Gemini, ADK, and Vertex behind me instead of working around them. Google is where that combination actually exists.
+> FDE is the only role I have seen that pairs deep ML engineering with real customer pressure. I have been the engineer who gets called when the Gracenote ingestion breaks and when the J&J approval workflow needs a hard answer before a compliance review; I want to do that with Gemini, ADK, and Vertex behind me instead of working around them. Google is where that combination actually exists.
 
 **If they push:**
 > I have shipped two npm MCP servers, an AutoResearch fork with kiro-cli, and production LLM work; the FDE loop is my natural speed.

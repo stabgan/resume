@@ -17,8 +17,8 @@ This folder is the single source of truth for your prep. It replaces both earlie
 | 2.5 | [`11_BUILD_PLAN.md`](./11_BUILD_PLAN.md) | Six GitHub projects I ship in 11 days to close JD gaps (ADK, CrewAI, OAuth, RAG Engine, A2A, VPC-SC) |
 | 3 | [`cases/`](./cases/) | Ten fully worked customer cases (2000-3000 words each). Start with [`cases/README.md`](./cases/README.md) |
 | 4 | [`04_CODING_PROTOCOL.md`](./04_CODING_PROTOCOL.md) | Google-Doc whiteboard mechanics + 40-min protocol |
-| 5 | [`05_CODING_PROBLEM_SET.md`](./05_CODING_PROBLEM_SET.md) | 22 problems (must-do) + 18 stretch + OOP set |
-| 5a | [`05a_CODING_SOLUTIONS.md`](./05a_CODING_SOLUTIONS.md) | **Reference Python solutions** for all 25 problems. Use to check your own work after drilling on a blank Doc. |
+| 5 | [`05_CODING_PROBLEM_SET.md`](./05_CODING_PROBLEM_SET.md) | 22 core problems + 18 stretch + 3 OOP extensions (25 total in solutions) |
+| 5a | [`05a_CODING_SOLUTIONS.md`](./05a_CODING_SOLUTIONS.md) | **Reference Python solutions** for all 25 problems (22 core + 3 OOP). Use to check your own work after drilling on a blank Doc. |
 | 6 | [`06_PYTHON_AND_OOP.md`](./06_PYTHON_AND_OOP.md) | Python fluency + OOP class-design templates |
 | 7 | [`07_SYSTEM_DESIGN.md`](./07_SYSTEM_DESIGN.md) | Classic + ML + GenAI system design skeletons |
 | 8 | [`08_GCP_AND_FDE_VOCABULARY.md`](./08_GCP_AND_FDE_VOCABULARY.md) | Google Cloud product map, decision trees, JD-language phrases |
@@ -62,6 +62,16 @@ Memorize this and time it. Use some version of it in both rounds when asked to i
 ## The One-Sentence Answer to "What Is FDE?"
 
 > An FDE is an embedded builder who turns frontier AI into production reality inside a customer's actual environment.
+
+## Flagship story locator (when you need the actual words tonight)
+
+Your 3 hot stories live in `09_STORIES_AND_COMP.md`. Exact locations:
+
+- **J&J approval heuristics (ambiguity, hard-gate reframe)** — `09_STORIES_AND_COMP.md`, Story 2. Maps to behavioral prompts 6, 22, 4, 9 in `13_BEHAVIORAL_INDEX.md`.
+- **Sonnet → Haiku migration (cost, eval discipline)** — `09_STORIES_AND_COMP.md`, Story 6. Numbers live in `01_SOURCE_OF_TRUTH.md` (p95 -50%, cost/req -3x, DeepEval+DSPy+GEPA). Case version in `cases/07_cost_reduction.md`.
+- **AutoResearch + MCP flagship (field friction → tool, product feedback loop)** — `09_STORIES_AND_COMP.md`, Story 5. Do twice. This is the one that signals FDE.
+
+One-liner for every round close: *"If I kept hitting the same integration / eval / data pattern, I'd capture it as a reusable module and send it back as a feature request to the Google Cloud engineering team."* Lives in `02_RRK_MASTER_GUIDE.md` and `10_INTERVIEW_DAY.md` cheat sheet.
 
 ## Emergency Minimum If Time Collapses
 

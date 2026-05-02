@@ -4,6 +4,29 @@ You confirmed: **both rounds on the same day.** Two 60-minute technical rounds b
 
 Read it on May 12 night and May 13 morning. Do not use it to cram.
 
+---
+
+## TL;DR — what to open tonight and tomorrow morning
+
+If you have 90 minutes tonight (May 12) and nothing else:
+
+1. **`14_NARRATED_WALKTHROUGHS.md` (30 min, aloud).** Read both transcripts at interview pace. This is the single highest-leverage file tonight — it's the only place you hear a full round spoken. Do not read silently.
+2. **`13_BEHAVIORAL_INDEX.md` Section A (5 min, eyeball).** The 30-prompt → story map. You're not rehearsing; you're building recall so when a prompt lands tomorrow your reflex is "Prompt 11 → Story 4."
+3. **This file (`10_INTERVIEW_DAY.md`), end to end (20 min).** Cheat sheet, recovery scripts, between-rounds reset, self-eval rubric.
+4. **3 hot stories aloud, standing, no notes (20 min).** J&J approval heuristics (Story 2), Sonnet → Haiku (Story 6), AutoResearch/MCP flagship (Story 5). Each under 90 seconds.
+5. **By 21:00: everything off. Lights out by 22:30.**
+
+Morning of May 13 (60 min before round 1):
+
+1. **Re-read only this file's "Cheat sheet" section below (10 min).** Nothing else.
+2. **30-second Google Doc warmup (5 min).** Type the 3-line import block + one class skeleton.
+3. **Say the 60-second opener aloud once (30 sec).** From README, not the longer version in 14.
+4. **Sit. Breathe. Enter round 1.**
+
+Do NOT re-read cases, RRK guide, system design, GCP vocabulary, or coding solutions on the morning of. You either know them or you don't; rereading on an anxious stomach hurts, not helps.
+
+---
+
 ## The schedule
 
 - **Round 1 — RRK:** 60 minutes
