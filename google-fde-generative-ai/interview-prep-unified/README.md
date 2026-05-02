@@ -17,8 +17,8 @@ This folder is the single source of truth for your prep. It replaces both earlie
 | 2.5 | [`11_BUILD_PLAN.md`](./11_BUILD_PLAN.md) | Six GitHub projects I ship in 11 days to close JD gaps (ADK, CrewAI, OAuth, RAG Engine, A2A, VPC-SC) |
 | 3 | [`cases/`](./cases/) | Ten fully worked customer cases (2000-3000 words each). Start with [`cases/README.md`](./cases/README.md) |
 | 4 | [`04_CODING_PROTOCOL.md`](./04_CODING_PROTOCOL.md) | Google-Doc whiteboard mechanics + 40-min protocol |
-| 5 | [`05_CODING_PROBLEM_SET.md`](./05_CODING_PROBLEM_SET.md) | 22 core problems + 18 stretch + 3 OOP extensions (25 total in solutions) |
-| 5a | [`05a_CODING_SOLUTIONS.md`](./05a_CODING_SOLUTIONS.md) | **Reference Python solutions** for all 25 problems (22 core + 3 OOP). Use to check your own work after drilling on a blank Doc. |
+| 5 | [`05_CODING_PROBLEM_SET.md`](./05_CODING_PROBLEM_SET.md) | 22 core problems + 18 stretch + 5 OOP extensions (27 total in solutions) |
+| 5a | [`05a_CODING_SOLUTIONS.md`](./05a_CODING_SOLUTIONS.md) | **Reference Python solutions** for all 27 problems (22 core + 5 OOP: MinStack, TimeMap, HitCounter, Logger, FileSystem). Use to check your own work after drilling on a blank Doc. |
 | 6 | [`06_PYTHON_AND_OOP.md`](./06_PYTHON_AND_OOP.md) | Python fluency + OOP class-design templates |
 | 7 | [`07_SYSTEM_DESIGN.md`](./07_SYSTEM_DESIGN.md) | Classic + ML + GenAI system design skeletons |
 | 8 | [`08_GCP_AND_FDE_VOCABULARY.md`](./08_GCP_AND_FDE_VOCABULARY.md) | Google Cloud product map, decision trees, JD-language phrases |
@@ -28,6 +28,9 @@ This folder is the single source of truth for your prep. It replaces both earlie
 | 12 | [`13_BEHAVIORAL_INDEX.md`](./13_BEHAVIORAL_INDEX.md) | **30 Google behavioral prompts** mapped to 13 stories (8 existing + 5 new career-arc stories) |
 | 13 | [`14_NARRATED_WALKTHROUGHS.md`](./14_NARRATED_WALKTHROUGHS.md) | **Two full spoken transcripts**: Rate Limiter coding round (40 min) + Enterprise RAG RRK round (60 min) |
 | 14 | [`15_VIDEO_STUDY_PLAN.md`](./15_VIDEO_STUDY_PLAN.md) | **DeepLearning.AI Pro + YouTube** plan. 8 JD-aligned DLAI courses (A2A, CrewAI, MCP, Evaluating AI Agents, ADK voice, DSPy, Vertex embeddings, Agent memory) + 3 YouTube picks (Karpathy LLMs, 3B1B attention, Stanford CS25). ~10.5h across 11 days. |
+| 15 | [`16_BLIND_INTEL.md`](./16_BLIND_INTEL.md) | **Harvested Blind intel** on Google FDE India comp (₹1.0-1.3 Cr L5 target), interview shape, culture signals, and updated comp negotiation script. |
+| 16 | [`17_METRIC_DEFENSE.md`](./17_METRIC_DEFENSE.md) | **Hostile-interviewer drill**: every resume number (AUROC 0.95, 3x cost, 50% p95, 12M rows/$460, +12pts, 58% FP drop, Data Sentry) defended with denominator, baseline, eval design, leakage check, rollback criteria, failure cases. |
+| 17 | [`18_ADVERSARIAL_MOCK_SCRIPT.md`](./18_ADVERSARIAL_MOCK_SCRIPT.md) | **30 RRK interruption prompts + 15 coding gotchas** organized by answer stage. Script these into May 9 and May 11 mocks so solo rehearsal has hostile-interviewer pressure. |
 
 > **Note:** `03_RRK_CASEBOOK.md` is now the [`cases/`](./cases/) folder. The old single-file skeleton is archived at `../interview-prep/_archive/03_RRK_CASEBOOK_v1_skeleton.md`.
 

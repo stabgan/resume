@@ -2,7 +2,7 @@
 
 ## How to use this file
 
-This file holds reference Python solutions for the full coding-round target set: the 22 core problems from `05_CODING_PROBLEM_SET.md`, renumbered 01 through 22 here, plus three additional OOP class-design problems (23 `MinStack`, 24 `TimeMap`, 25 `HitCounter`) that cover the class patterns most likely to show up in Round 2. The three OOP problems are extensions; the 22 core are the must-solve set. "25" throughout this file means `22 core + 3 OOP extensions`.
+This file holds reference Python solutions for the full coding-round target set: the 22 core problems from `05_CODING_PROBLEM_SET.md`, renumbered 01 through 22 here, plus five additional OOP class-design problems (23 `MinStack`, 24 `TimeMap`, 25 `HitCounter`, 26 `Logger`, 27 `FileSystem`) that cover the class patterns most likely to show up in Round 2. The five OOP problems are extensions; the 22 core are the must-solve set. "27" throughout this file means `22 core + 5 OOP extensions`.
 
 The workflow is the same every day. Open a blank Google Doc, read only the problem name and signature from the problem set, then solve the problem cold on the Doc using the protocol in `04_CODING_PROTOCOL.md`. Talk through the invariant, dry-run one example by hand, then write the code. Only after you are done do you open this file and diff your work against the reference.
 
@@ -936,6 +936,96 @@ class HitCounter:
 **Common bug:** Using `<` instead of `<=` on the cutoff. The spec says "past 5 minutes" meaning strictly within 300 seconds, so a hit at `timestamp - 300` is already out of the window. Getting this wrong is a one-off error that slips through easy cases.
 
 **What to say during the round:** "Deque of timestamps. `hit` appends, `getHits` evicts anything at or before `timestamp - 300` then returns the length. Amortized O(1) per hit. I mention the 300-bucket variant for the high-QPS follow-up where I do not want per-hit memory."
+
+---
+
+## 26. Logger Rate Limiter (LC #359)
+
+**Pattern:** Dict of message to last-seen timestamp
+**Time:** O(1) per `shouldPrintMessage`
+**Space:** O(M) where M is the number of distinct messages seen, bounded by the stream cardinality
+**Invariant:** For each message ever seen, I store the earliest timestamp at which it can print again, which is `last_allowed + 10`. A new call prints only if `timestamp >= earliest_allowed`.
+
+```python
+class Logger:
+    def __init__(self) -> None:
+        self._next_allowed: dict[str, int] = {}
+
+    def shouldPrintMessage(self, timestamp: int, message: str) -> bool:
+        next_ok = self._next_allowed.get(message)
+        if next_ok is None or timestamp >= next_ok:
+            self._next_allowed[message] = timestamp + 10
+            return True
+        return False
+```
+
+**Key insight:** I store `timestamp + 10` instead of `timestamp` because the read path becomes a single `>=` comparison rather than `timestamp - last >= 10`. Semantically equivalent, one less arithmetic op, no off-by-one risk. The map grows with distinct message count; in production I would add a TTL eviction pass for unbounded message alphabets, but the interview spec does not require it.
+
+**Common bug:** Updating `_next_allowed` before the check, which forces every call to return True on first sight instead of respecting repeat calls at the same timestamp. Also using `>` instead of `>=` — the spec allows printing exactly 10 seconds later.
+
+**What to say during the round:** "Map from message to its next allowed timestamp. On every call I check if current time is past that, update if yes, return True; otherwise return False. O(1) per call. In production I would add TTL cleanup because distinct messages accumulate forever here."
+
+---
+
+## 27. File System (LC #588 / Design In-Memory File System)
+
+**Pattern:** Trie-like nested dict, nodes hold both children and optional file content
+**Time:** `ls` O(path depth + children to list), `mkdir` / `addContentToFile` / `readContentFromFile` O(path depth)
+**Space:** O(total path characters + total file content)
+**Invariant:** Every node in the tree is either a directory (has a `children` dict) or a file (has a `content` string). The root is always a directory. Path traversal creates intermediate directories on write, but never on read.
+
+```python
+class _Node:
+    __slots__ = ("children", "content")
+
+    def __init__(self) -> None:
+        self.children: dict[str, "_Node"] = {}
+        self.content: str | None = None
+
+    @property
+    def is_file(self) -> bool:
+        return self.content is not None
+
+
+class FileSystem:
+    def __init__(self) -> None:
+        self._root = _Node()
+
+    def _walk(self, path: str, create: bool) -> _Node:
+        node = self._root
+        if path == "/":
+            return node
+        for part in path.split("/")[1:]:
+            if part not in node.children:
+                if not create:
+                    raise KeyError(path)
+                node.children[part] = _Node()
+            node = node.children[part]
+        return node
+
+    def ls(self, path: str) -> list[str]:
+        node = self._walk(path, create=False)
+        if node.is_file:
+            return [path.rsplit("/", 1)[1]]
+        return sorted(node.children.keys())
+
+    def mkdir(self, path: str) -> None:
+        self._walk(path, create=True)
+
+    def addContentToFile(self, filePath: str, content: str) -> None:
+        node = self._walk(filePath, create=True)
+        node.content = (node.content or "") + content
+
+    def readContentFromFile(self, filePath: str) -> str:
+        node = self._walk(filePath, create=False)
+        return node.content or ""
+```
+
+**Key insight:** The trick is that the same node class represents both directories and files, with `content is None` as the discriminator. `addContentToFile` creates intermediate directories (per the LC spec) and appends on repeat writes. `ls` on a file returns a single-element list with the file name, which is an easy edge case to miss. Using `__slots__` on `_Node` saves ~40% memory per node, not required for the interview but a senior habit worth mentioning.
+
+**Common bug:** Forgetting that `ls` on a file path returns just the file name, not the full path; forgetting that `addContentToFile` appends rather than overwrites; using `path.split("/")` without `[1:]` and getting an empty first component that breaks traversal. Also: handling the root path `/` needs an explicit early return because `split("/")[1:]` on `/` gives `['']` which tries to create an empty-string-keyed child.
+
+**What to say during the round:** "Trie of nodes. Each node is either a directory (has children) or a file (has content). I use a single helper `_walk` parametrized on create-or-fail because `mkdir` and `addContentToFile` need create semantics while `ls` and `readContentFromFile` need fail semantics. `ls` on a file returns the file name per the spec. If the interviewer asks for permissions, I would add a metadata field per node with ACLs and enforce at walk time, similar to the RAG ACL pattern."
 
 ---
 
