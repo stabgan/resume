@@ -175,16 +175,62 @@ Re-solving is where retention happens. Spaced repetition beats volume.
 - Slicing `s[i:j]`: O(length). Don't slice in tight loops.
 - String concatenation in loop: can be O(n²). Use `list` + `"".join(list)`.
 
-## Common Google-asked problems NOT on the core 22
+## Frequency-ranked gaps from the Google 30-day + 3-month list (May 2026)
 
-If you've finished the core and the stretch and still want more, these are frequent at Google specifically. Note: **Design In-Memory File System and Logger Rate Limiter now have full solutions in `05a_CODING_SOLUTIONS.md`** (problems 26 and 27), so they're pre-drilled.
+I pulled the public LeetCode-Google mirror (`_leetcode_google_tags/` CSVs, snapshot Feb 2026) and cross-referenced Google's most-asked problems against your 22 core + 18 stretch + 5 OOP set. **Your 22 core is extremely well-calibrated.** 15 of the 25 problems in the top-30 Google 30-day list are already in your drill set, including Two Sum (100% freq), Container With Most Water, Trapping Rain Water, Longest Substring, Merge Intervals, Rotated Sorted Search, Valid Parens, Kth Largest, Subsets, Top K, Group Anagrams, Product of Array Except Self, LIS, Islands.
 
-- Meeting Rooms II (253) — interval + heap
-- Word Break (139) — DP
-- Design In-Memory File System (588) — pre-solved in `05a`
-- Logger Rate Limiter (359) — pre-solved in `05a`
-- Alien Dictionary (269) — topological sort from constraints
-- Longest Palindromic Substring (5) — expand around center
+### The real gaps: 8 problems worth adding in the final 10 days
+
+These appeared in BOTH the 30-day AND 3-month Google lists but aren't in your drill set. Ranked by combined signal. Each one is 30-45 minutes to learn and uses patterns you already know.
+
+| Priority | LC # | Title | Difficulty | Pattern | Why it matters |
+|---|---|---|---|---|---|
+| 1 | 560 | Subarray Sum Equals K | Medium | Prefix sum + hashmap | Classic Google; extends your Two Sum hashmap pattern |
+| 2 | 128 | Longest Consecutive Sequence | Medium | Hashmap + set walk | Tests whether you spot the O(n) trick vs naive O(n log n) |
+| 3 | 5 | Longest Palindromic Substring | Medium | Expand-around-center | Pattern you don't have; 30 lines |
+| 4 | 394 | Decode String | Medium | Stack + recursion | Your stack pattern extended |
+| 5 | 242 | Valid Anagram | Easy | Counter comparison | Warmup; uses `collections.Counter` which you've memorized |
+| 6 | 875 | Koko Eating Bananas | Medium | Binary search on answer | Meta-pattern: binary search NOT on an index. Google loves this. |
+| 7 | 53 | Maximum Subarray (Kadane's) | Medium | 1D DP / greedy | Canonical interview problem; your DP coverage is thin without it |
+| 8 | 31 | Next Permutation | Medium | Array / two-pointer find-and-swap | Trickiest of the 8; skip if time-tight |
+
+### What you can safely SKIP from the Google list
+
+Problems in the 30-day list that look tempting but are lower-ROI for you:
+- LC 9 Palindrome Number, LC 14 Longest Common Prefix, LC 26 Remove Duplicates, LC 88 Merge Sorted Array, LC 169 Majority Element, LC 283 Move Zeroes, LC 70 Climbing Stairs — all trivial once you see them. If Google asks one of these, you'll solve it live. Don't drill.
+- LC 2 Add Two Numbers, LC 206 Reverse Linked List — linked list problems, Google-classic but your sliding-window / graph / hash-map practice already covers the mental model.
+- LC 4 Median of Two Sorted Arrays — LC Hard, 62.5% frequency but very rarely given to anyone below L6. If asked, say "I'd binary-search the partition" and move on.
+- LC 175 Combine Two Tables, LC 1757 Recyclable Products, LC 3010 / 3637 / 3721 — SQL and contest problems. Not typical Google interview questions.
+- LC 51 N-Queens — Hard backtracking. If your interviewer gives this, they've already decided. Not worth 2 hours.
+- LC 1929 Concatenation of Array — trivial filler, free 5 minutes if it shows up.
+
+### Day-by-day additions to `00_EXECUTION_PLAN.md`
+
+Slot 2 gap problems per day from May 3 to May 6, replacing nothing in the existing plan (use the 30-min coding block slot):
+
+| Date | New drill | Paired with |
+|---|---|---|
+| May 3 | LC 560 Subarray Sum Equals K | + existing LC 3 Longest Substring |
+| May 4 | LC 128 Longest Consecutive Seq | + existing LC 49 Group Anagrams |
+| May 5 | LC 5 Longest Palindromic Substring | + existing LC 33 Rotated Search |
+| May 6 | LC 394 Decode String | + existing LC 20 Valid Parens |
+| May 7 | LC 875 Koko Eating Bananas | + existing LC 215 Kth Largest |
+| May 8 | LC 53 Maximum Subarray | + existing LC 200 Islands |
+
+Skip LC 242 and LC 31 unless you finish the other 6 early. They're the weakest-ROI of the 8.
+
+### How the CSVs are structured (raw data in `_leetcode_google_tags/`)
+
+Five files, matching LeetCode Premium's exact time windowing:
+- `thirty-days.csv` — 182 Google questions in last 30 days
+- `three-months.csv` — 472 Google questions in last 3 months
+- `six-months.csv` — 792 Google questions in last 6 months
+- `more-than-six-months.csv` — 2058 older Google questions
+- `all.csv` — all 2217 Google-tagged questions
+
+Columns: `ID, URL, Title, Difficulty, Acceptance %, Frequency %`. Frequency is the relative occurrence rate within that time window; Two Sum at 100% means it's the most-asked question in that window.
+
+Snapshot is Feb 21, 2026 (~10 weeks old). Good enough for pattern targeting; not guaranteed to match May 13's exact question pool.
 
 ## The one habit that wins the coding round
 
