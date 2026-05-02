@@ -1,0 +1,345 @@
+Delivered-To: kaustabhganguly@gmail.com
+Received: by 2002:a05:7301:169a:b0:2be:74e:e54f with SMTP id ma26csp1024099dyb;
+        Thu, 30 Apr 2026 06:45:28 -0700 (PDT)
+X-Received: by 2002:a05:6870:c203:b0:3d9:2fe2:f5c8 with SMTP id 586e51a60fabf-434380930a5mr1344654fac.32.1777556728457;
+        Thu, 30 Apr 2026 06:45:28 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1777556728; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=VAKnyB7IWpNYX8530aFd2ZJ3kW7aje2kvMP6K/6t/YIBqratH71gksoz/79k2FGcmv
+         rDoTDvO7fzmBqcMh6DKLNwSWk0DvpAOXKXPP1lR5fJA+BUY8EQshB3xpbwpbSx0efjjE
+         TEHi5hLqIZTQn3+pOtxZnnSbRvXOjqkDLi25o2IRBYsMxhVg2mBs6u8Ane9J/EPIAxXu
+         Njw5t9SUCczgWMNA1ucU4grlNr2Dg2jBqsKWRsGYwY2eVCJH90klxSR2s+aFH6YGRDRd
+         TekjcPmn359cs7dMtXdT/4ir3mMgsiuhfPe7jF/Mte3NdtulQv2NghahztApfqzVunKS
+         nEEw==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=cc:to:subject:message-id:date:from:reply-to:mime-version
+         :dkim-signature;
+        bh=N2mwiQfEZtwnqrPy07d7m2t24d1H44cVJiH7Eby5tOw=;
+        fh=bZBxghwkZ81TUqayoVXUEgg8bzz6NbDtrnbp55sdz1E=;
+        b=YH3G1Ls5LojkypC1krQte6GXVCn+0uBR7FMAXbskoXvZEM2ziKGRaSOygqDbrkM1IZ
+         Pc6sjdYHKTfoqrvnA0dT6APtx8ZN3YPt1Fqmb8kt8o1wxIqFKT7npOP3JnTv7CQ03GXH
+         GxuqptKHpVlq9tBB0+04UeCxO56jgxOXUXv57o0c3PvLh7G+YQIMNPGf5Qolt8zxnkFe
+         GUREl4l7g38+TabI7psBuTbbKfNSVQJGsF6ZvSBkqfMZBZYEbaQQfmxATS43Xnlb3mMv
+         u5OUt31CW6146wxFa3hzXYcgCIND+b/rPZfMx9CE/pC3tLGx4IfrUykmt++ouso+jL5u
+         B4Ug==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20251104 header.b=Nuyp8pkW;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of gumpini@google.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=gumpini@google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <gumpini@google.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 586e51a60fabf-4340e6e12b8sor2237240fac.4.2026.04.30.06.45.28
+        for <kaustabhganguly@gmail.com>
+        (Google Transport Security);
+        Thu, 30 Apr 2026 06:45:28 -0700 (PDT)
+Received-SPF: pass (google.com: domain of gumpini@google.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20251104 header.b=Nuyp8pkW;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of gumpini@google.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=gumpini@google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1777556728; cv=none;
+        d=google.com; s=arc-20240605;
+        b=JnNneRx7NJiRiUrl67oe61gxRI+50y4mXbs8U8XZuivaRW08NdFIX8nEvwnRPxf4X/
+         Ibn7VklTJou2UFcomldNDJZW61Vwq9d7N1Z1wYQoxfk9VWm9WccbpHguu6+IqFbNGWb8
+         3eRQZW+Y66aiXRhFmZJCW8+V1HwFJ8EhNt5SFP9KnPTMvC9IAeUif8QO0TNWlnxjt+bY
+         wkNRTeEXZOq4B1ceu57buTnbf45eZ1trq5gzOy0U1yRhnI+XLy931Wu6QKPplmS1LC5J
+         m6Xcxx7UVES1vLPQH/3YOIemFbEHZTVrzo67hTXBUyx1F5YVizjxU33fBZ9XjmK7yEYi
+         i+ow==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=cc:to:subject:message-id:date:from:reply-to:mime-version
+         :dkim-signature;
+        bh=N2mwiQfEZtwnqrPy07d7m2t24d1H44cVJiH7Eby5tOw=;
+        fh=bZBxghwkZ81TUqayoVXUEgg8bzz6NbDtrnbp55sdz1E=;
+        b=AyDhWEPV/m78DFZx0yKL5lwSdqO6VyizM4D25tTZSz6y70BYV0uBvdf13CrlfE6RiJ
+         xPhQQKmMJi1pkd9MUBktkCvclbJv0cSVoNou/qWIPtntDqRmP2CW56/YNcE01eskXfYY
+         Ps05UYxg+JyU/AOrA/fOAGX3ODeDOATlywO2CYy5C5uotXLq7wEDR1WjYDeSmmkTivdS
+         EJ0weZwBOYMZhNGoSfRie1a6BhnPnjhUGzCtSKfJAZYtsQ/kP3FA6/Uvg2qOOWn/Hjo+
+         tSwzwNWCMSQ5DX5ngZjFno/RHP6FJvAVctLVPX55M3pTvcxh3mrhSdkI2vELVdzDfGAc
+         5UTA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20251104; t=1777556728; x=1778161528; dara=google.com;
+        h=cc:to:subject:message-id:date:from:reply-to:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=N2mwiQfEZtwnqrPy07d7m2t24d1H44cVJiH7Eby5tOw=;
+        b=Nuyp8pkWuNnyRf1YA5Gr87n6EQIHYze1N3JkRdj5DjmWSJEkxKPkWKRXJKE76MX3dK
+         AXsOu6Wq8gQQQ81cPyXvCTtk/nx/6de1Tqdp5QsMOF0Iu5R3loxRQOn4kaUFc2UPQRtL
+         VwuNEXUOeyRp9LluTCSiND/joXCpiM4oK8v+wK/C7HAx1Sa/TCfxlkAftR+ZhnDWQIfQ
+         ihrmFuMGU5Gojh/1wAhNuSYwdzM3wFnXirSqqThpZj7SvLNtIMRpxtQJeE5xXwi2LkaR
+         9P8+KlBrARMxMmRvg4o5ekvrdH8zFqqa9/JbogWJTAIj1p+UYu3CFsz8rcK49LFdZsop
+         HV9Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1777556728; x=1778161528;
+        h=cc:to:subject:message-id:date:from:reply-to:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=N2mwiQfEZtwnqrPy07d7m2t24d1H44cVJiH7Eby5tOw=;
+        b=Vx2OQniNoujwa7RLYWzWF7NGHHmNnApaG4V+BkRJpQ0p6Sg9s+ygCq7UjRaD17ZAoE
+         KTkQZEmf3GD3WOUcZWU2Xu6fRY44Z8BM6IU22yElrzLfDo5C1PetDh3eNIr7jrcUEata
+         qZP6/SpMTTCI2xdSzNeN5+1gaLzqH90KtAmwBOqA+3GJ1f4hVjrASaBC4PpK+X5m0cH2
+         4UNBAo6/rldaM9mO/RtyAbqu3JOy5JDT4QNIFYNZ9DDrLTPBKTa1aRa24/oOEUceHs/W
+         ky7LvS6wr3kFtdTdl6JXDXak5uxdWWVmPnJf18RdD6olbxC6G+TUm89nJBFUBezJGwb/
+         AfmA==
+X-Gm-Message-State: AOJu0Yye67TYDMKraTVfpNtAmeNI08LdijstgXm7fmUOnOa02D2lTdm1
+	rWkFCHrNhyEI5eIpD/XzDnF3WaHJqco2GO8FX/BXCQuyumLTiArquBAA1xw+8PcUzaDEKmtM61h
+	hUbBPf1HpRa1gciAXt/RKGfFfajE2wIRyURFmHxYZWhzzp9AS+ZIT3PetW8N/20KD/QNUoCtxhK
+	O7KNTogwZQEIZflc6ff+j54fMsyRBEJI4/9L+KxgYzpNSBa3A8+OTDhdSGJ10pXI/GT5iwcRBnF
+	+isJWIY1aMTZS1VmJTyFdr9PNB/XFiYA5CwsfsVxXayifrUlhVajJVMksH9fY7pwvV/dl1Mv7PV
+	pH0UHUXl9ThC+/0=
+X-Gm-Gg: AeBDievrielYOiRWPC3EUfW+PHJ/IZ08/MjWBAau6CgNvwfkoW7yGLyBJoN2A98BnrO
+	Msbqx9m2NQ4PrjNqW4zB/tRrq1kgtOGzwU81NWvQM8V26A2SdzNJql7GWfJaNcrjbo2luufEdMU
+	YO5zidRsfU6WUT6MHqLOasKUIMQzrmj+bQYGSfT8jl2NvCrwbL76QencUlBtwSX4nwQUnMxrWoP
+	C15srKvZXjfzijRdLu47f6jDZVBChEF8vO/FFLdKffflEtSQNFv8AjZK5gBotvsr3tiPQZ5aPEf
+	5ZI2lqQOmLfP10cA0EbJr+aMK49MPA==
+X-Received: by 2002:a05:6820:1ca3:b0:696:1a85:5873 with SMTP id
+ 006d021491bc7-6967a9f58f1mr1165242eaf.31.1777556727371; Thu, 30 Apr 2026
+ 06:45:27 -0700 (PDT)
+MIME-Version: 1.0
+Reply-To: gumpini@xwf.google.com
+From: "Harish Gumpini (xWF)" <gumpini@xwf.google.com>
+Date: Thu, 30 Apr 2026 19:15:15 +0530
+X-Gm-Features: AVHnY4Kfb2qUsuC69SojRbppa9Es7gkzvUgTl-QbT_IVbl5CaMy6tpfKsZFRF3A
+Message-ID: <CAEzguUKAdmKnf-1V0Sa74gK_0dv+FWWuqNFzrnpQ4pYcGKzbcQ@mail.gmail.com>
+Subject: Intro: Kaustabh Ganguly meet Priyanka Biswas for Google Application
+To: Kaustabh Ganguly <kaustabhganguly@gmail.com>, gangulykaustabh@gmail.com
+Cc: "Priyanka Biswas (xWF)" <bipriyanka@google.com>
+Content-Type: multipart/alternative; boundary="0000000000004e93690650adad62"
+
+--0000000000004e93690650adad62
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Kaustabh,
+
+I am pleased to inform you that your profile has been shortlisted for the
+Forward Deployed Engineer, GenAI role.
+
+We are now ready to begin the interview process. Interviews are scheduled
+to start on May 6th and will take place every Wednesday and Thursday.
+
+So, please share your availability for two rounds of interviews according
+to the Wednesday and Thursday schedule mentioned above.
+
+Also, moving forward, your candidature will be managed by Priyanka Biswas.
+Priyanka will be your primary point of contact who will guide you through
+the upcoming interview process at Google.
+
+It was wonderful connecting with you, and I wish you the best of luck.
+Please let me know if you have any questions.
+
+Best regards,
+
+
+
+<http://careers.google.com/>
+
+Harish Gumpini
+
+Staffing Specialist - Recruiting
+
+Randstad Sourceright, Supporting Google
+
++91 40-67412803
+
+careers.google.com
+
+<https://www.linkedin.com/company/google/>
+<https://www.youtube.com/user/lifeatgoogle>
+<https://www.facebook.com/lifeatgoogle/> <https://x.com/lifeatgoogle>
+<https://www.instagram.com/lifeatgoogle>
+
+<https://blog.google/inside-google/working-google/>
+
+|Learn more about our candidate privacy policy.|
+<https://careers.google.com/privacy-policy/>
+
+Resources for our interview: Careers In AI <https://goo.gle/careersinai> | Tech
+Pathways in India <https://goo.gle/44OHyT2> | Working@Google
+<https://goo.gle/4iMmoZb>
+
+If you require interview accommodations due to a disability, medical
+condition or neurodivergence, please email
+candidateaccommodations@google.com for a confidential consultation.
+Information shared will only be viewed by members of the Candidate
+Accommodations team, and will not be used or referenced in any hiring
+decisions. By reaching out to this alias, you are consenting to a
+consultation with an Accommodations Specialist.
+
+
+* If you received this communication by mistake, please don't forward it to
+anyone else (it may contain confidential or privileged information), please
+erase all copies of it, including all attachments, and please let the
+sender know it went to the wrong person. Thanks.Google Careers*
+
+--0000000000004e93690650adad62
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><div>Dear Kaustabh,</div><div><br></div><div>I am ple=
+ased to inform you that your profile has been shortlisted for the Forward D=
+eployed Engineer, GenAI role.</div><div><br></div><div>We are now ready to =
+begin the interview process. Interviews are scheduled to start on May 6th a=
+nd will take place every Wednesday and Thursday.</div><div><br></div><div>S=
+o, please share your availability for two rounds of interviews according to=
+ the Wednesday and Thursday schedule mentioned above.</div><div><br></div><=
+div>Also, moving forward, your candidature will be managed by Priyanka Bisw=
+as. Priyanka will be your primary point of contact who will guide you throu=
+gh the upcoming interview process at Google.</div><div><br></div><div>It wa=
+s wonderful connecting with you, and I wish you the best of luck. Please le=
+t me know if you have any questions.</div><div><br></div><div>Best regards,=
+</div><div><br clear=3D"all"></div></div><div><div dir=3D"ltr" class=3D"gma=
+il_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div dir=
+=3D"ltr"><p dir=3D"ltr" style=3D"line-height:1.656;background-color:#ffffff=
+;margin-top:0pt;margin-bottom:0pt"><span></span></p><div><div dir=3D"ltr"><=
+div dir=3D"ltr"><table style=3D"color:rgb(34,34,34);border:none;border-coll=
+apse:collapse"><colgroup><col width=3D"125"></colgroup><tbody><tr style=3D"=
+height:0pt"><td style=3D"border-top:1pt solid rgb(66,133,244);vertical-alig=
+n:top;overflow:hidden"><br></td><td style=3D"border-top:1pt solid rgb(66,13=
+3,244);vertical-align:top;overflow:hidden"><br></td></tr><tr style=3D"heigh=
+t:84.75pt"><td style=3D"vertical-align:middle;overflow:hidden"><p dir=3D"lt=
+r" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><a href=3D"h=
+ttp://careers.google.com/" style=3D"color:rgb(17,85,204)" target=3D"_blank"=
+><span style=3D"font-size:10pt;font-family:Roboto,sans-serif;background-col=
+or:transparent;vertical-align:baseline"><span style=3D"border:none;display:=
+inline-block;overflow:hidden;width:110px;height:22px"><img src=3D"https://l=
+h7-rt.googleusercontent.com/docsz/AD_4nXcsSAOpKGUuwQHTWoKxp3Ds3JXOvSKUCxbRE=
+iQHMQMATbnOdxajDt4T7zruEBOBVYChWbCTuTUadniXHTRIq-PUFOUOo8tOheRXj_OGJsMbQPVZ=
+_tUvszdvpE7rKFZ15wxKlpuGxAFrDtGY628G8SNVBzlrbonYhdWdWX6RMA5gslDH?key=3D6Tb8=
+UB4wDgteXmDVy1Wg0g" width=3D"110" height=3D"22" style=3D"margin-left:0px;ma=
+rgin-top:0px"></span></span></a></p><br></td><td style=3D"vertical-align:to=
+p;overflow:hidden"><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;=
+margin-bottom:0pt"><span style=3D"color:rgb(102,102,102);font-family:Roboto=
+,sans-serif;font-size:13.3333px;font-weight:700">Harish Gumpini</span></p><=
+p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><=
+font color=3D"#666666">Staffing Specialist - Recruiting</font></p><p dir=3D=
+"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><font col=
+or=3D"#666666">Randstad Sourceright, Supporting Google</font></p><p dir=3D"=
+ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span styl=
+e=3D"font-family:Roboto,sans-serif;font-size:13.3333px"><font color=3D"#666=
+666">+91 40-67412803</font></span></p><p dir=3D"ltr" style=3D"line-height:1=
+.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:10pt;font-fa=
+mily:Roboto,sans-serif;vertical-align:baseline"><font color=3D"#666666"><a =
+href=3D"http://careers.google.com" target=3D"_blank">careers.google.com</a>=
+</font></span></p><p dir=3D"ltr" style=3D"line-height:1.2;margin-top:3pt;ma=
+rgin-bottom:0pt"><a href=3D"https://www.linkedin.com/company/google/" style=
+=3D"color:rgb(17,85,204)" target=3D"_blank"><span style=3D"font-size:10pt;f=
+ont-family:Roboto,sans-serif;color:rgb(102,102,102);background-color:transp=
+arent;vertical-align:baseline"><span style=3D"border:none;display:inline-bl=
+ock;overflow:hidden;width:15px;height:15px"><img title=3D"LinkedIn" src=3D"=
+https://lh7-rt.googleusercontent.com/docsz/AD_4nXcd5Ll4j8BMitfBfec_Weo6h8wc=
+k6Nsu-F2MVSamaITElBCJGESsM8325eVDCm1l64H_46tjAJQRCf5y_Xm3ihIsM2HRRgv4d2iGZG=
+WoP3UUn811z7aYAjfivw7bw9i5_-xsjGIdfgzL09OA26F4guOQLNomM2f6qn16ypprUg_-bcG?k=
+ey=3D6Tb8UB4wDgteXmDVy1Wg0g" width=3D"15" height=3D"15" style=3D"margin-lef=
+t:0px;margin-top:0px"></span></span></a><span style=3D"font-size:10pt;font-=
+family:Roboto,sans-serif;color:rgb(102,102,102);background-color:transparen=
+t;vertical-align:baseline"> </span><a href=3D"https://www.youtube.com/user/=
+lifeatgoogle" style=3D"color:rgb(17,85,204)" target=3D"_blank"><span style=
+=3D"font-size:10pt;font-family:Roboto,sans-serif;color:rgb(102,102,102);bac=
+kground-color:transparent;vertical-align:baseline"><span style=3D"border:no=
+ne;display:inline-block;overflow:hidden;width:22px;height:15px"><img title=
+=3D"YouTube" src=3D"https://lh7-rt.googleusercontent.com/docsz/AD_4nXcXciM-=
+KCef5QSqoiIcjn9pSDE5gyPI7Rl0v30_YLybe1MOtYD7wBP_FIwJqsaFCeFSopcxVCBUIbziIvo=
+hzjl6QDKKvvVVcPbfIrh_XSqPglba8UKtnZgF0OR5yGvL5JQeWbQr5VV14J4pDQI6nO0whv6yy9=
+qJkuggKN_ZX3taVmsC?key=3D6Tb8UB4wDgteXmDVy1Wg0g" width=3D"22" height=3D"15"=
+ style=3D"margin-left:0px;margin-top:0px"></span></span></a><span style=3D"=
+font-size:10pt;font-family:Roboto,sans-serif;color:rgb(102,102,102);backgro=
+und-color:transparent;vertical-align:baseline"> </span><a href=3D"https://w=
+ww.facebook.com/lifeatgoogle/" style=3D"color:rgb(17,85,204)" target=3D"_bl=
+ank"><span style=3D"font-size:10pt;font-family:Roboto,sans-serif;color:rgb(=
+102,102,102);background-color:transparent;vertical-align:baseline"><span st=
+yle=3D"border:none;display:inline-block;overflow:hidden;width:15px;height:1=
+5px"><img title=3D"Facebook" src=3D"https://lh7-rt.googleusercontent.com/do=
+csz/AD_4nXcdYGdc2Pb1y-n7IoL0ZJ4EVkPzmo93MQZ_gQsGiOpaDnJecZdlDo2GDBwWM60tvFt=
+hhv-JdwkRexNNeOLkv0MCI8hdKoPWx6xwyHU_aUp_uo7Y3OQjkuFu_sCDSKFitBddOCHUKW4Sae=
+bTTpPk2cwe4xGa1hxU4---IvTWtiqEc8c7?key=3D6Tb8UB4wDgteXmDVy1Wg0g" width=3D"1=
+5" height=3D"15" style=3D"margin-left:0px;margin-top:0px"></span></span></a=
+><span style=3D"font-size:10pt;font-family:Roboto,sans-serif;color:rgb(102,=
+102,102);background-color:transparent;vertical-align:baseline"> </span><a h=
+ref=3D"https://x.com/lifeatgoogle" style=3D"color:rgb(17,85,204)" target=3D=
+"_blank"><span style=3D"font-size:10pt;font-family:Roboto,sans-serif;backgr=
+ound-color:transparent;vertical-align:baseline"><span style=3D"border:none;=
+display:inline-block;overflow:hidden;width:15px;height:15px"><img src=3D"ht=
+tps://lh7-rt.googleusercontent.com/docsz/AD_4nXfi3Z4ji9Y0N9DCTiO7qitqRU6LSq=
+WkL8ZatzEWflwDUM8aIX6MWxO_xlyl3LrY7shyA5I3Kl1CEbMrjnMqeMswFhsuye7sgKkVYmwIq=
+vM1JssFbBLJQuBDoSEEiHbuLm33F45gBAGlRcitv2nAO-FeIL5IkqqvOa6gPWZKU1HRXUw?key=
+=3D6Tb8UB4wDgteXmDVy1Wg0g" width=3D"15" height=3D"15" style=3D"margin-left:=
+0px;margin-top:0px"></span></span></a><span style=3D"font-size:10pt;font-fa=
+mily:Roboto,sans-serif;color:rgb(102,102,102);vertical-align:baseline"> </s=
+pan><a href=3D"https://www.instagram.com/lifeatgoogle" style=3D"color:rgb(1=
+7,85,204)" target=3D"_blank"><span style=3D"font-size:10pt;font-family:Robo=
+to,sans-serif;color:rgb(102,102,102);vertical-align:baseline"><span style=
+=3D"border:none;display:inline-block;overflow:hidden;width:15px;height:15px=
+"><img title=3D"Instagram" src=3D"https://lh7-rt.googleusercontent.com/docs=
+z/AD_4nXf1FUIad54Yy8bZuHm2dbjpiOkiA5oL0juikqq9DUwNrxeQ87kmS6pK6gf6W1zMAs-Mb=
+98aKvNy4YOvWJZs8AmS56d_uhbJRslwft2u7LfUdugksJQL5QIxfCN0pLicln-qPX-0_u3nT4G9=
+Mpr4H17rlu8ZkJ_Wnb8Xl0WfTvcgxBO8?key=3D6Tb8UB4wDgteXmDVy1Wg0g" width=3D"15"=
+ height=3D"15" style=3D"margin-left:0px;margin-top:0px"></span></span></a><=
+span style=3D"font-size:10pt;font-family:Roboto,sans-serif;color:rgb(102,10=
+2,102);background-color:transparent;vertical-align:baseline"> </span><a hre=
+f=3D"https://blog.google/inside-google/working-google/" style=3D"color:rgb(=
+17,85,204)" target=3D"_blank"><span style=3D"font-size:10pt;font-family:Rob=
+oto,sans-serif;vertical-align:baseline"><span style=3D"border:none;display:=
+inline-block;overflow:hidden;width:15px;height:15px"><img title=3D"Life at =
+Google blog" src=3D"https://lh7-rt.googleusercontent.com/docsz/AD_4nXd-F2f2=
+IeY6icDjwTjFRcxoWa72LueDj-qUeHxQZsYFsyE4eI10c9X7--AghxRSIruoTpi-LcUxJYcWzgU=
+6nQrD7Aw90ePtU6Dv9nCrP0kKtSkQALog1rVcdnRCV7WHsZ7YH7zKh6nn4RNCb5X7FJPPDxmH-m=
+AnVx0TRA3155Ud7_ri?key=3D6Tb8UB4wDgteXmDVy1Wg0g" width=3D"15" height=3D"15"=
+ style=3D"margin-left:0px;margin-top:0px"></span></span><span style=3D"font=
+-size:10pt;font-family:Roboto,sans-serif;color:rgb(102,102,102);background-=
+color:transparent;vertical-align:baseline"><br><br></span></a></p></td></tr=
+><tr style=3D"height:10pt"><td colspan=3D"2" style=3D"vertical-align:top;ov=
+erflow:hidden"><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;marg=
+in-bottom:0pt"><a href=3D"https://careers.google.com/privacy-policy/" style=
+=3D"color:rgb(17,85,204)" target=3D"_blank"><span style=3D"font-size:10pt;f=
+ont-family:Roboto,sans-serif;background-color:transparent;vertical-align:ba=
+seline">|Learn more about our candidate privacy policy.|</span></a></p><p d=
+ir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><spa=
+n style=3D"background-color:transparent;font-size:10pt;font-family:Arial,sa=
+ns-serif;color:rgb(0,0,0);vertical-align:baseline">Resources</span><span st=
+yle=3D"font-size:10pt;font-family:Arial,sans-serif;color:rgb(0,0,0);vertica=
+l-align:baseline"> for our interview:</span><a href=3D"https://goo.gle/care=
+ersinai" style=3D"color:rgb(17,85,204)" target=3D"_blank"><span style=3D"fo=
+nt-size:10pt;font-family:Arial,sans-serif;color:rgb(0,0,0);vertical-align:b=
+aseline"> </span><span style=3D"font-size:10pt;font-family:Arial,sans-serif=
+;vertical-align:baseline">Careers In AI</span></a><span style=3D"font-size:=
+10pt;font-family:Arial,sans-serif;color:rgb(0,0,0);vertical-align:baseline"=
+> |</span><a href=3D"https://goo.gle/44OHyT2" style=3D"color:rgb(17,85,204)=
+" target=3D"_blank"><span style=3D"font-size:10pt;font-family:Arial,sans-se=
+rif;color:rgb(0,0,0);vertical-align:baseline"> </span><span style=3D"font-s=
+ize:10pt;font-family:Arial,sans-serif;vertical-align:baseline">Tech Pathway=
+s in India</span></a><span style=3D"font-size:10pt;font-family:Arial,sans-s=
+erif;color:rgb(0,0,0);vertical-align:baseline"> |</span><a href=3D"https://=
+goo.gle/4iMmoZb" style=3D"color:rgb(17,85,204)" target=3D"_blank"><span sty=
+le=3D"font-size:10pt;font-family:Arial,sans-serif;color:rgb(0,0,0);vertical=
+-align:baseline"> </span><span style=3D"font-size:10pt;font-family:Arial,sa=
+ns-serif;vertical-align:baseline">Working@Google</span></a></p></td></tr></=
+tbody></table></div><div dir=3D"ltr" style=3D"color:rgb(34,34,34)"><span><p=
+ dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><s=
+pan><span style=3D"font-size:10pt;font-family:&quot;Google Sans&quot;,sans-=
+serif;color:rgb(0,0,0);background-color:transparent;font-style:italic;verti=
+cal-align:baseline">If you require interview accommodations due to a disabi=
+lity, medical condition or neurodivergence, please email </span><span style=
+=3D"font-size:10pt;font-family:&quot;Google Sans&quot;,sans-serif;color:rgb=
+(17,85,204);background-color:transparent;font-style:italic;vertical-align:b=
+aseline"><a href=3D"mailto:candidateaccommodations@google.com" target=3D"_b=
+lank">candidateaccommodations@google.com</a></span><span style=3D"font-size=
+:10pt;font-family:&quot;Google Sans&quot;,sans-serif;color:rgb(0,0,0);backg=
+round-color:transparent;font-style:italic;vertical-align:baseline"> for a c=
+onfidential consultation. Information shared will only be viewed by members=
+ of the Candidate Accommodations team, and will not be used or referenced i=
+n any hiring decisions. By reaching out to this alias, you are consenting t=
+o a consultation with an Accommodations Specialist.</span></span><br><br><i=
+><b>=C2=A0If=C2=A0</b><b>you received this communication by mistake, please=
+ don&#39;t forward it to anyone else (it may contain confidential or privil=
+eged information), please erase all copies of it, including all attachments=
+, and please let the sender know it went to the wrong person. Thanks.</b><b=
+r><b>Google Careers</b></i></p></span></div><div dir=3D"ltr" style=3D"color=
+:rgb(34,34,34)"><div><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><di=
+v></div></div></div></div></div></div></div></div></div></div></div></div><=
+/div>
+
+--0000000000004e93690650adad62--

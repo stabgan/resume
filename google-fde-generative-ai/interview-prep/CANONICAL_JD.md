@@ -4,20 +4,22 @@ Mined and synthesized on 27 April 2026 from **10 live Google Careers postings** 
 
 ## Variants observed
 
-| Variant | Location | Req ID / source | Level |
-|---|---|---|---|
-| **FDE, GenAI, Google Cloud (India)** — your req | Bengaluru / Mumbai / Gurugram | Adzuna IN mirror | 8+ yrs (recruiter said); adzuna listed `3+ yrs` min which is the *entry* posting |
-| **FDE, GenAI, Google Cloud** | US generic | careers.google.com `91100648979735238` | Mid |
-| **FDE, GenAI, Google Cloud** | US generic (high-customer-travel) | careers.google.com `125844378898834118` | Mid |
-| **FDE I, GenAI, Google Cloud** | US | careers.google.com `139953273451750086` | Early |
-| **Staff FDE, GenAI, Google Cloud** | US | careers.google.com `74360142065214150` | Advanced (Staff) |
-| **FDE, GenAI, DACH, Google Cloud** | Germany/Austria/Switzerland | careers.google.com `122434088966464198` | Early |
-| **FDE, GenAI, Google Cloud (Mandarin)** | Singapore | BeBee SG mirror | Senior (6+ yrs) |
-| **FDE I, GenAI, Google Cloud (Japanese, English)** | Japan | careers.google.com `91077984437314246` | Advanced |
-| **FDE, GenAI, Telecom, Google Cloud** | Addison TX / DC | AnitaB mirror | Mid ($153K–$222K + equity) |
-| **FDE, GenAI (GenMedia), Google Cloud** | US | careers.google.com `106248470351749830` | — |
-| **FDE, Applied AI, Google Cloud** (Conversational AI sibling) | 14 US cities | careers.google.com `101918593561567942` | — |
-| **FDE, GenAI, Google Cloud** | London | PitchMeAI mirror | — |
+
+| Variant                                                       | Location                          | Req ID / source                         | Level                                                                            |
+| ------------------------------------------------------------- | --------------------------------- | --------------------------------------- | -------------------------------------------------------------------------------- |
+| **FDE, GenAI, Google Cloud (India)** — your req               | Bengaluru / Mumbai / Gurugram     | Adzuna IN mirror                        | 8+ yrs (recruiter said); adzuna listed `3+ yrs` min which is the *entry* posting |
+| **FDE, GenAI, Google Cloud**                                  | US generic                        | careers.google.com `91100648979735238`  | Mid                                                                              |
+| **FDE, GenAI, Google Cloud**                                  | US generic (high-customer-travel) | careers.google.com `125844378898834118` | Mid                                                                              |
+| **FDE I, GenAI, Google Cloud**                                | US                                | careers.google.com `139953273451750086` | Early                                                                            |
+| **Staff FDE, GenAI, Google Cloud**                            | US                                | careers.google.com `74360142065214150`  | Advanced (Staff)                                                                 |
+| **FDE, GenAI, DACH, Google Cloud**                            | Germany/Austria/Switzerland       | careers.google.com `122434088966464198` | Early                                                                            |
+| **FDE, GenAI, Google Cloud (Mandarin)**                       | Singapore                         | BeBee SG mirror                         | Senior (6+ yrs)                                                                  |
+| **FDE I, GenAI, Google Cloud (Japanese, English)**            | Japan                             | careers.google.com `91077984437314246`  | Advanced                                                                         |
+| **FDE, GenAI, Telecom, Google Cloud**                         | Addison TX / DC                   | AnitaB mirror                           | Mid ($153K–$222K + equity)                                                       |
+| **FDE, GenAI (GenMedia), Google Cloud**                       | US                                | careers.google.com `106248470351749830` | —                                                                                |
+| **FDE, Applied AI, Google Cloud** (Conversational AI sibling) | 14 US cities                      | careers.google.com `101918593561567942` | —                                                                                |
+| **FDE, GenAI, Google Cloud**                                  | London                            | PitchMeAI mirror                        | —                                                                                |
+
 
 So this is a **globally-hiring role family**, and Google has been stamping out variants by language + vertical + seniority. Your req (India, 8+ yrs) is the **Senior variant** of the generic GenAI FDE template.
 
@@ -26,9 +28,11 @@ So this is a **globally-hiring role family**, and Google has been stamping out v
 ## ROLE — what an FDE at Google Cloud actually does
 
 **One-sentence definition (verbatim, appears across 8 of 10 postings):**
+
 > "An embedded builder who bridges the gap between frontier AI products and production-grade reality within customers."
 
 **Variant framings used interchangeably:**
+
 - "**Builder-consultant**" (DACH, Singapore, GenMedia)
 - "**Innovator-builder**" (Japan, GenMedia)
 - "**High-agency engineer with a founder's mindset**" (India, GenMedia, Staff)
@@ -36,16 +40,19 @@ So this is a **globally-hiring role family**, and Google has been stamping out v
 - "**Agent engineer and primary delivery arm**" (Applied AI variant)
 
 **The dual purpose (verbatim on 7 of 10 postings):**
+
 1. "**White-glove deployment** of (complex) AI systems" within the customer's environment
 2. "**Critical feedback loop**, transforming real-world field insights into Google Cloud's future product roadmap"
 
 **The production-blockers you solve (verbatim):**
+
 - Integration complexities
 - Data readiness issues
 - State-management challenges
 - *"…that prevent AI from reaching enterprise-grade maturity."*
 
 **Delivery style (Applied AI / Telecom variants):**
+
 - **"High-travel, high-impact"** — "significant customer collaboration and travel often required"
 - "Lead with deep, **bespoke implementation** as the primary value proposition"
 - "Translate one-off customer solutions into **reusable, scalable assets**"
@@ -156,6 +163,7 @@ These show up across postings. Nearly every one maps to something you've already
 Mined from the postings + Google Cloud docs + April 2025 Cloud Next announcements:
 
 ### Core Google-proprietary (know cold)
+
 - **Gemini family** (2.5 Pro, 2.5 Flash, 2.5 Flash-Lite) — when each is appropriate
 - **Vertex AI** — the unified platform; know the sub-products:
   - **Vertex AI Agent Builder** — umbrella
@@ -172,23 +180,27 @@ Mined from the postings + Google Cloud docs + April 2025 Cloud Next announcement
 - **Cloud Run, GKE, Apigee, IAP, VPC-SC** — for agent deployment + security
 
 ### Ecosystem frameworks (must know fluently)
+
 - **LangGraph, LangChain, CrewAI** — on your resume, keep deep
 - **DSPy** (MIPROv2, GEPA, BootstrapFewShot, COPRO) — already your strong suit
 - **Model Context Protocol (MCP)** — you ship MCP servers, own this
 - **ReAct, self-reflection, hierarchical delegation** — patterns, not frameworks
 
 ### Observability / evaluation
+
 - **DeepEval, Arize Phoenix, Langfuse, OpenLLMetry**
 - **OpenTelemetry GenAI semantic conventions**
 - Google-native tracing via Cloud Trace + Agent Engine
 
 ### Enterprise integration
+
 - **Terraform** (Applied AI variant names it explicitly as a minimum qualification)
 - **OAuth 2.0 / OIDC** flows
 - **Private Service Connect, VPC-SC, Identity-Aware Proxy (IAP)**
 - **Apigee** — customer API management
 
 ### ML infrastructure (for fine-tuning work)
+
 - Distributed training (ZeRO, FSDP); accelerators (A100, H100, TPU v5)
 - vLLM, FP8 quantization (you've used this)
 - Unsloth, LoRA/QLoRA
@@ -200,11 +212,13 @@ Mined from the postings + Google Cloud docs + April 2025 Cloud Next announcement
 
 Public bands I found across variants:
 
-| Variant | Location | Published band |
-|---|---|---|
-| Telecom FDE | Addison TX / DC | **$153K–$222K + equity** (USD) |
-| Mandarin FDE | Singapore | **SGD 96K–130K** base |
-| India postings | Bengaluru | Not published on Google Careers (opaque) |
+
+| Variant        | Location        | Published band                           |
+| -------------- | --------------- | ---------------------------------------- |
+| Telecom FDE    | Addison TX / DC | **$153K–$222K + equity** (USD)           |
+| Mandarin FDE   | Singapore       | **SGD 96K–130K** base                    |
+| India postings | Bengaluru       | Not published on Google Careers (opaque) |
+
 
 For India, **levels.fyi for Google SWE L5 in 2024–26**: total comp ~₹95L–₹1.3Cr. FDE typically pays at or slightly above SWE bands because it's customer-facing. Match that range in negotiation.
 
@@ -228,16 +242,19 @@ Use these 1–2 times each during the loop, naturally. Don't parrot, but don't a
 
 After synthesizing 10 postings, the evaluators are grading against 6 specific capabilities. In interview rounds, expect all 6 to get probed:
 
-| # | Capability | Round where it's tested |
-|---|---|---|
-| 1 | **Design production agentic systems on Google Cloud (ADK + Agent Engine)** | AI/ML round + System design |
-| 2 | **Navigate and integrate with messy customer infrastructure (APIs, OAuth, legacy data, VPCs)** | System design + customer scenario |
-| 3 | **Build evaluation + observability pipelines with real LLM-native metrics** | AI/ML round |
-| 4 | **Own discovery → spec → ship cycle with C-suite / executive stakeholders** | Customer scenario + Googleyness |
-| 5 | **Write and debug production Python under interview pressure** | DSA round |
-| 6 | **Translate field insights into product requests** (meta-capability) | Googleyness + customer scenario |
+
+| #   | Capability                                                                                     | Round where it's tested           |
+| --- | ---------------------------------------------------------------------------------------------- | --------------------------------- |
+| 1   | **Design production agentic systems on Google Cloud (ADK + Agent Engine)**                     | AI/ML round + System design       |
+| 2   | **Navigate and integrate with messy customer infrastructure (APIs, OAuth, legacy data, VPCs)** | System design + customer scenario |
+| 3   | **Build evaluation + observability pipelines with real LLM-native metrics**                    | AI/ML round                       |
+| 4   | **Own discovery → spec → ship cycle with C-suite / executive stakeholders**                    | Customer scenario + Googleyness   |
+| 5   | **Write and debug production Python under interview pressure**                                 | DSA round                         |
+| 6   | **Translate field insights into product requests** (meta-capability)                           | Googleyness + customer scenario   |
+
 
 Your current resume already evidences #1, #3, #4, #6. Your work gaps for prep are:
+
 - **#2 — Google-Cloud-specific integration patterns** (OAuth 2.0 flows, VPC-SC, Apigee, IAP, Private Service Connect)
 - **#5 — DSA on a blank Google Doc**
 

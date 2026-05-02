@@ -20,14 +20,16 @@ Then stop talking.
 
 ## Logistics to have ready
 
-| Question | Your answer |
-|---|---|
-| Notice period | Your actual — probably 60 or 90 days |
-| Location | Bengaluru preferred; open to Gurgaon/Mumbai |
-| Work auth | Indian citizen, no issues |
-| Start date | After notice, some flexibility on buyout |
-| Other interviews | "Google is the only active conversation right now" |
-| Why looking | "Drawn to embedded-builder roles — it's what I want to do for the next 3–5 years" (never badmouth current) |
+
+| Question         | Your answer                                                                                                |
+| ---------------- | ---------------------------------------------------------------------------------------------------------- |
+| Notice period    | Your actual — probably 60 or 90 days                                                                       |
+| Location         | Bengaluru preferred; open to Gurgaon/Mumbai                                                                |
+| Work auth        | Indian citizen, no issues                                                                                  |
+| Start date       | After notice, some flexibility on buyout                                                                   |
+| Other interviews | "Google is the only active conversation right now"                                                         |
+| Why looking      | "Drawn to embedded-builder roles — it's what I want to do for the next 3–5 years" (never badmouth current) |
+
 
 ## Your 3 questions (pick 2)
 
@@ -54,3 +56,4 @@ Within 2 hours, send:
 - No cramming on GEPA / ADK / DSA — none of that gets tested tomorrow
 - Re-read your own resume out loud, once
 - Test Meet + camera + mic at 9:15 tomorrow
+

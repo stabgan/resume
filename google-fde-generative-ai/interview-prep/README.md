@@ -2,6 +2,14 @@
 
 A 2-week, day-by-day plan for the Google Forward Deployed Engineer, Generative AI, Google Cloud interview loop.
 
+## May 13 intensive pack
+
+For the high-intensity 18-hour/day sprint, start with [`may13-intensive-prep/README.md`](./may13-intensive-prep/README.md). This is the single merged folder that combines DSA, algorithms, system design, ML/GenAI system design, Google Cloud FDE RRK, cases, behavioral, compensation, and sources.
+
+## May 13 rapid pack
+
+For the shortlisted two-round loop, start with [`may13-rapid-prep/00_START_HERE.md`](./may13-rapid-prep/00_START_HERE.md). It is the focused May 2-May 13 pack for the confirmed `RRK` + `Coding` interviews.
+
 ## Start here (in order)
 
 1. **Tonight** — read [`CHEATSHEET_recruiter_call.md`](./CHEATSHEET_recruiter_call.md). Nothing else.

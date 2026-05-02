@@ -1,0 +1,608 @@
+Delivered-To: kaustabhganguly@gmail.com
+Received: by 2002:a05:7301:169a:b0:2be:74e:e54f with SMTP id ma26csp156778dyb;
+        Tue, 28 Apr 2026 23:21:48 -0700 (PDT)
+X-Received: by 2002:a05:6214:8004:b0:89c:e5f0:8f33 with SMTP id 6a1803df08f44-8b3e301a3afmr88546566d6.10.1777443708386;
+        Tue, 28 Apr 2026 23:21:48 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1777443708; cv=none;
+        d=google.com; s=arc-20240605;
+        b=X3IBYIa7aInQq8C7p1EFaKyMVWxE/O4d2EDW0xARfioHTg5auMGOPBPHPZnzqW8Y4p
+         8YddtKWejuQhesiH4zggNTbxtugMBp27l/5ooQZe8rgXBYzfSCliIfqiwxLAG0CF8q4V
+         e8NElnj/MDhrlRY33H4YiwfoP2Ihe0UhE1/ynk6IIinJAQZtZita8RVzIYSYkJt+f9A5
+         CmLyOem/ApGfgGXBSwLGhpA58xImSgXtjhKkWhzljsS8P/9kDgPABNYVEroP6Em6oF+5
+         8FkAjQSBg51eWb/lcAgiA5cKB8ImpKdxe+o0fwnLjE7XBzP7akkvN87G/jY1ci9GXLAO
+         gGeQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:from:subject:message-id:gmsai:feedback-id:reply-to:date
+         :mime-version:dkim-signature;
+        bh=hUPiaMnYeOx2qdLIUIsmC97U6/UheJTIxlfLivx3+7M=;
+        fh=RJa/KiL8v1d9w+/d9nZaez8J5a7B8OtazBnZcEqUN5A=;
+        b=amGD6s2EDMK9q1pJFWRnP1xiGrq1SYv0dahLmE/WzezM3QwN7L1SqQA5bT4BXTuX1G
+         EOVBaZHlaoM3+o/fpevzjScr9TN2oLx/zAC5HceWavohsonVs7Jr+keWGi/p2Jg9Xeq1
+         MtIr8NLT5Tt2Y44Pji/xQEvqDWLVyi1z6BgjzOkagD6H5JOhn6wQn6IovgK53sm1AInA
+         gzkJpjhc5NZ1gDiMYHN6EgLsCKjqTl43WtKB/7hrxmE2wc9B9HE+HARA3P9A4t0pnBxs
+         sUKwrdSPro4KLcIUS8CuQKxl8+EHKIbH9bRXWW8jbOqdfcIro1KGI3AD8SwLlk1SSb00
+         BfsA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20251104 header.b=J+t+Ucse;
+       spf=pass (google.com: domain of 3fkpxaqckd98hvnqjojhpphmf.dpnlbvtubcihbohvmzhnbjm.dpn@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3fKPxaQcKD98HVNQJOJHPPHMF.DPNLBVTUBCIHBOHVMZHNBJM.DPN@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <3fKPxaQcKD98HVNQJOJHPPHMF.DPNLBVTUBCIHBOHVMZHNBJM.DPN@scoutcamp.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id 6a1803df08f44-8b3ef7f547dsor6895996d6.8.2026.04.28.23.21.48
+        for <kaustabhganguly@gmail.com>
+        (Google Transport Security);
+        Tue, 28 Apr 2026 23:21:48 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 3fkpxaqckd98hvnqjojhpphmf.dpnlbvtubcihbohvmzhnbjm.dpn@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20251104 header.b=J+t+Ucse;
+       spf=pass (google.com: domain of 3fkpxaqckd98hvnqjojhpphmf.dpnlbvtubcihbohvmzhnbjm.dpn@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3fKPxaQcKD98HVNQJOJHPPHMF.DPNLBVTUBCIHBOHVMZHNBJM.DPN@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20251104; t=1777443708; x=1778048508; dara=google.com;
+        h=to:from:subject:message-id:gmsai:feedback-id:reply-to:date
+         :mime-version:from:to:cc:subject:date:message-id:reply-to;
+        bh=hUPiaMnYeOx2qdLIUIsmC97U6/UheJTIxlfLivx3+7M=;
+        b=J+t+UcseL7sGzscsc6pSeM4PEtuyXhV63R6gqRKJLboGXjrqaX7wRioA8Zzs0AH5Kx
+         DkRC68WuFLK/MRKlt2NefjS5CoNB5EMtVYvlGnqbfV1I2uB3sHPnZ1nvwMeu45ITe6an
+         X++pUc0CHAi69BPqO9JhG7nZ11324xpyFOlmUNYbN8yLaLGgxN8eXmNvG7otRptOhaqm
+         5ZfUIWAgWWp1njf99irEe13zmPrGj1s82O1HmR3TzwB5z9ryYoiC+gSeOY+HKS6+4Izv
+         jH9GiWa4W3Kqwja1I9LoE5R7WcJS8VOZMu55f88O459oEGneCZ3Y80+1FL8EGM4Ipd97
+         rACg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1777443708; x=1778048508;
+        h=to:from:subject:message-id:gmsai:feedback-id:reply-to:date
+         :mime-version:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=hUPiaMnYeOx2qdLIUIsmC97U6/UheJTIxlfLivx3+7M=;
+        b=B5L8CeFZc+8kjT7+qB5zAQQSGbo1OyQhhc5VDUOuD9BpBE+7ZErthGw5TJYROLvuL5
+         25muj8xkvgmsRFmnLKRwMDXGGgd6jvIYpn5hs0ysk+Zljze6HlyBx4HrF+LZbMX4f1md
+         h6O2f/4/os8LrE3dtSxOdneIeLyDNTGT9/iRlBLTpFatPSdriNe2DIqJpvB3EtxV72fU
+         HTw8iMAUofpB8kTYVv3ZShJj30v6DXn3IdxrY0W9tcnJAHfeHjavSkGV2f/8OCuXdV0m
+         fXpkdLymAYwEjm3ZsAKwjVvS2F9QM9Kb0I+TIp3MuNSMibo5vsjlDBzYH+Pa97fFWU5t
+         W4gw==
+X-Gm-Message-State: AOJu0YzjDPiQrHU8jKEaClkWxdrKRTgeFShPyb88ItHd3hy00TqHvAsl
+	aGd4p//WojMgPtZ+Tbye4pJYW1DIxelfNEJtpJWbPgKFefVXD1M=
+MIME-Version: 1.0
+X-Received: by 2002:a05:6214:5f0b:b0:8ac:a6f7:8a6c with SMTP id
+ 6a1803df08f44-8b3e309a2fdmr104627336d6.36.1777443708144; Tue, 28 Apr 2026
+ 23:21:48 -0700 (PDT)
+Date: Tue, 28 Apr 2026 23:21:48 -0700
+Reply-To: "Harish Gumpini (xWF)" <gumpini@google.com>
+X-Google-Id: 196947
+Feedback-ID: P-69-0:C10027498:M100052518-en-US:gamma
+gmsai: true
+X-Google-Notification-Metadata: CgISAA
+X-Notifications: 5131d22b9d460000
+X-Notifications-Bounce-Info: AZ3VuTg3VChuaGNB-CkWze7oEyJ5drLOF1szznEiuTVK0D8dQghShumJXFb0tnM5tPmmaV0duIAh9FdRE7ta2wSVDE8JdoP53l1zTj3VdS0SYPf7ensEGzIVOGeIzkWHBZCwVIR-yUiKJcIaDFIPcU9aKWWUiyMsAP4k0Sn4fI40UMZ0l1UZTPtgdu20IhCOdNwZko7QcSGIKDUUWd5qXmRNP6p7MVaJoY1i-rYee0A6Qt-gWi8UQomXGI-dviT0WNT64I70mdSxpoJfZKcnEMFOK8IxAftPqkqgsTC0NK-x6T1lx9vF8TcQrBRmVj-4XMd3hODoGrrGWqcwbdLhezTj5XN7lRN5-T5xBnfQr8qBQPrrodnbpCUzR-tFe_pbFih7t2GBjWNzG3JEoOQTNlVBoP4QADRE39ec_fEAkY6wgDSoF5ddSuMP_Oe1bmdhm6hks9WUV7xFTjmxoAaZEtKgRDrwu7k_2ON2Exyjyl4UJnXLfGJwmoKCwIjpO7y-UIzpyYIPL-HkXHbrs4W5gwIfhxANxMfVOas75QA0hsjM9emmT9np9YpKtOGF1yjg2BXpO_5ZPAgknV9frxAelwNjAwNjA0MDQxNTM1NTk2OTMzMg
+Message-ID: <12ead6ebec8ef76cae454763d9d7ab024ac8131d-10027498-100146025@google.com>
+Subject: Your invitation to apply to Google
+From: "Harish Gumpini (xWF)" <gumpini@google.com>
+To: kaustabhganguly@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000d50ba20650935c39"
+
+--000000000000d50ba20650935c39
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+DQoNCllvdSdyZSBpbnZpdGVkIHRvIGFwcGx5IHRvIEdvb2dsZQ0KDQpIaSBLYXVzdGFiaCBHYW5n
+dWx5LA0KDQpBcyB3ZSBkaXNjdXNzZWQsIEknZCBsaWtlIHRvIGludml0ZSB5b3UgdG8gYXBwbHkg
+dG8gR29vZ2xlIGZvciB0aGUgcm9sZSBvZiAgDQpGb3J3YXJkIERlcGxveWVkIEVuZ2luZWVyLCBH
+ZW5BSSwgR29vZ2xlIENsb3VkIC0gQmVuZ2FsdXJ1LCBNdW1iYWkgb3INCkd1cnVncmFtLiBUbyBn
+ZXQgc3RhcnRlZCwgZmlsbCBvdXQgdGhpcyBzaG9ydCBhcHBsaWNhdGlvbiBhdCAgDQpodHRwczov
+L3d3dy5nb29nbGUuY29tL2Fib3V0L2NhcmVlcnMvYXBwbGljYXRpb25zL2dvb2dsZWludml0ZWxv
+Z2luL0FJRDN4bDFCbzhmZDlJYXRZWWVyYm1tTWI3clFPclFieGFiUlBxN080N2FtVFFwdnZTYm52
+M1RpVjlBUlFxMTN6MlRoblBOeFRRVDJETnBjN2FYY1RyM2ZaZG5RWU5GYV9ad2hFZS1MdUN4NjZV
+emV1Vjd1cDNOR3FNcFVHMF9hSnVXNktmUWFKcDVwIC4gIA0KWW91IGhhdmUgMTAgZGF5cyB0byBz
+dWJtaXQgeW91ciBhcHBsaWNhdGlvbiwgYnV0IHdl4oCZcmUgbG9va2luZyBmb3J3YXJkIHRvICAN
+CnJldmlld2luZyB5b3VyIHJlc3VtZSwgc28gd2UgaG9wZSB5b3XigJlsbCBhcHBseSBzb29uISBQ
+bGVhc2UgdXNlIHRoaXMgIA0KaW52aXRhdGlvbiB0byBhcHBseSB0byB0aGlzIHJvbGUsIGFzIGl0
+IHdpbGwgbm90IGNvdW50IHRvd2FyZHMgeW91ciAgDQphcHBsaWNhdGlvbiBsaW1pdCAoMyBhcHBs
+aWNhdGlvbnMgaW4gYSByb2xsaW5nIDMwIGRheSB3aW5kb3cpLg0KDQpJ4oCZdmUgaW5jbHVkZWQg
+YSBiaXQgbW9yZSBpbmZvIGFib3V0IHRoZSBGb3J3YXJkIERlcGxveWVkIEVuZ2luZWVyLCBHZW5B
+SSwgIA0KR29vZ2xlIENsb3VkIC0gQmVuZ2FsdXJ1LCBNdW1iYWkgb3INCkd1cnVncmFtIHJvbGUg
+YmVsb3csIGJ1dCBwbGVhc2UgbGV0IG1lIGtub3cgaWYgeW91IGhhdmUgYW55IG90aGVyIHF1ZXN0
+aW9ucy4NCg0KDQpTVEFSVCBZT1VSIEFQUExJQ0FUSU9OIGF0ICANCmh0dHBzOi8vd3d3Lmdvb2ds
+ZS5jb20vYWJvdXQvY2FyZWVycy9hcHBsaWNhdGlvbnMvZ29vZ2xlaW52aXRlbG9naW4vQUlEM3hs
+MUJvOGZkOUlhdFlZZXJibW1NYjdyUU9yUWJ4YWJSUHE3TzQ3YW1UUXB2dlNibnYzVGlWOUFSUXEx
+M3oyVGhuUE54VFFUMkROcGM3YVhjVHIzZlpkblFZTkZhX1p3aEVlLUx1Q3g2NlV6ZXVWN3VwM05H
+cU1wVUcwX2FKdVc2S2ZRYUpwNXANCg0KDQpJIGhvcGUgdG8gaGVhciBmcm9tIHlvdSBzb29uLA0K
+SGFyaXNoIEd1bXBpbmkgKHhXRiksIEdvb2dsZSByZWNydWl0aW5nDQoNCg0KTW9yZSBhYm91dCB0
+aGUgcm9sZQ0KSm9iIHRpdGxlOiBGb3J3YXJkIERlcGxveWVkIEVuZ2luZWVyLCBHZW5BSSwgR29v
+Z2xlIENsb3VkIC0gQmVuZ2FsdXJ1LCAgDQpNdW1iYWkgb3INCkd1cnVncmFtDQpKb2IgZGVzY3Jp
+cHRpb246IEFzIGFuIEFJIEZvcndhcmQgRGVwbG95ZWQgRW5naW5lZXIgKEZERSkgYXQgR29vZ2xl
+IENsb3VkLCAgDQp5b3UgYXJlIGFuDQplbWJlZGRlZCBidWlsZGVyIHdobyBicmlkZ2VzIHRoZSBn
+YXAgYmV0d2VlbiBmcm9udGllciBBSSBwcm9kdWN0cyBhbmQNCnByb2R1Y3Rpb24tZ3JhZGUgcmVh
+bGl0eSB3aXRoaW4gY3VzdG9tZXJzLiBVbmxpa2UgdHJhZGl0aW9uYWwgYWR2aXNvcnkNCnJvbGVz
+LCB5b3UgZnVuY3Rpb24gYXMgYSAiYnVpbGRlci1jb25zdWx0YW50LCIgbW92aW5nIGJleW9uZCBo
+aWdoLWxldmVsDQphcmNoaXRlY3R1cmUgdG8gY29kZSwgZGVidWcsIGFuZCBqb2ludGx5IHNoaXAg
+YmVzcG9rZSBhZ2VudGljIHNvbHV0aW9ucw0KZGlyZWN0bHkgd2l0aGluIHRoZSBjdXN0b21lcuKA
+mXMgZW52aXJvbm1lbnQuIFlvdSB3aWxsIG1hbmFnZSBibG9ja2VyIHRvDQpwcm9kdWN0aW9uIGlu
+Y2x1ZGluZyBzb2x2aW5nIHRoZSBpbnRlZ3JhdGlvbiBjb21wbGV4aXRpZXMsIGRhdGEgcmVhZGlu
+ZXNzDQppc3N1ZXMsIGFuZCBzdGF0ZS1tYW5hZ2VtZW50IGNoYWxsZW5nZXMgdGhhdCBwcmV2ZW50
+IEFJIGZyb20gcmVhY2hpbmcNCmVudGVycHJpc2UtZ3JhZGUgbWF0dXJpdHkuIEJ5IGVtYmVkZGlu
+ZyB3aXRoIHN0cmF0ZWdpYyBhY2NvdW50cywgeW91IHNlcnZlDQphIGR1YWwgcHVycG9zZTogcHJv
+dmlkaW5nICJ3aGl0ZSBnbG92ZSIgZGVwbG95bWVudCBvZiBjb21wbGV4IEFJIHN5c3RlbXMNCmFu
+ZCBhY3RpbmcgYXMgYSBjcml0aWNhbCBmZWVkYmFjayBsb29wLCB0cmFuc2Zvcm1pbmcgcmVhbC13
+b3JsZCBmaWVsZA0KaW5zaWdodHMgaW50byBHb29nbGUgQ2xvdWTigJlzIGZ1dHVyZSBwcm9kdWN0
+IHJvYWRtYXAuDQoNCk1pbmltdW0gcXVhbGlmaWNhdGlvbnM6DQoqIEJhY2hlbG9yJ3MgZGVncmVl
+IGluIFNjaWVuY2UsIFRlY2hub2xvZ3ksIEVuZ2luZWVyaW5nLCBNYXRoZW1hdGljcywgb3INCmVx
+dWl2YWxlbnQgcHJhY3RpY2FsIGV4cGVyaWVuY2UuDQoqIDMgeWVhcnMgb2YgZXhwZXJpZW5jZSBp
+biBQeXRob24gYW5kIHJlbGV2YW50IG1hY2hpbmUgbGVhcm5pbmcgcGFja2FnZXMNCihlLmcuLCBr
+ZXJhcywgSEYgdHJhbnNmb3JtZXJzKS4NCiogRXhwZXJpZW5jZSBpbiBhcHBsaWVkIEFJLCB3aXRo
+IGEgZm9jdXMgb24gYnVpbGRpbmcgc3lzdGVtcyBhcm91bmQNCnByZXRyYWluZWQgbW9kZWxzIChl
+LmcuLCBwcm9tcHQgZW5naW5lZXJpbmcsIGZpbmUtdHVuaW5nLA0KUmV0cmlldmFsLUF1Z21lbnRl
+ZCBHZW5lcmF0aW9uIChSQUcpLCBvcmNoZXN0cmF0aW5nIG1vZGVsIGludGVyYWN0aW9ucyB3aXRo
+DQpleHRlcm5hbCB0b29scyB0byBkZWxpdmVyIHNvbHV0aW9ucykuDQoqIEV4cGVyaWVuY2UgaW1w
+bGVtZW50aW5nIG11bHRpLWFnZW50IHN5c3RlbXMgdXNpbmcgZnJhbWV3b3JrcyAoZS5nLiwNCkxh
+bmdHcmFwaCwgQ3Jld0FJLCBldGMuKSBhbmQgcGF0dGVybnMgbGlrZSBSZUFjdCwgc2VsZi1yZWZs
+ZWN0aW9uLCBhbmQNCmhpZXJhcmNoaWNhbCBkZWxlZ2F0aW9uLg0KDQpQcmVmZXJyZWQgcXVhbGlm
+aWNhdGlvbnM6DQoqIE1hc3RlcidzIGRlZ3JlZSBpbiBDb21wdXRlciBTY2llbmNlLCBFbmdpbmVl
+cmluZywgb3IgYSByZWxhdGVkIHRlY2huaWNhbA0KZmllbGQuDQoqIEV4cGVyaWVuY2UgdHJhaW5p
+bmcgYW5kIGZpbmUgdHVuaW5nIG1vZGVscyBpbiBsYXJnZSBzY2FsZSBlbnZpcm9ubWVudHMNCihl
+LmcuLCBpbWFnZSwgbGFuZ3VhZ2UsIHJlY29tbWVuZGF0aW9uKSB3aXRoIGFjY2VsZXJhdG9ycy4N
+CiogRXhwZXJpZW5jZSBpbiBzeXN0ZW1zIGRlc2lnbiB3aXRoIHRoZSBhYmlsaXR5IHRvIGFyY2hp
+dGVjdCBhbmQgZXhwbGFpbiAgDQpkYXRhDQpwaXBlbGluZXMsIE1MIHBpcGVsaW5lcywgYW5kIE1M
+IHRyYWluaW5nIGFuZCBzZXJ2aW5nIGFwcHJvYWNoZXMuDQoqIEV4cGVyaWVuY2Ugd29ya2luZyB3
+aXRoIGN1c3RvbWVycyBpbiBhIHRlY2huaWNhbCBjYXBhY2l0eS4NCiogS25vd2xlZGdlIG9mICJM
+TE0tbmF0aXZlIiBtZXRyaWNzICh0b2tlbnMvc2VjLCBjb3N0LXBlci1yZXF1ZXN0KSBhbmQNCnRl
+Y2huaXF1ZXMgZm9yIG9wdGltaXppbmcgc3RhdGUgbWFuYWdlbWVudCBhbmQgZ3JhbnVsYXIgdHJh
+Y2luZy4NCiogQWJpbGl0eSB0byBiZSBhY3Rpb24tb3JpZW50ZWQsIHdpdGggYSBmb2N1cyBvbiBz
+b2x2aW5nIGN1c3RvbWVyIHByb2JsZW1zLg0KDQpKb2IgcmVzcG9uc2liaWxpdGllczoNCiogU2Vy
+dmUgYXMgdGhlIGxlYWQgZGV2ZWxvcGVyIGZvciBjb21wbGV4IEFJIGFwcGxpY2F0aW9ucywgdHJh
+bnNpdGlvbmluZyAgDQpmcm9tDQpyYXBpZCBwcm90b3R5cGVzIHRvIHByb2R1Y3Rpb24tZ3JhZGUg
+YWdlbnRpYyB3b3JrZmxvd3MgKGUuZy4sIG11bHRpLWFnZW50DQpzeXN0ZW1zLCBNQ1Agc2VydmVy
+cykgdGhhdCBkcml2ZSBtZWFzdXJhYmxlIHJldHVybiBvbiBpbnZlc3RtZW50Lg0KKiBBcmNoaXRl
+Y3QgYW5kIGNvZGUgdGhlICJjb25uZWN0aXZlIHRpc3N1ZSIgYmV0d2VlbiBHb29nbGXigJlzIEFJ
+IHByb2R1Y3RzICANCmFuZA0KY3VzdG9tZXIncyBsaXZlIGluZnJhc3RydWN0dXJlLCBpbmNsdWRp
+bmcgQVBJcywgbGVnYWN5IGRhdGEgc2lsb3MsIGFuZA0Kc2VjdXJpdHkgcGVyaW1ldGVycy4NCiog
+QnVpbGQgaGlnaC1wZXJmb3JtYW5jZSBldmFsdWF0aW9uIChFdmFsKSBwaXBlbGluZXMgYW5kIG9i
+c2VydmFiaWxpdHkNCmZyYW1ld29ya3MgdG8gZW5zdXJlIGFnZW50aWMgc3lzdGVtcyBtZWV0IHJl
+cXVpcmVtZW50cyBmb3IgYWNjdXJhY3ksDQpzYWZldHksIGFuZCBsYXRlbmN5Lg0KKiBJZGVudGlm
+eSByZXBlYXRhYmxlIGZpZWxkIHBhdHRlcm5zIGFuZCB0ZWNobmljYWwgImZyaWN0aW9uIHBvaW50
+cyIgaW4NCkdvb2dsZeKAmXMgQUkgc3RhY2ssIGNvbnZlcnRpbmcgdGhlbSBpbnRvIHJldXNhYmxl
+IG1vZHVsZXMgb3IgZm9ybWFsIHByb2R1Y3QNCmZlYXR1cmUgcmVxdWVzdHMgZm9yIHRoZSBFbmdp
+bmVlcmluZyB0ZWFtcy4NCiogQ28tYnVpbGQgd2l0aCBjdXN0b21lciBlbmdpbmVlcmluZyB0ZWFt
+cyB0byBpbnN0aWxsIEdvb2dsZS1ncmFkZQ0KZGV2ZWxvcG1lbnQgYmVzdCBwcmFjdGljZXMsIGVu
+c3VyaW5nIGxvbmctdGVybSBwcm9qZWN0IHN1Y2Nlc3MgYW5kIGhpZ2gNCmVuZC11c2VyIGFkb3B0
+aW9uLg0KDQpBdCBHb29nbGUsIHdlIGRvbuKAmXQganVzdCBhY2NlcHQgZGlmZmVyZW5jZSAtIHdl
+IGNlbGVicmF0ZSBpdCwgd2Ugc3VwcG9ydCAgDQppdCwgYW5kIHdlIHRocml2ZSBvbiBpdCBmb3Ig
+dGhlIGJlbmVmaXQgb2Ygb3VyIGVtcGxveWVlcywgb3VyIHByb2R1Y3RzIGFuZCAgDQpvdXIgY29t
+bXVuaXR5LiBGb3IgbW9yZSBpbmZvcm1hdGlvbiwgc2VlIG91ciBFcXVhbCBFbXBsb3ltZW50IE9w
+cG9ydHVuaXR5ICANCnBvbGljeSBhdCBodHRwczovL3d3dy5nb29nbGUuY29tL2Fib3V0L2NhcmVl
+cnMvZWVvLyBhbmQgdGhlIEVFT0MncyAiRXF1YWwgIA0KRW1wbG95bWVudCBPcHBvcnR1bml0eSBp
+cyBUaGUgTGF3IiAoUERGKSBhdCAgDQpodHRwczovL3d3dy5nb29nbGUuY29tL2Fib3V0L2NhcmVl
+cnMvZWVvL2Vlb2lzdGhlbGF3LnBkZg0KDQpQYXkgVHJhbnNwYXJlbmN5IFBvbGljeToNCkdvb2ds
+ZSdzIFBheSBUcmFuc3BhcmVuY3kgUG9saWN5IGVuc3VyZXMgdGhhdCB5b3Ugd29uJ3QgYmUgZGlz
+Y2hhcmdlZCBvciAgDQpkaXNjcmltaW5hdGVkIGFnYWluc3QgYmFzZWQgb24gd2hldGhlciB5b3Un
+dmUgaW5xdWlyZWQgYWJvdXQsIGRpc2N1c3NlZCwgb3IgIA0KZGlzY2xvc2VkIHlvdXIgcGF5LiBS
+ZWFkIHRoZSBmdWxsIHBvbGljeSAoUERGKSBhdCAgDQpodHRwczovL3d3dy5nb29nbGUuY29tL2Fi
+b3V0L2NhcmVlcnMvcGF5dHJhbnNwYXJlbmN5L3BheXRyYW5zcGFyZW5jeS5wZGYNCg0KwqkgMjAy
+NiBHb29nbGUgTExDIDE2MDAgQW1waGl0aGVhdHJlIFBhcmt3YXksIE1vdW50YWluIFZpZXcsIENB
+IDk0MDQzDQpZb3UgcmVjZWl2ZWQgdGhpcyBtZXNzYWdlIGJlY2F1c2UgeW91IGV4cHJlc3NlZCBp
+bnRlcmVzdCBpbiBhcHBseWluZyB0byAgDQpHb29nbGUuDQo=
+--000000000000d50ba20650935c39
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+<html dir=3D"" lang=3Den-US><head>
+        <meta http-equiv=3DContent-Type content=3D"text/html; charset=3DUTF=
+-8">
+        <meta name=3Dviewport content=3Dwidth=3Ddevice-width,initial-scale=
+=3D1,user-scalable=3Dyes>
+        <title> You&#39;re invited to apply to Google</title>
+        <style> =20
+          @import url(https://fonts.googleapis.com/css?family=3DGoogle+Sans=
+);
+          .appleLinksWhite a {color: #898989 !important; text-decoration: n=
+one !important; cursor: default !important; pointer-events: none !important=
+;  }
+        </style>   =20
+    </head>=20
+    <body dir=3D"" style=3D"-ms-text-size-adjust:100%; -webkit-text-size-ad=
+just:100%; background:#fafafa; font-family:Arial; font-weight:normal; margi=
+n:0; padding:0; width:100%" width=3D100%>  =20
+   =20
+  <div style=3D"height:0px; font-size:0px; max-height:0px; min-height: 0px;=
+ line-height:0px; width: 100%; color: #fff; display:none;"></div>  =20
+<table class=3Douter_wrapper width=3D100% align=3Dcenter cellspacing=3D0 ce=
+llpadding=3D0 border=3D0 style=3D"-premailer-cellpadding:0; -premailer-cell=
+spacing:0; background:#fafafa; border-collapse:collapse; font-family:Arial,=
+ sans-serif; font-weight:normal; margin:0; mso-table-lspace:0; mso-table-rs=
+pace:0; padding:0; width:100%">
+ <tbody><tr><td class=3Douter_wrapper_td style=3Dborder-collapse:collapse>
+<table class=3Dinner_wrapper align=3Dcenter width=3D100% cellspacing=3D0 ce=
+llpadding=3D0 border=3D0 style=3D"-premailer-cellpadding:0; -premailer-cell=
+spacing:0; border-collapse:collapse; font-family:Arial, sans-serif; font-we=
+ight:normal; margin:0 auto; max-width:600px; mso-table-lspace:0; mso-table-=
+rspace:0; width:100%">=20
+ <!--[if (gte mso 9)|(IE)]>
+ <table class=3D"inner_wrapper" align=3D"center" width=3D"600" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0"  >=20
+<![endif]-->
+   <tbody><tr><td style=3Dborder-collapse:collapse>
+=20
+ <table class=3Douter align=3Dcenter style=3D"-premailer-cellpadding:0; -pr=
+emailer-cellspacing:0; border-collapse:collapse; font-family:Roboto, arial;=
+ font-weight:normal; margin:0 auto; max-width:600px; mso-table-lspace:0; ms=
+o-table-rspace:0; width:100%" cellpadding=3D0 cellspacing=3D0 width=3D100%>
+            <tbody><tr>
+              <td class=3D"two-column logo_holder_container" style=3D"borde=
+r-collapse:collapse; font-size:0; padding:32px 5px 28px 5px; text-align:cen=
+ter" align=3Dcenter>
+                <!--[if (gte mso 9)|(IE)]>
+                <table width=3D"100%">
+                <tr>
+                <td width=3D"50%" valign=3D"top">
+                <![endif]-->
+                <div class=3Dcolumn style=3D"display:inline-block; float:le=
+ft; max-width:290px; vertical-align:top; width:100%" valign=3Dtop width=3D1=
+00%>
+                      <table width=3D100% style=3D"-premailer-cellpadding:0=
+; -premailer-cellspacing:0; border-collapse:collapse; font-family:Roboto, a=
+rial; font-weight:normal; mso-table-lspace:0; mso-table-rspace:0" cellpaddi=
+ng=3D0 cellspacing=3D0>
+                              <tbody><tr>
+                                  <td class=3Dinner style=3D"border-collaps=
+e:collapse; font-size:15px; padding:2px 0 0 0">
+                                      <table width=3D100% class=3D"logo_hol=
+der flexible" cellspacing=3D0 cellpadding=3D0 border=3D0 style=3D"-premaile=
+r-cellpadding:0; -premailer-cellspacing:0; border-collapse:collapse; font-f=
+amily:roboto, arial; font-weight:500; mso-table-lspace:0; mso-table-rspace:=
+0; width:100%">
+                                          <tbody><tr>=20
+                                            <td style=3D"border-collapse:co=
+llapse; text-align:left;">
+                                               <img src=3Dhttps://www.gstat=
+ic.com/peopleops/careers/images/google-careers-logo-336x52.png width=3D168 =
+style=3D"-ms-interpolation-mode:bicubic; height:auto; outline:none; text-de=
+coration:none" height=3Dauto>
+                                            </td>
+                                          </tr> =20
+                                      </tbody></table>
+                                  </td>
+                              </tr>
+                      </tbody></table>
+               </div>
+                <!--[if (gte mso 9)|(IE)]>
+                </td>
+                <![endif]-->
+
+                <!--[if (gte mso 9)|(IE)]>
+                </td>
+                </tr>
+                </table>
+                <![endif]-->
+            </td>
+        </tr>
+        </tbody></table>
+   <!-- NOTE TO CANDIDATE-->
+   <table class=3D"content_wrapper " bgcolor=3D#ffffff align=3Dcenter cells=
+pacing=3D0 cellpadding=3D0 border=3D0 style=3D"-premailer-cellpadding:0; -p=
+remailer-cellspacing:0; border-collapse:collapse; border-top:1px solid #eee=
+eee; border-left:1px solid #dddddd; border-right:1px solid #dddddd;border-b=
+ottom:1px solid #dddddd; font-family:Arial, sans-serif; font-weight:normal;=
+ max-width:600px; mso-table-lspace:0; mso-table-rspace:0; width:100%; -khtm=
+l-border-radius:5px 5px 0 0; -moz-border-radius:5px 5px 0 0; -ms-border-rad=
+ius:5px 5px 0 0; -o-border-radius:5px 5px 0 0; -webkit-border-radius:5px 5p=
+x 0 0; background-color: #ffffff;" width=3D100%>=20
+ <tbody><tr><td class=3D"" cellspacing=3D0 cellpadding=3D0 border=3D0 style=
+=3D"border-collapse:collapse; -premailer-cellpadding:0; -premailer-cellspac=
+ing:0;">
+ <table width=3D100% cellspacing=3D0 cellpadding=3D0 border=3D0 style=3D"-p=
+remailer-cellpadding:0; -premailer-cellspacing:0; border-collapse:collapse;=
+ font-family:Roboto,Arial; font-weight:normal; mso-table-lspace:0; mso-tabl=
+e-rspace:0;border-top:none;background-color: #ffffff;">
+ <tbody>
+ <!-- ILLUSTRATION -->
+ <tr style=3D"border-top:4px solid #4285F4">
+ <td style=3D" border-collapse:collapse; padding-left: 40px; padding-right:=
+ 40px; padding-bottom:0px; padding-top:31px;font-family:Roboto, Arial;">
+ <table class=3Dpara cellspacing=3D0 cellpadding=3D0 border=3D0 align=3Dlef=
+t width=3D100% style=3D"-moz-border-radius:5px; -premailer-cellpadding:0; -=
+premailer-cellspacing:0;  font-family:Roboto, Arial; font-weight:normal; ma=
+x-width:528px; mso-table-lspace:0; mso-table-rspace:0; ">
+ <tbody><tr>
+ <td align=3Dleft style=3D"border-collapse:initial; color:#202124; font-fam=
+ily:Google Sans, Roboto, arial; font-size:24px; font-weight:normal; line-he=
+ight:32px;text-align:left;">You&#39;re invited to apply to Google</td>=20
+ </tr>=20
+ </tbody></table>
+ </td></tr></tbody></table>
+ <table width=3D100% cellspacing=3D0 cellpadding=3D0 border=3D0 style=3D"-p=
+remailer-cellpadding:0; -premailer-cellspacing:0; border-collapse:collapse;=
+ font-family:Roboto,Arial; font-weight:normal; mso-table-lspace:0; mso-tabl=
+e-rspace:0;border-top:none;background-color: #ffffff;">
+ <tbody><tr>
+ <td style=3D" border-collapse:collapse; padding-left: 40px; padding-right:=
+ 40px; padding-bottom:8px; padding-top:15px;font-family:Roboto, Arial;">
+ <table class=3Dpara cellspacing=3D0 cellpadding=3D0 border=3D0 align=3Dlef=
+t width=3D100% style=3D"-moz-border-radius:5px; -premailer-cellpadding:0; -=
+premailer-cellspacing:0;  font-family:Roboto, Arial; font-weight:normal; ma=
+x-width:528px; mso-table-lspace:0; mso-table-rspace:0; ">
+ <tbody><tr>
+ <td align=3Dleft style=3D"border-collapse:initial; color:#414141; font-fam=
+ily:Roboto, arial; font-size:14px; font-weight:normal; line-height:24px;tex=
+t-align:left; ">
+
+<p>Hi Kaustabh Ganguly,</p>
+
+<p>As we discussed, I&#39;d like to invite you to apply to Google for the r=
+ole of Forward Deployed Engineer, GenAI, Google Cloud - Bengaluru, Mumbai o=
+r=20
+Gurugram. To get started, fill out <a href=3Dhttps://c.gle/AOExmq3QcNUs0BAQ=
+ty03t0DVlh-R_jLgu5DNAxHYSvr9yntHrxja0ILcWDjc711Pfg9bI1ekSnRwEc78JlFCMqwQKSP=
+BXEcm9HtFiCKR-lQSuOBAS9P536Q4_YHxP-1e1IjMNGCxgC0tP1mRh2hkDR-SAQ749MiivjqQUT=
+CxwAn5M3YYMIJ_NoRPV3sF0ToKTsE0queYm3h7xUa3I-OOMFspPnKRyZiQ1wwmPbhj7oZ_Jipot=
+8M5UUwrcucAHHFidUErNONwVPuQVjbUMU91YDKheuQPK5SeON4LT_mZdxkufXI3qojP026CQDOp=
+ilwqHOpC2is1Ng_wK0TN8qKZtvJolRdj1DEpnL9hAEorAqZ3XQ>this short application</=
+a>. You have <b>10 days</b> to submit your application, but we=E2=80=99re l=
+ooking forward to reviewing your resume, so we hope you=E2=80=99ll apply so=
+on! Please use this invitation to apply to this role, as it will not count =
+towards your application limit (3 applications in a rolling 30 day window).=
+</p>
+
+<p>I=E2=80=99ve included a bit more info about the Forward Deployed Enginee=
+r, GenAI, Google Cloud - Bengaluru, Mumbai or=20
+Gurugram role below, but please let me know if you have any other questions=
+.<p>
+   </td>
+   </tr>
+   <tr height=3D24px></tr>
+   <tr>
+	<td>
+		<table width=3D100% border=3D0 cellspacing=3D0 cellpadding=3D0 style=3D;p=
+adding-bottom:4px;>
+		<tbody>
+		<tr>																							<td>																							<a href=3Dhttps://c=
+.gle/AOExmq3QcNUs0BAQty03t0DVlh-R_jLgu5DNAxHYSvr9yntHrxja0ILcWDjc711Pfg9bI1=
+ekSnRwEc78JlFCMqwQKSPBXEcm9HtFiCKR-lQSuOBAS9P536Q4_YHxP-1e1IjMNGCxgC0tP1mRh=
+2hkDR-SAQ749MiivjqQUTCxwAn5M3YYMIJ_NoRPV3sF0ToKTsE0queYm3h7xUa3I-OOMFspPnKR=
+yZiQ1wwmPbhj7oZ_Jipot8M5UUwrcucAHHFidUErNONwVPuQVjbUMU91YDKheuQPK5SeON4LT_m=
+ZdxkufXI3qojP026CQDOpilwqHOpC2is1Ng_wK0TN8qKZtvJolRdj1DEpnL9hAEorAqZ3XQ tar=
+get=3D_blank style=3D"-khtml-border-radius:2px; -moz-border-radius:3px; -mo=
+z-border-radius-bottomleft:0; -moz-border-radius-bottomright:3px; -moz-bord=
+er-radius-topleft:0; -moz-border-radius-topright:3px; -ms-border-radius:2px=
+; -o-border-radius:2px; -webkit-border-bottom-left-radius:0; -webkit-border=
+-bottom-right-radius:3px; -webkit-border-radius:3px; -webkit-border-top-lef=
+t-radius:0; -webkit-border-top-right-radius:3px; background-color:#1A73E8; =
+border-bottom-left-radius:0; border-bottom-right-radius:3px; border-color:#=
+1A73E8; border-radius:3px; border-style:solid; border-top-left-radius:0; bo=
+rder-top-right-radius:3px; border-width:15px 17px 15px 17px; color:#ffffff;=
+ display:inline-block; font-family:Roboto, Arial; font-size:14px; font-weig=
+ht:500; line-height:18px; margin:0; mso-hide:all; text-align:center; text-d=
+ecoration:none">START YOUR APPLICATION</a>
+			</td>
+		</tr>
+		</tbody>
+		</table>
+	</td>
+	</tr>
+<tr>
+ <td align=3Dleft style=3D"border-collapse:initial; color:#414141; font-fam=
+ily:Roboto, arial; font-size:14px; font-weight:normal; line-height:16px;tex=
+t-align:left; ">=20
+</td>=20
+ </tr>=20
+ </tbody></table>
+ </td></tr></tbody></table>
+
+
+ <table width=3D100% cellspacing=3D0 cellpadding=3D0 border=3D0 class=3Dsig=
+noff style=3D"-premailer-cellpadding:0; -premailer-cellspacing:0; border-co=
+llapse:collapse; font-family:Arial, sans-serif; font-weight:normal; mso-tab=
+le-lspace:0; mso-table-rspace:0;background-color: #ffffff;">
+ <tbody><tr>
+ <td width=3D100% class=3Dclose style=3D"border-bottom:1px solid #dddddd; b=
+order-collapse:collapse; padding-left:40px; padding-top:4px; width:100%;pad=
+ding-right:22px;">
+ <table cellspacing=3D0 cellpadding=3D0 border=3D0 class=3Dsignoff style=3D=
+"-premailer-cellpadding:0; -premailer-cellspacing:0; border-collapse:collap=
+se; font-family:Arial, sans-serif; font-weight:normal; mso-table-lspace:0; =
+mso-table-rspace:0">
+ <tbody><tr>
+ <td class=3Dsignoff1 style=3D"border-collapse:collapse; color:#414141; fon=
+t-family:Roboto, arial; font-size:14px; font-weight:normal; line-height:24p=
+x; padding-bottom:7px; padding-top:0px">I hope to hear from you soon,</td>
+ </tr>
+ <tr>
+ <td class=3Dsignoff2 style=3D"border-collapse:collapse; color:#414141; fon=
+t-family:Roboto, arial; font-size:16px; font-weight:500; line-height:24px; =
+padding-bottom:34px;white-space: nowrap;">Harish Gumpini (xWF), Google recr=
+uiting
+ </tbody></table>
+ </td>
+ </tr>
+</tbody></table>
+=20
+ </td></tr>
+ </tbody></table>=20
+=20
+=20
+            </td></tr>
+             <!-- END EMAIL CONTENT -->
+<!-- NOTE TO CANDIDATE-->
+                      <tr>
+                        <td>
+                          <table width=3D100% border=3D0 cellspacing=3D0 ce=
+llpadding=3D0 style=3D"font-family:Roboto,Helvetica,Arial,sans-serif;color:=
+#222;font-size:14px;font-weight:300;line-height:24px; padding-top:24px">
+                            <tbody>
+                              <tr>
+                                <td style=3Dwidth:36px;padding-left:40px;><=
+img src=3Dhttps://www.gstatic.com/images/icons/material/system/2x/info_grey=
+600_24dp.png width=3D24px alt=3D"Info icon">
+                                </td>
+                                <td style=3D"font-family:Roboto,Helvetica,A=
+rial,sans-serif;color:#222;font-size:16px;font-weight:400;line-height:24px;=
+ padding-bottom:16px;padding-right:24px; padding-top:16px;">More about the =
+role</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style=3Dfont-family:Roboto,Helvetica,Arial,sans=
+-serif;color:#666666;font-size:14px;font-weight:400;line-height:24px;paddin=
+g-left:40px;padding-bottom:32px;padding-right:16px;>
+                          <strong>Job title:</strong> Forward Deployed Engi=
+neer, GenAI, Google Cloud - Bengaluru, Mumbai or=20
+Gurugram <br>
+<strong>Job description:</strong> As an AI Forward Deployed Engineer (FDE) =
+at Google Cloud, you are an=20
+embedded builder who bridges the gap between frontier AI products and=20
+production-grade reality within customers. Unlike traditional advisory=20
+roles, you function as a &quot;builder-consultant,&quot; moving beyond high=
+-level=20
+architecture to code, debug, and jointly ship bespoke agentic solutions=20
+directly within the customer=E2=80=99s environment. You will manage blocker=
+ to=20
+production including solving the integration complexities, data readiness=
+=20
+issues, and state-management challenges that prevent AI from reaching=20
+enterprise-grade maturity. By embedding with strategic accounts, you serve=
+=20
+a dual purpose: providing &quot;white glove&quot; deployment of complex AI =
+systems=20
+and acting as a critical feedback loop, transforming real-world field=20
+insights into Google Cloud=E2=80=99s future product roadmap. <br><br>
+  <strong>Minimum qualifications:</strong>=20
+  <ul>
+      <li>Bachelor&#39;s degree in Science, Technology, Engineering, Mathem=
+atics, or=20
+equivalent practical experience.</li>
+      <li>3 years of experience in Python and relevant machine learning pac=
+kages=20
+(e.g., keras, HF transformers).</li>
+      <li>Experience in applied AI, with a focus on building systems around=
+=20
+pretrained models (e.g., prompt engineering, fine-tuning,=20
+Retrieval-Augmented Generation (RAG), orchestrating model interactions with=
+=20
+external tools to deliver solutions).</li>
+      <li>Experience implementing multi-agent systems using frameworks (e.g=
+.,=20
+LangGraph, CrewAI, etc.) and patterns like ReAct, self-reflection, and=20
+hierarchical delegation.</li>
+  </ul>
+  <strong>Preferred qualifications:</strong>
+  <ul>
+      <li>Master&#39;s degree in Computer Science, Engineering, or a relate=
+d technical=20
+field.</li>
+      <li>Experience training and fine tuning models in large scale environ=
+ments=20
+(e.g., image, language, recommendation) with accelerators.</li>
+      <li>Experience in systems design with the ability to architect and ex=
+plain data=20
+pipelines, ML pipelines, and ML training and serving approaches.</li>
+      <li>Experience working with customers in a technical capacity.</li>
+      <li>Knowledge of &quot;LLM-native&quot; metrics (tokens/sec, cost-per=
+-request) and=20
+techniques for optimizing state management and granular tracing.</li>
+      <li>Ability to be action-oriented, with a focus on solving customer p=
+roblems.</li>
+  </ul>
+  <strong>Job responsibilities:</strong>=20
+  <ul>
+      <li>Serve as the lead developer for complex AI applications, transiti=
+oning from=20
+rapid prototypes to production-grade agentic workflows (e.g., multi-agent=
+=20
+systems, MCP servers) that drive measurable return on investment.</li>
+      <li>Architect and code the &quot;connective tissue&quot; between Goog=
+le=E2=80=99s AI products and=20
+customer&#39;s live infrastructure, including APIs, legacy data silos, and=
+=20
+security perimeters.</li>
+      <li>Build high-performance evaluation (Eval) pipelines and observabil=
+ity=20
+frameworks to ensure agentic systems meet requirements for accuracy,=20
+safety, and latency.</li>
+      <li>Identify repeatable field patterns and technical &quot;friction p=
+oints&quot; in=20
+Google=E2=80=99s AI stack, converting them into reusable modules or formal =
+product=20
+feature requests for the Engineering teams.</li>
+      <li>Co-build with customer engineering teams to instill Google-grade=
+=20
+development best practices, ensuring long-term project success and high=20
+end-user adoption.</li>
+  </ul>
+</td>
+<tr>
+<tr>
+<td style=3D"font-family:Roboto,Helvetica,Arial,sans-serif;color:#666666;fo=
+nt-size:14px;font-weight:400;line-height:24px;padding-top:24px; padding-lef=
+t:40px;padding-bottom:32px;padding-right:16px;border-top:1px solid #dddddd;=
+ border-bottom:1px solid #dddddd">
+
+<p>At Google, we don=E2=80=99t just accept difference - we celebrate it, we=
+ support it, and we thrive on it for the benefit of our employees, our prod=
+ucts and our community. For more information, see our <a href=3Dhttps://c.g=
+le/AOExmq2c_ivW3-qqRIakrMWlLzEVB_e_8ZkoG7_mOvIpSj3xonq2zrhp1PfVDA0sdj7MbjWR=
+a_nVCN7f4TKTX2iT_0mQBWES7FmCSwTcZ0p2lbACRzJQMffY868Rb7vZgKKxwGUYtQPnwQ }>Eq=
+ual Employment Opportunity policy</a> and the EEOC&#39;s <a href=3Dhttps://=
+c.gle/AOExmq1K_7oBeMwqjyLWe7pJopE-CAw_5ysUpFlIhjj6L20-IIfRKAYnfXDZbYiXquOnm=
+8itTT_S3OCvOQVT81rjDqpPZJtiGMdph5nA2xNXAjovbdcFsjKEuptoUcDXybjdnlwieNs0nK6G=
+pUV1Ha08KUTsBes32Q }>&quot;Equal Employment Opportunity is The Law&quot; (P=
+DF)</a></p>
+
+<p><strong>Pay Transparency Policy:</strong><br>
+Google&#39;s Pay Transparency Policy ensures that you won&#39;t be discharg=
+ed or discriminated against based on whether you&#39;ve inquired about, dis=
+cussed, or disclosed your pay. Read the <a href=3Dhttps://c.gle/AOExmq3nM1j=
+Lc8ZzDrteADjFJ36tOMf7AV24p9aAJxD8BnOFsdsD_BPSJ8z0fITg12vZw8P-Cg3PgTRSzadeVt=
+3DX5V_S6OS5YhMEmBGAFtheqA2gCMEeCJAU12q-MXGRuHnnbTIXLaIZvyl2mrtAobdrIrsmwGR1=
+E6moZhd7HKyovDBciW5yF0 }>full policy (PDF)</a></p>
+                        </td>
+                      </tr>
+<tr>
+<td style=3Dborder-collapse:collapse>
+                <table width=3D100% class=3Dcontent_wrapper align=3Dcenter =
+cellspacing=3D0 cellpadding=3D0 border=3D0 style=3D"-premailer-cellpadding:=
+0; -premailer-cellspacing:0; border-collapse:collapse; font-family:Arial, s=
+ans-serif; font-weight:normal; margin:0 auto; max-width:600px; mso-table-ls=
+pace:0; mso-table-rspace:0; width:100%">
+                                     <tbody><tr>
+                     <td class=3Dfooter_wrapper_td style=3D"border-collapse=
+:collapse; color:#757575; font-family:Roboto, arial; font-size:12px; line-h=
+eight:16px; padding:36px 40px 0 40px; text-align:center" align=3Dcenter>=20
+                       <img src=3Dhttp://services.google.com/fh/files/email=
+s/gcp_newsletter_email_cloud_footer_logo_new.png alt=3D"Google logo" width=
+=3D77 style=3D"-ms-interpolation-mode:bicubic; outline:none; text-decoratio=
+n:none">
+                      </td>
+                    </tr>
+                   <tr>
+                     <td class=3Dfooter_wrapper_td style=3D"border-collapse=
+:collapse; color:#757575; font-family:Roboto, arial; font-size:12px; line-h=
+eight:16px; padding:27px 40px 20px 40px; padding-top:10px; text-align:cente=
+r; word-break: break-word;" align=3Dcenter>=20
+
+      <span style=3D"font-size:inherit; color:inherit; font-weight:inherit;=
+ line-height:inherit; font-family:inherit;">=C2=A9 2026 Google LLC 1600 Amp=
+hitheatre Parkway, Mountain View, CA 94043</span>
+  =20
+  =20
+<br><br>
+
+You received this message because you expressed interest in applying to Goo=
+gle.
+=20
+                      </td>
+                    </tr>
+                 =20
+		<tr height=3D40px></tr>=09
+                </tbody></table>
+         </td> </tr>
+=20
+         </tbody></table>
+       </td></tr>
+      </tbody></table>
+  </body></html>
+--000000000000d50ba20650935c39--
