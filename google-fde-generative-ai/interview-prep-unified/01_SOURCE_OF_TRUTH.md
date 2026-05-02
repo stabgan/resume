@@ -120,16 +120,43 @@ Negotiation stance (from `09_STORIES_AND_COMP.md`):
 | **AutoResearch extension** | Forked Karpathy AutoResearch; added hypothesis logs, memory logs, research-plan-then-execute; wired kiro-cli + Firecrawl MCP + steelmind-thinking MCP. Drove the EmbeddingGemma technique selection. |
 | **IIT Madras M.Tech** | Clinical ML on MIMIC-IV; done concurrently with full-time work. |
 
-## What You Don't Know (and shouldn't pretend to)
+## Your Gaps Are Closeable — Build Plan
 
-These come up in the JD but aren't load-bearing in your actual experience. Be honest if asked.
+These come up in the JD but aren't load-bearing in your production history yet. You have 11 days. The strategy is not "hedge and avoid"; it's **build → push to GitHub → claim with evidence**. Each project below is scoped to 3 to 6 hours, publishable as a real repo with a README, a short demo video or GIF, and an evaluation note. Full schedule lives in `11_BUILD_PLAN.md`.
 
-- **CrewAI:** know what it is (Python multi-agent framework, competes with LangGraph, different mental model — roles + tasks vs. graph + state). Don't claim you've shipped with it.
-- **Google ADK:** know the role (code-first Python agent framework, deploys to Agent Engine). Don't claim hands-on.
-- **Specific Vertex AI products** beyond Gemini API (Agent Builder, RAG Engine, Vector Search): know what they do, not how you used them. Say "I've used Gemini via Vertex AI; I've read the architecture docs for the rest but haven't shipped with them."
-- **Deep OAuth 2.0 internals:** you used Microsoft Graph OAuth for Data Sentry. You're not an OAuth architect. Say "I've used OAuth flows in production for IAM automation; happy to talk about that, but for deep protocol design I'd want to work with a security specialist."
+Ground rule: after you push the repo, you get to say "I built X" in the interview. Before you push, you say "I've read the docs, not shipped." No bluffing either way.
 
-Honesty here is a feature, not a bug. Interviewers calibrate trust based on whether you over-claim.
+- **CrewAI**
+  - Gap: framework fluency. You know LangGraph (graph + state). CrewAI is the roles + tasks mental model, and the JD names it explicitly.
+  - What I'll build: `crewai-support-triage`. A 3-agent crew (Intake, Classifier, Responder) that triages a synthetic customer support queue, with a Manager agent doing hierarchical delegation. Includes a side-by-side note on when you'd pick CrewAI vs LangGraph.
+  - What to say after building: "I shipped a small CrewAI triage crew last week to get the roles-and-tasks model in my hands. My production multi-agent work is LangGraph, but I can speak to the tradeoff: CrewAI is faster to stand up for role-shaped workflows, LangGraph wins when you need explicit state, checkpointing, or HITL interrupts."
+
+- **Google ADK (Agent Development Kit)**
+  - Gap: code-first Python agent framework that deploys to Vertex AI Agent Engine. Named on nearly every FDE posting.
+  - What I'll build: `adk-research-assistant`. A single-agent ADK app with 2 tools (web search + a structured summarizer), deployed locally, with a README section on how it would deploy to Agent Engine and what the Agent Engine runtime buys you (managed sessions, tracing, scaling).
+  - What to say after building: "I built a small ADK agent end to end this week. I haven't put one on Agent Engine in prod, but I understand the deploy story and the runtime surface, so I can map a customer's agent onto it on day one."
+
+- **Vertex AI Agent Builder**
+  - Gap: the low-code / managed side of Google's agent stack. Different audience than ADK.
+  - What I'll build: `vertex-agent-builder-demo`. A Data Store agent + a tool-using agent in Agent Builder, wired to a small corpus and one external API. README covers when Agent Builder beats hand-rolling in ADK (time-to-value for non-engineering buyers, managed grounding).
+  - What to say after building: "I stood up an Agent Builder demo so I could speak to the managed path, not just the code-first path. For an FDE conversation that matters because some customers want the console, not a codebase."
+
+- **Vertex AI RAG Engine**
+  - Gap: Google's managed RAG primitive. You've built RAG by hand; you haven't used the managed one.
+  - What I'll build: `vertex-rag-engine-vs-diy`. Ingest the same 200-doc corpus into Vertex RAG Engine and a hand-rolled pgvector pipeline. Same eval set (20 questions, faithfulness + answer relevance via DeepEval). README is the comparison: latency, cost per query, recall, operational burden.
+  - What to say after building: "I ran my own RAG pipeline against Vertex RAG Engine on the same corpus and eval set. I can tell you where the managed service earns its keep and where you still want to own the retrieval layer."
+
+- **Vertex AI Vector Search**
+  - Gap: the underlying ANN index product. Comes up in scale conversations.
+  - What I'll build: Fold into the RAG Engine project above as a third arm: same corpus, Vertex Vector Search directly, with the retrieval layer hand-wired. Measure recall@k and p95 latency at 100k and 1M vectors (synthetic duplication).
+  - What to say after building: "I benchmarked Vector Search against pgvector and Vertex RAG Engine on the same eval. Happy to walk through the numbers."
+
+- **OAuth 2.0 depth**
+  - Gap: you shipped Microsoft Graph OAuth in Data Sentry. You haven't designed an OAuth flow from the RFC down.
+  - What I'll build: `mcp-oauth-tool-server`. An MCP server that exposes a third-party API (pick one: Notion or Linear) behind a proper OAuth 2.0 authorization code flow with PKCE, refresh token rotation, and per-user token storage. README walks through the flow end to end.
+  - What to say after building: "I shipped an OAuth-authed MCP server last week. I can whiteboard auth-code-with-PKCE, refresh rotation, and the failure modes. For enterprise IdP federation I'd still pair with a security specialist, but I'm not handwaving the basics."
+
+Calibration point: honesty still earns trust. The difference is what you're being honest about. It's no longer "I don't know this." It's "I shipped a small version last week to get it in my hands, and here's exactly where my depth ends." Interviewers reward that kind of precision far more than either bluffing or blanket hedging.
 
 ## Research Sources (reliability tagged)
 

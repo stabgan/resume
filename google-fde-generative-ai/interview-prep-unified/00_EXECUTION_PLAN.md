@@ -18,7 +18,7 @@ For days when Gracenote is heavy.
 
 | Block | Time | Action |
 |---|---|---|
-| A | 20 min | One RRK case from `03_RRK_CASEBOOK.md`, spoken aloud |
+| A | 20 min | One RRK case from `cases/` folder, spoken aloud |
 | B | 30 min | One coding problem on a blank Google Doc, timed |
 | C | 10 min | One STAR story from `09_STORIES_AND_COMP.md`, standing, no notes |
 
@@ -36,6 +36,8 @@ For mornings/evenings with runway.
 
 ## The 11-day schedule
 
+> **Parallel track — GitHub build plan.** In addition to the daily blocks below, I am shipping 4-6 small repos in 11 days per [`11_BUILD_PLAN.md`](./11_BUILD_PLAN.md): ADK hello-world, CrewAI-vs-LangGraph, OAuth/PKCE demo, Vertex AI RAG Engine, optional A2A and VPC-SC. Each is 2-5 hours. Evening work blocks (Sat May 3 AM, Sun May 4 AM, Mon-Wed May 5-7 PM) belong to building. These repos become concrete talking points for the RRK round, not overclaims.
+
 ### May 2 (Sat) — Foundation + environment setup
 
 Goal: orient to the plan; set up the practice environment.
@@ -51,7 +53,7 @@ Goal: orient to the plan; set up the practice environment.
 
 - [ ] Coding: **Longest Substring Without Repeating Characters** (LC 3).
 - [ ] RRK: read `02_RRK_MASTER_GUIDE.md` again, slower. Highlight the discovery-to-deployment framework.
-- [ ] Case: **Slow Website** (Case 1 in `03_RRK_CASEBOOK.md`). Spoken, 15 min.
+- [ ] Case: **Slow Website** (`cases/01_slow_website.md`). Spoken, 15 min.
 - [ ] Python: skim `06_PYTHON_AND_OOP.md` imports + hash map / sliding window / BFS templates.
 - [ ] Recall: STAR 1 (Data Sentry).
 
@@ -59,14 +61,14 @@ Goal: orient to the plan; set up the practice environment.
 
 - [ ] Coding: **Group Anagrams** (LC 49).
 - [ ] RRK: RAG section of `02_RRK_MASTER_GUIDE.md`. Memorize the RAG-done-properly checklist.
-- [ ] Case: **Enterprise RAG Assistant** (Case 2).
+- [ ] Case: **Enterprise RAG Assistant** (`cases/02_enterprise_rag_bank.md`).
 - [ ] Recall: STAR 2 (J&J ambiguity).
 
 ### May 5 (Tue) — Agents, MCP, A2A
 
 - [ ] Coding: **Search in Rotated Sorted Array** (LC 33).
 - [ ] RRK: agent section + GCP vocabulary from `08_GCP_AND_FDE_VOCABULARY.md`.
-- [ ] Case: **Multi-Agent Claims Workflow** (Case 3).
+- [ ] Case: **Multi-Agent Claims Workflow** (`cases/03_multi_agent_claims.md`).
 - [ ] Recall: STAR 5 (AutoResearch + MCP).
 - [ ] Say aloud: "MCP connects agents to tools and data. A2A connects agents to other agents. ADK builds the agent. Agent Engine runs it in production." × 5.
 
@@ -74,21 +76,21 @@ Goal: orient to the plan; set up the practice environment.
 
 - [ ] Coding: **Valid Parentheses** (LC 20). Plus one OOP class skeleton from `06_PYTHON_AND_OOP.md`.
 - [ ] RRK: security section of `02_RRK_MASTER_GUIDE.md`. Memorize OAuth/OIDC, IAP, VPC-SC, PSC, Apigee one-liners.
-- [ ] Case: **MCP/OAuth Tool Integration** (Case 4).
+- [ ] Case: **MCP/OAuth Tool Integration** (`cases/04_mcp_oauth_tool_integration.md`).
 - [ ] Recall: STAR 4 (hard-gate disagreement).
 
 ### May 7 (Thu) — Eval and observability (your differentiator)
 
 - [ ] Coding: **Kth Largest Element** (LC 215).
 - [ ] RRK: eval section. Read `07_SYSTEM_DESIGN.md` ML section.
-- [ ] Case: **Eval Pipeline For Agentic Support** (Case 5).
+- [ ] Case: **Eval Pipeline For Agentic Support** (`cases/05_eval_pipeline_agentic_support.md`).
 - [ ] Recall: STAR 6 (Sonnet → Haiku migration). Practice the 60-second GEPA explanation.
 
 ### May 8 (Fri) — Scale and reliability
 
 - [ ] Coding: **Number of Islands** (LC 200).
 - [ ] RRK: scale section. Read `07_SYSTEM_DESIGN.md` classic section.
-- [ ] Case: **10K Internal Users to Millions External** (Case 8 in `03_RRK_CASEBOOK.md`).
+- [ ] Case: **10K Internal Users to Millions External** (`cases/08_scale_internal_to_external.md`).
 - [ ] Recall: STAR 3 (Gracenote ingestion troubleshooting).
 
 ### May 9 (Sat) — Mock day 1
@@ -114,7 +116,7 @@ No new material. Fix what surfaced on May 9.
 ### May 11 (Mon) — Mock day 2 + compression
 
 - [ ] Coding: pick `Coin Change` (LC 322) or `Subsets` (LC 78). Google Doc, no-run.
-- [ ] RRK mock: `Customer Data Readiness` (Case 6) + `Cost Reduction` (Case 7).
+- [ ] RRK mock: `Customer Data Readiness` (`cases/06_customer_data_readiness.md`) + `Cost Reduction` (`cases/07_cost_reduction.md`).
 - [ ] Recall: full opener + "why Google/why FDE" + 1 hot story.
 - [ ] **Switch to `10_INTERVIEW_DAY.md` as your primary reference.** Stop reading deep docs.
 
@@ -163,8 +165,8 @@ Default to **Minimum Viable Day** and keep going. Do not catch up with a 5-hour 
 - Don't build a new open-source project this week. The resume is set; Google has it.
 - Don't rewrite the resume again.
 - Don't negotiate comp in your head. Keep that for when Priyanka brings it up.
-- Don't learn CrewAI deeply right now — know what it is (one sentence), don't claim deep experience. Same for Google ADK: know the role (agent development kit, Python, code-first), know it deploys to Agent Engine, don't overclaim hands-on.
 - Don't memorize Google product names beyond what's in `08_GCP_AND_FDE_VOCABULARY.md`. Breadth matters more than obscure names.
+- **Do build the repos in `11_BUILD_PLAN.md` as scheduled.** One small repo per evening on ADK, CrewAI-vs-LangGraph, OAuth/PKCE, Vertex AI RAG Engine. They become talking points, not overclaims. Learning by building is the fastest path for me.
 
 ## Error log
 
